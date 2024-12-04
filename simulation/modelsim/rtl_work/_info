@@ -1,0 +1,392 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Aeron/Documents/University/ELEC3885/Clean/simulation/modelsim
+vCOLOUR_CHOICE_LCD
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1732758541
+!i10b 1
+!s100 j]lkNHa>a@baN8[ILFnG<0
+IjI^fJEX7AKR5d`K^EDPIO1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 COLOUR_CHOICE_LCD_sv_unit
+S1
+R0
+w1732468981
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1732758541.000000
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean
+Z8 tCvgOpt 0
+n@c@o@l@o@u@r_@c@h@o@i@c@e_@l@c@d
+vLCD_RUBIKS_CUBE_DISPLAY
+R1
+R2
+!i10b 1
+!s100 >SL^TXi__;hKa<=?@AeBC3
+Ib:=N4MbTc6>SQD=Io1]Se1
+R3
+!s105 LCD_RUBIKS_CUBE_DISPLAY_sv_unit
+S1
+R0
+w1732757869
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv|
+!i113 1
+R6
+R7
+R8
+n@l@c@d_@r@u@b@i@k@s_@c@u@b@e_@d@i@s@p@l@a@y
+vLCD_SPI_CONTROLLER_RUBIK
+R1
+R2
+!i10b 1
+!s100 ioCLRP^:1Xa8QDGZ]`3AJ3
+I[;R`kUQ;c:hN:OJeG]]Xz0
+R3
+!s105 LCD_SPI_CONTROLLER_RUBIK_sv_unit
+S1
+R0
+w1732469004
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv|
+!i113 1
+R6
+R7
+R8
+n@l@c@d_@s@p@i_@c@o@n@t@r@o@l@l@e@r_@r@u@b@i@k
+vLCD_SPI_MASTER_IMPROVED
+R1
+R2
+!i10b 1
+!s100 aG4o3m;6TlV^VGY]kkIFb3
+IPFz9E7ZhHg6`[S=2hoWf22
+R3
+!s105 LCD_SPI_MASTER_IMPROVED_sv_unit
+S1
+R0
+w1731705962
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv|
+!i113 1
+R6
+R7
+R8
+n@l@c@d_@s@p@i_@m@a@s@t@e@r_@i@m@p@r@o@v@e@d
+vpll
+R2
+!i10b 1
+!s100 >IR93`n7?Ul=VOjQA15Zf3
+IaL4LXVPjn3BMek[PG6n^00
+R3
+R0
+w1732302852
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v
+L0 39
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip|C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v|
+!i113 1
+Z9 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip
+R8
+vpll_altpll
+R2
+!i10b 1
+!s100 gYG2[LafB^21eEi0_]LKm1
+Izh8^bZ>zm>4H`8^X^5^eQ3
+R3
+R0
+w1732302896
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v
+L0 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/db|C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v|
+!i113 1
+R9
+!s92 -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/db
+R8
+vRUBIKS_CUBE_STATE_LCD
+R1
+R2
+!i10b 1
+!s100 G?oL01=nY7j]VldE3ah]A1
+Io<PY9=3SNJ<KWK[b0hAbO3
+R3
+!s105 RUBIKS_CUBE_STATE_LCD_sv_unit
+S1
+R0
+w1732620423
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv|
+!i113 1
+R6
+R7
+R8
+n@r@u@b@i@k@s_@c@u@b@e_@s@t@a@t@e_@l@c@d
+vRUBIKS_CUBE_STATE_TOUCH
+R1
+R2
+!i10b 1
+!s100 ^PLkOYz0=<@k`i6EZ=B7H0
+I3mf^b9FoX<1nQNTJZcC>M2
+R3
+!s105 RUBIKS_CUBE_STATE_TOUCH_sv_unit
+S1
+R0
+w1732471578
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv|
+!i113 1
+R6
+R7
+R8
+n@r@u@b@i@k@s_@c@u@b@e_@s@t@a@t@e_@t@o@u@c@h
+vSQUARE_STATE
+R1
+R2
+!i10b 1
+!s100 5^LERLHJ:5_JNOAF6`L712
+I6LoAoV@Dc?CKHXYB<f^HI0
+R3
+!s105 SQUARE_STATE_sv_unit
+S1
+R0
+w1732396814
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv|
+!i113 1
+R6
+R7
+R8
+n@s@q@u@a@r@e_@s@t@a@t@e
+vSQUARE_TOUCH
+R1
+R2
+!i10b 1
+!s100 Cbdikz1BRC?a9eNTC906Z1
+I]9MjTfU]Hj]cLfgC=16hR3
+R3
+!s105 SQUARE_TOUCH_sv_unit
+S1
+R0
+w1732466606
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv|
+!i113 1
+R6
+R7
+R8
+n@s@q@u@a@r@e_@t@o@u@c@h
+vSTEP_CONVERSION
+R1
+R2
+!i10b 1
+!s100 ^KigA1bYb613nFU9@Z3XH3
+IC:3kF9B`:W0]>M:0AR^IA3
+R3
+!s105 STEP_CONVERSION_sv_unit
+S1
+R0
+w1732758096
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv|
+!i113 1
+R6
+R7
+R8
+n@s@t@e@p_@c@o@n@v@e@r@s@i@o@n
+vSTEP_CONVERSION_tb
+R1
+R2
+!i10b 1
+!s100 `5YeHCW^QA>8XRZDk;16Q1
+Ind?`b=2kHg;NonlG>aCal0
+R3
+!s105 STEP_CONVERSION_tb_sv_unit
+S1
+R0
+w1732758527
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv|
+!i113 1
+R6
+R7
+R8
+n@s@t@e@p_@c@o@n@v@e@r@s@i@o@n_tb
+vTOUCH_CALIBRATION
+R1
+R2
+!i10b 1
+!s100 MYkEigREU<nGD6zjdAZ<D3
+I6Ab6<kEhQP?alGJkh5`:e2
+R3
+!s105 TOUCH_CALIBRATION_sv_unit
+S1
+R0
+w1732384485
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv|
+!i113 1
+R6
+R7
+R8
+n@t@o@u@c@h_@c@a@l@i@b@r@a@t@i@o@n
+vTOUCH_SPI_CONTROLLER
+R1
+R2
+!i10b 1
+!s100 jY[Lj:9Q5IXJ0ZzfN05U10
+I:m5G0W4dcmU]HjRBfzJM`2
+R3
+!s105 TOUCH_SPI_CONTROLLER_sv_unit
+S1
+R0
+w1732639063
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv|
+!i113 1
+R6
+R7
+R8
+n@t@o@u@c@h_@s@p@i_@c@o@n@t@r@o@l@l@e@r
+vTOUCH_SPI_MASTER
+R1
+R2
+!i10b 1
+!s100 RS]kP1=^`>6hdOB_`dKQH3
+IDaM9g[U@kXmTJV=lAOBzf1
+R3
+!s105 TOUCH_SPI_MASTER_sv_unit
+S1
+R0
+w1732470714
+8C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean|C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv|
+!i113 1
+R6
+R7
+R8
+n@t@o@u@c@h_@s@p@i_@m@a@s@t@e@r

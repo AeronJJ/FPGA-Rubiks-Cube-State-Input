@@ -1,0 +1,179 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do RUBIKS_CUBE_DISPLAY_INPUT_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip {C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip" C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/db {C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/db" C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv 
+# -- Compiling module TOUCH_SPI_MASTER
+# 
+# Top level modules:
+# 	TOUCH_SPI_MASTER
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv 
+# -- Compiling module RUBIKS_CUBE_STATE_LCD
+# 
+# Top level modules:
+# 	RUBIKS_CUBE_STATE_LCD
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv 
+# -- Compiling module LCD_SPI_MASTER_IMPROVED
+# 
+# Top level modules:
+# 	LCD_SPI_MASTER_IMPROVED
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv 
+# -- Compiling module LCD_SPI_CONTROLLER_RUBIK
+# 
+# Top level modules:
+# 	LCD_SPI_CONTROLLER_RUBIK
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv 
+# -- Compiling module LCD_RUBIKS_CUBE_DISPLAY
+# 
+# Top level modules:
+# 	LCD_RUBIKS_CUBE_DISPLAY
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv 
+# -- Compiling module TOUCH_SPI_CONTROLLER
+# 
+# Top level modules:
+# 	TOUCH_SPI_CONTROLLER
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv 
+# -- Compiling module SQUARE_STATE
+# 
+# Top level modules:
+# 	SQUARE_STATE
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv 
+# -- Compiling module TOUCH_CALIBRATION
+# 
+# Top level modules:
+# 	TOUCH_CALIBRATION
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv 
+# -- Compiling module COLOUR_CHOICE_LCD
+# 
+# Top level modules:
+# 	COLOUR_CHOICE_LCD
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv 
+# -- Compiling module SQUARE_TOUCH
+# 
+# Top level modules:
+# 	SQUARE_TOUCH
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv 
+# -- Compiling module RUBIKS_CUBE_STATE_TOUCH
+# 
+# Top level modules:
+# 	RUBIKS_CUBE_STATE_TOUCH
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv 
+# -- Compiling module STEP_CONVERSION
+# 
+# Top level modules:
+# 	STEP_CONVERSION
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:49:01 on Nov 28,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean" C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv 
+# -- Compiling module STEP_CONVERSION_tb
+# 
+# Top level modules:
+# 	STEP_CONVERSION_tb
+# End time: 01:49:01 on Nov 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  STEP_CONVERSION_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" STEP_CONVERSION_tb 
+# Start time: 01:49:01 on Nov 28,2024
+# Loading sv_std.std
+# Loading work.STEP_CONVERSION_tb
+# Loading work.STEP_CONVERSION
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 01:49:08 on Nov 28,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0

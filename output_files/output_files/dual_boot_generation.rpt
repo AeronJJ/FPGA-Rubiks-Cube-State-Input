@@ -1,0 +1,36 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\Aeron\Documents\University\ELEC3885\Clean - CFM Version\output_files\dual_boot.qsys" --block-symbol-file --output-directory="C:\Users\Aeron\Documents\University\ELEC3885\Clean - CFM Version\output_files\output_files" --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading output_files/dual_boot.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dual_boot [altera_dual_boot 17.1]
+Progress: Parameterizing module dual_boot
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\Aeron\Documents\University\ELEC3885\Clean - CFM Version\output_files\dual_boot.qsys" --synthesis=VERILOG --output-directory="C:\Users\Aeron\Documents\University\ELEC3885\Clean - CFM Version\output_files\output_files\synthesis" --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading output_files/dual_boot.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dual_boot [altera_dual_boot 17.1]
+Progress: Parameterizing module dual_boot
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: dual_boot: Generating dual_boot "dual_boot" for QUARTUS_SYNTH
+Info: dual_boot: generating top-level entity altera_dual_boot
+Info: dual_boot: "dual_boot" instantiated altera_dual_boot "dual_boot"
+Info: rst_controller: "dual_boot" instantiated altera_reset_controller "rst_controller"
+Info: dual_boot: Done "dual_boot" with 3 modules, 7 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="8045dbc09f2019d17709"/>
+  </project>
+  <file_info>
+    <file device="10M50DAF484C6GES" path="RUBIKS_CUBE_DISPLAY_INPUT.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="dual_boot:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME dual_boot HAS_SOPCINFO 1 GENERATION_ID 1732766233"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_cs",
+					"strict" : false
+				},
+				{
+					"name" : "o_dcrs",
+					"strict" : false
+				},
+				{
+					"name" : "o_sdi",
+					"strict" : false
+				},
+				{
+					"name" : "o_sck",
+					"strict" : false
+				},
+				{
+					"name" : "o_lcdrst",
+					"strict" : false
+				},
+				{
+					"name" : "t_sdi",
+					"strict" : false
+				},
+				{
+					"name" : "t_sck",
+					"strict" : false
+				},
+				{
+					"name" : "t_cs",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[5]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[4]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[3]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[8]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[9]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[7]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "MAX10_CLK1_50",
+					"strict" : false
+				},
+				{
+					"name" : "t_irq",
+					"strict" : false
+				},
+				{
+					"name" : "t_sdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

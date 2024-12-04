@@ -1,0 +1,72 @@
+module TOUCH_SPI_CONTROLLER (
+
+);
+
+reg t_en = 1'b0;
+reg [7:0] touch_data_in = 8'b11010000;
+wire t_busy;
+wire [15:0] touch_data;
+wire touch_data_valid;
+
+
+TOUCH_SPI_MASTER touch (
+	clk_1MHz, // 4MHz maximum, sck will be half this frequency and max spi clk frequency is 2MHz
+	t_en,
+	touch_data_in,
+	t_sdo,
+	t_irq,
+	
+	t_busy,
+	touch_data,
+	
+	t_cs,
+	t_sdi,
+	t_sck,
+	touch_data_valid
+);
+
+reg read_xy = 1'b1;
+reg data_read = 1'b0;
+reg [11:0] x_data = 12'b0;
+reg [11:0] y_data = 12'b0;
+
+reg [32:0] delay_left = 24'b0;
+localparam CLK_FREQ_MHz = 1;
+
+always @ (posedge clk_1MHz) begin
+	t_en <= 1'b0;
+	
+	if (delay_left > 24'b0) begin
+		delay_left <= delay_left - 1'b1; // Wait for delay to count down
+	end
+	else begin
+		if (~t_busy && ~t_en && ~t_irq && read_xy) begin
+			//touch_data_in <= read_xy ? 8'h09 : 8'h0B;
+			touch_data_in <= 8'h09; // Read x
+			t_en <= 1'b1;
+			read_xy <= 1'b0;//~read_xy;
+			data_read <= 1'b0;
+			delay_left <= 24'b0;
+		end
+		else if (~t_busy && ~t_en && ~read_xy && data_read) begin
+			touch_data_in <= 8'h0B; // Read y
+			t_en <= 1'b1;
+			read_xy <= 1'b1;//~read_xy;
+			data_read <= 1'b0;
+			delay_left <= 24'b0;
+		end
+		
+		if (touch_data_valid && read_xy && ~data_read) begin
+			y_data <= touch_data[15:4];
+			data_read <= 1'b1;
+			delay_left <= 24'(CLK_FREQ_MHz*15000); // Approx 15ms
+		end
+		else if (touch_data_valid && ~read_xy && ~data_read) begin
+			x_data <= touch_data[15:4];
+			data_read <= 1'b1;
+			delay_left <= 24'b0;
+		end
+	end
+end
+
+endmodule

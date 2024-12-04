@@ -1,0 +1,115 @@
+module COLOUR_CHOICE_LCD (
+	input clk,
+	input active,
+	input [8:0] x_pixel,
+	input [7:0] y_pixel,
+	input [11:0] x_touch,
+	input [11:0] y_touch,
+	input touch_input,
+	output [15:0] currentPixel_colourChoice,
+	output reg [2:0] new_colour,
+	output reg new_colour_chosen
+);
+
+localparam sqSize = 50;
+localparam sqBorder = 5;
+
+localparam sq00_x = 5;
+localparam sq00_y = 15;
+localparam sq01_x = 110;
+localparam sq01_y = 15;
+localparam sq02_x = 215;
+localparam sq02_y = 15;
+
+localparam sq10_x = 5;
+localparam sq10_y = 125;
+localparam sq11_x = 110;
+localparam sq11_y = 125;
+localparam sq12_x = 215;
+localparam sq12_y = 125;
+
+localparam NUM_SQUARES = 6;
+
+logic [NUM_SQUARES-1:0] isSqSet;
+logic [NUM_SQUARES-1:0][2:0] sqCol;
+
+SQUARE_STATE #(.x(sq00_x), .y(sq00_y), .length(sqSize), .border(sqBorder)) colour_sq0 (x_pixel, y_pixel, {3'b100}, isSqSet[0], sqCol[0]);
+SQUARE_STATE #(.x(sq01_x), .y(sq01_y), .length(sqSize), .border(sqBorder)) colour_sq1 (x_pixel, y_pixel, {3'b101}, isSqSet[1], sqCol[1]);
+SQUARE_STATE #(.x(sq02_x), .y(sq02_y), .length(sqSize), .border(sqBorder)) colour_sq2 (x_pixel, y_pixel, {3'b010}, isSqSet[2], sqCol[2]);
+SQUARE_STATE #(.x(sq10_x), .y(sq10_y), .length(sqSize), .border(sqBorder)) colour_sq3 (x_pixel, y_pixel, {3'b011}, isSqSet[3], sqCol[3]);
+SQUARE_STATE #(.x(sq11_x), .y(sq11_y), .length(sqSize), .border(sqBorder)) colour_sq0 (x_pixel, y_pixel, {3'b111}, isSqSet[4], sqCol[4]);
+SQUARE_STATE #(.x(sq12_x), .y(sq12_y), .length(sqSize), .border(sqBorder)) colour_sq1 (x_pixel, y_pixel, {3'b110}, isSqSet[5], sqCol[5]);
+
+logic[15:0] currentColour;
+logic[2:0] colours;
+always_comb begin
+	currentColour = 16'b0;
+	colours = 3'b0;
+	for (int i = 0; i < NUM_SQUARES; i = i + 1) begin
+		colours |= sqCol[i];
+	end
+	case (colours)
+		3'b000: begin
+			currentColour = 16'h0000; // Black
+		end
+		
+		3'b010: begin
+			currentColour = 16'h07E0; // Green
+		end
+		
+		3'b011: begin
+			currentColour = 16'h001F; // Blue
+		end
+		
+		3'b100: begin
+			currentColour = 16'hF800; // Red
+		end
+		
+		3'b101: begin
+			currentColour = 16'hFC0A; // Orange
+		end
+		
+		3'b111: begin
+			currentColour = 16'hFFFF; // White
+		end
+		
+		3'b110: begin
+			currentColour = 16'hDC05; // Yellow
+		end
+		
+		default: begin
+			currentColour = 16'h0000; // Black
+		end
+	endcase
+end
+
+assign currentPixel_colourChoice = (isSqSet ? currentColour : 16'hFFFF);
+
+initial new_colour = 3'b0;
+
+always @ (posedge touch_input) begin
+	new_colour <= 3'b0;
+	if (active) begin
+		if ((x_touch > sq00_x) && (x_touch < sq00_x + sqSize) && (y_touch > sq00_y) && (y_touch < sq00_y + sqSize)) begin
+			new_colour <= 3'b100;
+		end
+		else if ((x_touch > sq01_x) && (x_touch < sq01_x + sqSize) && (y_touch > sq01_y) && (y_touch < sq01_y + sqSize)) begin
+			new_colour <= 3'b101;
+		end
+		else if ((x_touch > sq02_x) && (x_touch < sq02_x + sqSize) && (y_touch > sq02_y) && (y_touch < sq02_y + sqSize)) begin
+			new_colour <= 3'b010;
+		end
+		else if ((x_touch > sq10_x) && (x_touch < sq10_x + sqSize) && (y_touch > sq10_y) && (y_touch < sq10_y + sqSize)) begin
+			new_colour <= 3'b011;
+		end
+		else if ((x_touch > sq11_x) && (x_touch < sq11_x + sqSize) && (y_touch > sq11_y) && (y_touch < sq11_y + sqSize)) begin
+			new_colour <= 3'b111;
+		end
+		else if ((x_touch > sq12_x) && (x_touch < sq12_x + sqSize) && (y_touch > sq12_y) && (y_touch < sq12_y + sqSize)) begin
+			new_colour <= 3'b110;
+		end
+	end
+end
+
+
+endmodule

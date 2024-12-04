@@ -1,0 +1,161 @@
+Flow report for RUBIKS_CUBE_DISPLAY_INPUT
+Wed Dec 04 00:26:44 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Dec 04 00:26:44 2024       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
+; Top-level Entity Name              ; LCD_RUBIKS_CUBE_DISPLAY                     ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 1,327 / 49,760 ( 3 % )                      ;
+;     Total combinational functions  ; 1,295 / 49,760 ( 3 % )                      ;
+;     Dedicated logic registers      ; 609 / 49,760 ( 1 % )                        ;
+; Total registers                    ; 609                                         ;
+; Total pins                         ; 28 / 360 ( 8 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------+
+; Flow Settings                                 ;
++-------------------+---------------------------+
+; Option            ; Setting                   ;
++-------------------+---------------------------+
+; Start date & time ; 12/04/2024 00:26:09       ;
+; Main task         ; Compilation               ;
+; Revision Name     ; RUBIKS_CUBE_DISPLAY_INPUT ;
++-------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                ;
++--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+---------------------+
+; Assignment Name                      ; Value                                                        ; Default Value             ; Entity Name             ; Section Id          ;
++--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+---------------------+
+; COMPILER_SIGNATURE_ID                ; 39908810502323.173327196907076                               ; --                        ; --                      ; --                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; TOUCH_SPI_MASTER_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; STEP_CONVERSION_tb  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; SQUARE_TOUCH_tb     ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; STEP_CONVERSION_tb                                           ; --                        ; --                      ; eda_simulation      ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                  ; --                        ; --                      ; eda_simulation      ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                    ; <None>                    ; --                      ; --                  ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                              ; --                        ; --                      ; eda_simulation      ;
+; EDA_TEST_BENCH_FILE                  ; TOUCH_SPI_MASTER_tb.sv                                       ; --                        ; --                      ; TOUCH_SPI_MASTER_tb ;
+; EDA_TEST_BENCH_FILE                  ; STEP_CONVERSION_tb.sv                                        ; --                        ; --                      ; STEP_CONVERSION_tb  ;
+; EDA_TEST_BENCH_FILE                  ; SQUARE_TOUCH_tb.sv                                           ; --                        ; --                      ; SQUARE_TOUCH_tb     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TOUCH_SPI_MASTER_tb                                          ; --                        ; --                      ; TOUCH_SPI_MASTER_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; STEP_CONVERSION_tb                                           ; --                        ; --                      ; STEP_CONVERSION_tb  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; SQUARE_TOUCH_tb                                              ; --                        ; --                      ; SQUARE_TOUCH_tb     ;
+; EDA_TEST_BENCH_NAME                  ; SQUARE_TOUCH_tb                                              ; --                        ; --                      ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; TOUCH_SPI_MASTER_tb                                          ; --                        ; --                      ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; STEP_CONVERSION_tb                                           ; --                        ; --                      ; eda_simulation      ;
+; EDA_TIME_SCALE                       ; 1 ps                                                         ; --                        ; --                      ; eda_simulation      ;
+; ENABLE_SIGNALTAP                     ; Off                                                          ; --                        ; --                      ; --                  ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                           ; --                        ; --                      ; --                  ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                            ; --                        ; --                      ; --                  ;
+; MISC_FILE                            ; output_files/output_files/synthesis/../dual_boot.cmp         ; --                        ; --                      ; --                  ;
+; MISC_FILE                            ; output_files/output_files/synthesis/../../dual_boot.qsys     ; --                        ; --                      ; --                  ;
+; MISC_FILE                            ; ip/pll_inst.v                                                ; --                        ; --                      ; --                  ;
+; MISC_FILE                            ; ip/pll.ppf                                                   ; --                        ; --                      ; --                  ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                            ; --                        ; --                      ; --                  ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                            ; --                        ; --                      ; --                  ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                   ; --                        ; --                      ; --                  ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                   ; --                        ; --                      ; --                  ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                 ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                 ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                 ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                          ; --                        ; --                      ; --                  ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --                        ; --                      ; --                  ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                 ; --                        ; --                      ; --                  ;
+; SLD_FILE                             ; output_files/output_files/synthesis/dual_boot.debuginfo      ; --                        ; --                      ; --                  ;
+; SLD_INFO                             ; QSYS_NAME dual_boot HAS_SOPCINFO 1 GENERATION_ID 1732766233  ; --                        ; dual_boot               ; --                  ;
+; SOPCINFO_FILE                        ; output_files/output_files/synthesis/../../dual_boot.sopcinfo ; --                        ; --                      ; --                  ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                           ; --                        ; --                      ; --                  ;
+; TOP_LEVEL_ENTITY                     ; LCD_RUBIKS_CUBE_DISPLAY                                      ; RUBIKS_CUBE_DISPLAY_INPUT ; --                      ; --                  ;
+; USE_SIGNALTAP_FILE                   ; output_files/stp2.stp                                        ; --                        ; --                      ; --                  ;
++--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4828 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:00:11     ; 1.3                     ; 5942 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.6                     ; 4873 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4662 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:50                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
+quartus_fit --read_settings_files=off --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
+quartus_asm --read_settings_files=off --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
+quartus_sta RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
+quartus_eda --read_settings_files=off --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
+
+
+

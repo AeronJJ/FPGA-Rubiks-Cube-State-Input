@@ -1,0 +1,14 @@
+module SQUARE_TOUCH ( 
+	input [11:0] x_touch,
+	input [11:0] y_touch,
+	output isTouched
+);
+
+parameter x_touch_corner = 0;
+parameter y_touch_corner = 0;
+parameter x_touch_length = 0;
+parameter y_touch_length = 0;
+
+assign isTouched = (x_touch > x_touch_corner) && (x_touch < (x_touch_corner + x_touch_length)) && (y_touch > y_touch_corner) && (y_touch < (y_touch_corner + y_touch_length));
+
+endmodule

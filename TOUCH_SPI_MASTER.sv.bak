@@ -1,0 +1,72 @@
+module TOUCH_SPI_MASTER(
+	input clk_1MHz, // 4MHz maximum, sck will be half this frequency and max spi clk frequency is 2MHz
+	input en,
+	input [7:0] data_in,
+	input i_sdo,
+	input i_irq,
+	
+	output reg busy,
+	output [15:0] data_out,
+	
+	output reg o_cs,
+	output reg o_sdi,
+	output reg o_sck,
+	output reg data_valid
+);
+
+reg internal_sck;
+reg [7:0] internal_data_in;
+//reg [11:0] internal_data_out;
+reg [0:2] data_counter;
+reg [0:3] data_in_counter;
+reg rw; // 1 for read, 0 for write
+
+reg [0:15] reverse_data_out;
+
+initial internal_sck <= 1'b1;
+initial busy <= 1'b0;
+initial o_cs <= 1'b1;
+initial o_sdi <= 1'b0;
+initial data_counter <= 3'b0;
+initial data_in_counter <= 4'b0;
+initial rw <= 1'b0;
+initial reverse_data_out <= 16'b0;
+initial data_valid <= 1'b0;
+
+assign o_sck = internal_sck & ~o_cs; // sck is idle low
+assign data_out[15:0] = reverse_data_out[0:15];
+
+always @ (posedge clk_1MHz) begin
+	if (en) begin
+		internal_data_in <= data_in;
+		busy <= 1'b1;
+	end
+	
+	if (busy && ~rw) begin
+		internal_sck <= !internal_sck;
+		if (internal_sck) begin
+			o_sdi <= internal_data_in[data_counter];
+			o_cs <= 1'b0;
+			data_counter <= data_counter + 1'b1;
+			rw <= &data_counter;
+		end
+	end
+	else if (busy && rw) begin
+		internal_sck <= !internal_sck;
+		if (internal_sck) begin
+			reverse_data_out[data_in_counter] <= i_sdo;
+			o_cs <= 1'b0;
+			data_in_counter <= data_in_counter + 1'b1;
+			busy <= ~&data_in_counter;
+			data_valid <= &data_in_counter;
+			rw <= ~&data_in_counter;
+		end
+	end
+	else begin
+		internal_sck <= 1'b1;
+		//rw <= 1'b0;
+		if (internal_sck) o_cs <= 1'b1;
+	end
+end
+
+endmodule

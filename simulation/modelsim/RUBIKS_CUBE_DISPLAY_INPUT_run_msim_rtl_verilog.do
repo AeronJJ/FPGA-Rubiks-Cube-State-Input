@@ -1,0 +1,30 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip {C:/Users/Aeron/Documents/University/ELEC3885/Clean/ip/pll.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean/db {C:/Users/Aeron/Documents/University/ELEC3885/Clean/db/pll_altpll.v}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_MASTER.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_LCD.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_MASTER_IMPROVED.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_SPI_CONTROLLER_RUBIK.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/LCD_RUBIKS_CUBE_DISPLAY.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_SPI_CONTROLLER.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_STATE.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/TOUCH_CALIBRATION.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/COLOUR_CHOICE_LCD.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/SQUARE_TOUCH.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/RUBIKS_CUBE_STATE_TOUCH.sv}
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION.sv}
+
+vlog -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Clean {C:/Users/Aeron/Documents/University/ELEC3885/Clean/STEP_CONVERSION_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  STEP_CONVERSION_tb
+
+add wave *
+view structure
+view signals
+run -all
