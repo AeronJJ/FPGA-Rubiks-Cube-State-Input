@@ -42,7 +42,7 @@ reg data_read = 1'b0;
 reg [23:0] delay_left = 24'b0;
 localparam CLK_FREQ_MHz = 1;
 
-reg [2:0] current_state;
+(* syn_preserve = 1, syn_encoding = "none" *) reg [2:0] current_state;
 reg [2:0] next_state;
 
 localparam s_IDLE = 3'b000;
@@ -129,7 +129,7 @@ always @ (posedge clk_1MHz or negedge rst_n) begin
 end
 
 always @ (*) begin
-//	next_state = current_state;
+	//next_state = current_state;
 	if (~rst_n) begin
 		next_state = s_IDLE;
 	end

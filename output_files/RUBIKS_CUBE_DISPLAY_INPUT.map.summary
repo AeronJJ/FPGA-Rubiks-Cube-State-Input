@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Dec 04 00:26:22 2024
+Analysis & Synthesis Status : Successful - Thu Feb 13 22:19:19 2025
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : RUBIKS_CUBE_DISPLAY_INPUT
 Top-level Entity Name : LCD_RUBIKS_CUBE_DISPLAY
 Family : MAX 10
-Total logic elements : 1,390
-    Total combinational functions : 1,292
-    Dedicated logic registers : 609
-Total registers : 609
-Total pins : 28
+Total logic elements : 1,970
+    Total combinational functions : 1,813
+    Dedicated logic registers : 843
+Total registers : 843
+Total pins : 44
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

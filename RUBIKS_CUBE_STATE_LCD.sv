@@ -84,20 +84,32 @@ always_comb begin
 		
 		3'b010: begin
 //			currentColour = 16'h001F; // Blue
-			currentColour = 16'h07E0; // Green
+//			currentColour = 16'h07E0; // Green - Working, dim
+
+			currentColour = 16'h00F8; // Green - BRIGHT
 		end
 		
 		3'b011: begin
 //			currentColour = 16'h07E0; // Green
-			currentColour = 16'h001F; // Blue
-		end
+//			currentColour = 16'h001F; // Blue - Working, dim
+			
+			currentColour = 16'hE007; // Blue - BRIGHT
+end
 		
 		3'b100: begin
-			currentColour = 16'hF800; // Red
+//			currentColour = 16'hF800; // Red - Working, dim
+
+//			currentColour = 16'h1F00; // RED - BRIGHT
+			
+			currentColour = 16'h1F00;
 		end
 		
 		3'b101: begin
-			currentColour = 16'hFC0A; // Orange
+//			currentColour = 16'hFC0A; // Orange - Working, dim
+			
+			//currentColour = 16'hFF03; 
+			
+			currentColour = 16'h7F45; 
 		end
 		
 		3'b111: begin
@@ -105,7 +117,11 @@ always_comb begin
 		end
 		
 		3'b110: begin
-			currentColour = 16'hDC05; // Yellow
+//			currentColour = 16'hDC05; // Yellow - Working, dim
+			
+			//currentColour = 16'hFFC0; // Yellow
+			
+			currentColour = 16'hDF07;
 		end
 		
 		default: begin

@@ -1,0 +1,222 @@
+module OV7670_Cam (
+	MAX10_CLK1_50,
+	
+	o_cs,
+	o_dcrs,
+	o_sdi,
+	o_sck,
+	o_lcdrst,
+	
+	t_sdo,
+	t_irq,
+	t_sdi,
+	t_sck,
+	t_cs,
+	
+	c_SCL,
+	c_SDATA,
+	c_VSYNC,
+	c_HREF,
+	c_PCLK,
+	c_XCLK,
+	c_DOUT7,
+	c_DOUT6,
+	c_DOUT5,
+	c_DOUT4,
+	c_DOUT3,
+	c_DOUT2,
+	c_DOUT1,
+	c_DOUT0,
+	c_RST,
+	c_PWRN,
+	
+	
+	switches,
+	leds,
+	rst_n
+);
+
+// IO Setup
+input MAX10_CLK1_50;
+
+output o_cs;
+output o_dcrs;
+output o_sdi;
+output o_sck;
+output o_lcdrst;
+
+input t_sdo;
+input t_irq;
+output t_sdi;
+output t_sck;
+output t_cs;
+
+output c_SCL;
+inout c_SDATA;
+input c_VSYNC;
+input c_HREF;
+input c_PCLK;
+output c_XCLK;
+input c_DOUT7;
+input c_DOUT6;
+input c_DOUT5;
+input c_DOUT4;
+input c_DOUT3;
+input c_DOUT2;
+input c_DOUT1;
+input c_DOUT0;
+output reg c_RST;
+output reg c_PWRN;
+
+input [9:0] switches;
+output reg [8:0] leds;
+
+input rst_n;
+
+assign o_cs = 1'b0;
+assign o_dcrs = 1'b0;
+assign o_sdi = 1'b0;
+assign o_sck = 1'b0;
+assign o_lcdrst = 1'b0;
+assign t_sdi = 1'b0;
+assign t_sck = 1'b0;
+assign t_cs = 1'b0;
+//
+
+
+// SDA Setup
+wire r_SDA;
+wire t_SDA;
+wire drive_SDA;
+
+assign c_SDATA = drive_SDA ? t_SDA : 1'bz;
+assign r_SDA = c_SDATA;
+//
+
+
+// Clock setup
+wire clk_100MHz;
+wire clk_800KHz;
+wire clk_800KHz_30;
+wire clk_24MHz;
+
+/*
+pll	pll_inst (
+	.inclk0 ( MAX10_CLK1_50 ),
+	.c0 ( clk_100MHz ),
+	.c1 ( clk_800KHz ),
+	.c2 ( clk_24MHz )
+	);*/
+	
+pll	pll_inst (
+	.inclk0 ( MAX10_CLK1_50 ),
+	.c0 ( clk_100MHz ),
+	.c1 ( clk_800KHz ),
+	.c2 ( clk_800KHz_30 ),
+	.c3 ( c_XCLK )
+	);
+
+	
+//assign c_XCLK = clk_24MHz;
+//
+
+
+// Camera Init Setup
+wire cam_init_done;
+reg cam_rst_n;
+
+OV7670_INIT cam_init (
+	clk_800KHz,
+	clk_800KHz_30,
+	cam_rst_n,
+	t_SDA,
+	r_SDA,
+	drive_SDA,
+	c_SCL,
+	
+	cam_init_done
+);
+//
+
+assign leds[0] = cam_init_done;
+assign leds[8:1] = 1'b0;
+assign c_PWRN = 1'b0;
+
+// State Machine Setup
+localparam s_IDLE = 3'b000;
+localparam s_INIT_START = 3'b001;
+localparam s_CAM_INIT = 3'b010;
+localparam s_DELAY = 3'b011;
+localparam s_CAM_PIXEL_TRANSFER = 3'b100;
+
+reg [2:0] current_state = s_IDLE;
+reg [2:0] next_state = s_IDLE;
+reg [23:0] delay_left = 24'b0;
+//
+
+always @ (posedge clk_800KHz or negedge rst_n) begin
+	if (~rst_n) begin
+		cam_rst_n <= 1'b1;
+		current_state <= s_IDLE;
+	end
+	else if (delay_left > 24'b0) begin
+		delay_left <= delay_left - 1'b1; // Wait for delay to count down
+	end
+	else begin
+		current_state <= next_state;
+		case (current_state)
+			s_IDLE: begin
+				cam_rst_n <= 1'b1;
+				c_RST <= 1'b0;
+			end
+			
+			s_INIT_START: begin
+				cam_rst_n <= 1'b0;
+				c_RST <= 1'b1;
+				delay_left <= 24'd1600; // Wait ~2ms
+			end
+			
+			s_CAM_INIT: begin
+				cam_rst_n <= 1'b1;
+			end
+			
+			s_DELAY: begin
+				delay_left <= 24'd800000; // Wait 1 second for no particular reason
+				//c_RST <= 1'b1;
+			end
+			
+			s_CAM_PIXEL_TRANSFER: begin
+			
+			end
+		endcase
+	end
+end
+
+always @ (*) begin
+	next_state = current_state;
+	case (current_state)
+		s_IDLE: begin
+			next_state = s_INIT_START;
+		end
+		
+		s_INIT_START: begin
+			next_state = s_CAM_INIT;
+		end
+		
+		s_CAM_INIT: begin
+			if (cam_init_done) begin
+				next_state = s_DELAY;
+			end
+		end
+		
+		s_DELAY: begin
+			next_state = s_CAM_PIXEL_TRANSFER;
+		end
+		
+		s_CAM_PIXEL_TRANSFER: begin
+			next_state = s_CAM_PIXEL_TRANSFER;
+		end
+	endcase
+end
+
+endmodule

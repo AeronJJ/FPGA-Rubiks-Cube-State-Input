@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at RUBIKS_CUBE_STATE_TOUCH.sv(94): always construct contains both blocking and non-blocking assignments File: C:/Users/Aeron/Documents/University/ELEC3885/Clean - CFM Version/RUBIKS_CUBE_STATE_TOUCH.sv Line: 94
+Warning (10268): Verilog HDL information at RUBIKS_CUBE_STATE_TOUCH.sv(94): always construct contains both blocking and non-blocking assignments File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 94
+Warning (10268): Verilog HDL information at DETECT_SWITCH_EDGE.sv(57): always construct contains both blocking and non-blocking assignments File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE.sv Line: 57

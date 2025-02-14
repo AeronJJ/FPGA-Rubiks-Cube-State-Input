@@ -15,7 +15,17 @@ module LCD_RUBIKS_CUBE_DISPLAY (
 	
 	switches,
 	leds,
-	rst_n
+	rst_n,
+	
+	c_SCL,
+	c_SDATA,
+	c_VSYNC,
+	c_HREF,
+	c_PCLK,
+	c_XCLK,
+	c_DOUT,
+	c_RST,
+	c_PWRN
 );
 
 input MAX10_CLK1_50;
@@ -37,6 +47,16 @@ output reg [5:0] leds;
 
 input rst_n;
 
+output c_SCL;
+inout wire c_SDATA;
+input c_VSYNC;
+input c_HREF;
+input c_PCLK;
+output c_XCLK;
+input [7:0] c_DOUT;
+output c_RST;
+output c_PWRN;
+
 dual_boot u0 (
 	.clk_clk       (MAX10_CLK1_50),   // clk.clk
 	.reset_reset_n (1'b1) 				 // reset.reset_n
@@ -50,13 +70,31 @@ STEP_CONVERSION convert (
 
 wire clk_100MHz;
 wire clk_1MHz;
+wire clk_800KHz;
+wire clk_800KHz_30;
+wire clk_25MHz;
+wire clk_200MHz;
+
+/*pll	pll_inst (
+	.inclk0 ( MAX10_CLK1_50 ),
+	.c0 ( clk_100MHz ),
+	.c1 ( clk_1MHz )
+	);*/
 
 pll	pll_inst (
 	.inclk0 ( MAX10_CLK1_50 ),
 	.c0 ( clk_100MHz ),
-	.c1 ( clk_1MHz )
+	.c1 ( clk_1MHz ),
+	.c2 ( clk_800KHz ),
+	.c3 ( clk_800KHz_30 ),
+	.c4 ( clk_200MHz )
 	);
 
+assign clk_25MHz = internal_xclk;
+reg internal_xclk = 1'b0;
+always @ (posedge MAX10_CLK1_50) begin
+	internal_xclk = ~internal_xclk;
+end
 
 reg[16:0] bufferIndex = 17'd0;
 wire incBuffer;
@@ -64,8 +102,13 @@ wire incBuffer;
 reg[8:0] x = 9'b0; // Current pixel position
 reg[7:0] y = 8'b0;
 
-always_ff @ (posedge incBuffer) begin
-	if (bufferIndex == 76799) begin
+always_ff @ (posedge incBuffer or posedge rst_lcd_mem_addr) begin
+	if (rst_lcd_mem_addr) begin
+		bufferIndex <= 17'b0;
+		x <= 9'b0;
+		y <= 8'b0;
+	end
+	else if (bufferIndex == 76799) begin
 		bufferIndex <= 17'b0;
 		x <= 9'b0;
 		y <= 8'b0;
@@ -82,11 +125,23 @@ always_ff @ (posedge incBuffer) begin
 	end
 end
 
-
 // + ~400 logic units:
 //assign bufferIndex = (bufferIndex + 1'b1) % 17'(320*240); // Max buffer of 320*240
 //wire[8:0] x = 9'(bufferIndex / 240); // x and y calculations
 //wire[7:0] y = 8'(bufferIndex % 240);
+
+wire sw0_pos_edge_pulse;
+wire sw0_neg_edge_pulse;
+wire rst_lcd_mem_addr;
+
+DETECT_SWITCH_EDGE sw0_det ( 
+	switches[0],
+	MAX10_CLK1_50,
+	
+	sw0_pos_edge_pulse,
+	sw0_neg_edge_pulse,
+	rst_lcd_mem_addr
+);
 
 
 //wire[143:0] cube_state = 144'h9249246db6dbffffffb6db6d492492db6db6; // Solved State
@@ -113,6 +168,10 @@ Black = 3'b000
 // Solved State = 144'h924924492492ffffff6db6dbdb6db6b6db6d 
 */
 
+wire p_available;
+
+assign p_available = cam_active ? d_available : 1'b1;
+
 LCD_SPI_CONTROLLER_RUBIK lcd (
 	clk_100MHz,
 	
@@ -123,7 +182,10 @@ LCD_SPI_CONTROLLER_RUBIK lcd (
 	o_dcrs,
 	o_sdi,
 	o_sck,
-	o_lcdrst
+	o_lcdrst,
+	
+	p_available,
+	rst_lcd_mem_addr
 );
 
 wire [11:0] x_data; // Touch coordinates
@@ -199,14 +261,19 @@ RUBIKS_CUBE_STATE_TOUCH state_touch (
 localparam s_IDLE = 2'b00;
 localparam s_STATE_DISPLAY = 2'b01;
 localparam s_COLOUR_CHOICE_DISPLAY = 2'b10;
+localparam s_CAM_VIEW = 2'b11;
 
-reg [1:0] current_state;
+(* syn_preserve = 1, syn_encoding = "none" *) reg [1:0] current_state;
 reg [1:0] next_state;
 
 initial current_state = s_IDLE;
 initial next_state = s_IDLE;
 
-assign currentPixel = cube_state_active ? currentPixel_cubestate : currentPixel_colourChoice;
+reg cam_active = 1'b0;
+wire [15:0] tempPixel;
+
+assign currentPixel = cam_active ? r_data : tempPixel;
+assign tempPixel = cube_state_active ? currentPixel_cubestate : currentPixel_colourChoice;
 
 always @ (posedge clk_1MHz) begin
 	current_state <= next_state;
@@ -214,19 +281,30 @@ always @ (posedge clk_1MHz) begin
 		s_IDLE: begin
 			cube_state_active <= 1'b0;
 			colour_choice_active <= 1'b0;
+			cam_active <= 1'b0;
 		end
 		
 		s_STATE_DISPLAY: begin
 			cube_state_active <= 1'b1;
 			colour_choice_active <= 1'b0;
+			cam_active <= 1'b0;
 		end
 		
 		s_COLOUR_CHOICE_DISPLAY: begin
 			cube_state_active <= 1'b0;
 			colour_choice_active <= 1'b1;
+			cam_active <= 1'b0;
 		end
+		
+		s_CAM_VIEW: begin
+			cube_state_active <= 1'b0;
+			colour_choice_active <= 1'b0;
+			cam_active <= 1'b1;
+		end
+		
 	endcase
 end
+
 
 always @ (*) begin
 	next_state = current_state;
@@ -236,7 +314,10 @@ always @ (*) begin
 		end
 		
 		s_STATE_DISPLAY: begin
-			if (activate_colour_choice) begin
+			if (switches[0]) begin
+				next_state = s_CAM_VIEW;
+			end
+			else if (activate_colour_choice) begin
 				next_state = s_COLOUR_CHOICE_DISPLAY;
 			end
 		end	
@@ -247,11 +328,54 @@ always @ (*) begin
 			end
 		end
 		
+		s_CAM_VIEW: begin
+			if (~switches[0]) begin
+				next_state = s_STATE_DISPLAY;
+			end
+		end
+		
+		
 		default: begin
 			next_state = s_IDLE;
 		end
 	endcase
 end
+
+wire [15:0] w_data;
+wire w_en;
+wire [15:0] r_data;
+wire r_en;
+wire d_available;
+
+ASYNC_FIFO fifo (
+	w_data,
+	w_en,
+	r_data,
+	incBuffer,
+	d_available
+);
+
+OV7670_Cam cam (
+	clk_800KHz,
+	clk_800KHz_30,
+	clk_25MHz,
+	
+	c_SCL,
+	c_SDATA,
+	c_VSYNC,
+	c_HREF,
+	c_PCLK,
+	c_XCLK,
+	c_DOUT,
+	c_RST,
+	c_PWRN,
+	
+	rst_n,
+	
+	d_available,
+	w_data,
+	w_en
+);
 
 endmodule
 

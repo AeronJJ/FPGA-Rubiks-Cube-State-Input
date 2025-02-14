@@ -60,6 +60,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "c_SCL",
+					"strict" : false
+				},
+				{
+					"name" : "c_XCLK",
+					"strict" : false
+				},
+				{
+					"name" : "c_RST",
+					"strict" : false
+				},
+				{
+					"name" : "c_SDATA",
+					"strict" : false
+				},
+				{
 					"name" : "switches[5]",
 					"strict" : false
 				},
@@ -109,6 +125,46 @@
 				},
 				{
 					"name" : "t_irq",
+					"strict" : false
+				},
+				{
+					"name" : "c_PCLK",
+					"strict" : false
+				},
+				{
+					"name" : "c_HREF",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "c_DOUT[4]",
 					"strict" : false
 				},
 				{

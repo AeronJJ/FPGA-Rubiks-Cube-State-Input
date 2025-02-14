@@ -1,0 +1,26 @@
+module SWITCH_DEBOUNCE (
+	clk,
+	sw_in,
+	sw_out
+);
+
+input clk;
+input sw_in;
+
+output reg sw_out;
+
+reg [15:0] counter;
+
+always @ (posedge clk) begin
+	if (sw_in == sw_out) begin
+		counter <= 16'b0;
+	end
+	else begin
+		counter <= counter + 1'b1;
+		if (counter == 16'd65535) begin
+			sw_out <= sw_in;
+		end
+	end
+end
+
+endmodule

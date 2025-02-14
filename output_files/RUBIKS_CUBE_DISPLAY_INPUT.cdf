@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/Aeron/Documents/University/ELEC3885/Clean - CFM Version/output_files/") File("RUBIKS_CUBE_DISPLAY_INPUT.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/") File("RUBIKS_CUBE_DISPLAY_INPUT.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
