@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for RUBIKS_CUBE_DISPLAY_INPUT
-Thu Feb 13 22:19:43 2025
+Tue Feb 18 01:11:50 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -94,15 +94,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.87        ;
+; Average used               ; 1.83        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.0%      ;
-;     Processor 3            ;  12.5%      ;
-;     Processor 4            ;  12.4%      ;
-;     Processors 5-8         ;  12.3%      ;
+;     Processor 2            ;  12.1%      ;
+;     Processor 3            ;  11.8%      ;
+;     Processor 4            ;  11.8%      ;
+;     Processors 5-8         ;  11.8%      ;
 +----------------------------+-------------+
 
 
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                              ; Status ; Read at                  ;
 +----------------------------------------------------------------------------+--------+--------------------------+
-; output_files/output_files/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Thu Feb 13 22:19:41 2025 ;
+; output_files/output_files/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Tue Feb 18 01:11:48 2025 ;
 +----------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -125,7 +125,6 @@ refer to the applicable agreement for further details.
 ; c_PCLK                                                             ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { c_PCLK }                                                             ;
 ; MAX10_CLK1_50                                                      ; Base      ; 20.000   ; 50.0 MHz   ; 0.000   ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { MAX10_CLK1_50 }                                                      ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock } ;
-; OV7670_Cam:cam|w_en                                                ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { OV7670_Cam:cam|w_en }                                                ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; Generated ; 10.000   ; 100.0 MHz  ; 0.000   ; 5.000   ; 50.00      ; 1         ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] }               ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; Generated ; 1000.000 ; 1.0 MHz    ; 0.000   ; 500.000 ; 50.00      ; 50        ; 1           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[1] }               ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; Generated ; 1250.000 ; 0.8 MHz    ; 0.000   ; 625.000 ; 50.00      ; 125       ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[2] }               ;
@@ -138,14 +137,14 @@ refer to the applicable agreement for further details.
 +-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name                                                         ; Note                                                          ;
 +-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; 84.95 MHz   ; 84.95 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
-; 140.9 MHz   ; 140.9 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
-; 150.35 MHz  ; 150.35 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
-; 155.47 MHz  ; 155.47 MHz      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
-; 172.65 MHz  ; 172.65 MHz      ; c_PCLK                                                             ;                                                               ;
-; 254.07 MHz  ; 254.07 MHz      ; ASYNC_FIFO:fifo|d_available                                        ;                                                               ;
-; 405.84 MHz  ; 250.0 MHz       ; MAX10_CLK1_50                                                      ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 1333.33 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 108.96 MHz  ; 108.96 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
+; 145.82 MHz  ; 145.82 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
+; 162.42 MHz  ; 162.42 MHz      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
+; 167.84 MHz  ; 167.84 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
+; 169.2 MHz   ; 169.2 MHz       ; MAX10_CLK1_50                                                      ;                                                               ;
+; 186.78 MHz  ; 186.78 MHz      ; c_PCLK                                                             ;                                                               ;
+; 271.22 MHz  ; 271.22 MHz      ; ASYNC_FIFO:fifo|d_available                                        ;                                                               ;
+; 1517.45 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -155,16 +154,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -11.792 ; -92.708       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -7.265  ; -59.721       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -5.432  ; -164.022      ;
-; c_PCLK                                                             ; -4.792  ; -234.374      ;
-; ASYNC_FIFO:fifo|d_available                                        ; -2.936  ; -64.771       ;
-; OV7670_Cam:cam|w_en                                                ; -1.040  ; -14.324       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -1.009  ; -1.009        ;
-; c_HREF                                                             ; 0.250   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 17.536  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 988.228 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -12.957 ; -108.799      ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -7.221  ; -59.328       ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -5.157  ; -153.998      ;
+; c_PCLK                                                             ; -4.354  ; -106.379      ;
+; ASYNC_FIFO:fifo|d_available                                        ; -2.687  ; -62.035       ;
+; MAX10_CLK1_50                                                      ; -1.965  ; -62.185       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.957  ; -0.957        ;
+; c_HREF                                                             ; 0.341   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 990.822 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
@@ -173,16 +171,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+-------+---------------+
 ; Clock                                                              ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------+-------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 0.080 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 0.219 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 0.324 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 0.026 ; 0.000         ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 0.324 ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.326 ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 0.328 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 0.324 ; 0.000         ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.325 ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 0.326 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 0.326 ; 0.000         ;
 ; c_PCLK                                                             ; 0.359 ; 0.000         ;
 ; c_HREF                                                             ; 0.371 ; 0.000         ;
-; ASYNC_FIFO:fifo|d_available                                        ; 0.386 ; 0.000         ;
-; OV7670_Cam:cam|w_en                                                ; 1.006 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                                        ; 0.395 ; 0.000         ;
 +--------------------------------------------------------------------+-------+---------------+
 
 
@@ -191,23 +188,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; ASYNC_FIFO:fifo|d_available                          ; -1.242   ; -30.003       ;
-; OV7670_Cam:cam|w_en                                  ; 0.061    ; 0.000         ;
-; MAX10_CLK1_50                                        ; 18.086   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.632 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; -4.932   ; -166.892      ;
+; c_PCLK                                               ; -1.473   ; -2.946        ;
+; MAX10_CLK1_50                                        ; 18.022   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.520 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Removal Summary                                         ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; OV7670_Cam:cam|w_en                                  ; -1.242 ; -21.084       ;
-; ASYNC_FIFO:fifo|d_available                          ; 0.724  ; 0.000         ;
-; MAX10_CLK1_50                                        ; 0.849  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.262  ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                                        ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.915 ; 0.000         ;
+; c_PCLK                                               ; 1.146 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.451 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; 2.631 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -215,39 +212,44 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                             ; -3.000  ; -66.544       ;
-; c_HREF                                                             ; -3.000  ; -5.444        ;
+; c_PCLK                                                             ; -3.000  ; -37.216       ;
+; c_HREF                                                             ; -3.000  ; -4.222        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -1.222  ; -56.212       ;
 ; ASYNC_FIFO:fifo|d_available                                        ; -1.222  ; -41.548       ;
-; OV7670_Cam:cam|w_en                                                ; -1.222  ; -20.774       ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4.726   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 9.409   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.718 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.725 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.728 ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 9.404   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.717 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.726 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.727 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 7
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 16.620 ns
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                                                 ;
-+------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                                         ; Note                                                          ;
-+------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; 93.7 MHz   ; 93.7 MHz        ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
-; 156.08 MHz ; 156.08 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
-; 164.99 MHz ; 164.99 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
-; 169.12 MHz ; 169.12 MHz      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
-; 189.75 MHz ; 189.75 MHz      ; c_PCLK                                                             ;                                                               ;
-; 279.88 MHz ; 279.88 MHz      ; ASYNC_FIFO:fifo|d_available                                        ;                                                               ;
-; 449.03 MHz ; 250.0 MHz       ; MAX10_CLK1_50                                                      ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 1455.6 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                                                  ;
++-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                                         ; Note                                                          ;
++-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
+; 119.96 MHz  ; 119.96 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
+; 160.31 MHz  ; 160.31 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
+; 179.24 MHz  ; 179.24 MHz      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
+; 183.72 MHz  ; 183.72 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
+; 185.36 MHz  ; 185.36 MHz      ; MAX10_CLK1_50                                                      ;                                                               ;
+; 207.43 MHz  ; 207.43 MHz      ; c_PCLK                                                             ;                                                               ;
+; 299.04 MHz  ; 299.04 MHz      ; ASYNC_FIFO:fifo|d_available                                        ;                                                               ;
+; 1658.37 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -256,16 +258,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -10.147 ; -79.776       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -6.105  ; -49.615       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -4.913  ; -147.966      ;
-; c_PCLK                                                             ; -4.270  ; -209.358      ;
-; ASYNC_FIFO:fifo|d_available                                        ; -2.573  ; -55.662       ;
-; OV7670_Cam:cam|w_en                                                ; -0.894  ; -12.379       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.435  ; -0.435        ;
-; c_HREF                                                             ; 0.313   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 17.773  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 989.328 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -11.279 ; -92.860       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -6.012  ; -49.114       ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -4.801  ; -138.619      ;
+; c_PCLK                                                             ; -3.879  ; -94.890       ;
+; ASYNC_FIFO:fifo|d_available                                        ; -2.344  ; -53.129       ;
+; MAX10_CLK1_50                                                      ; -1.664  ; -51.905       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.381  ; -0.381        ;
+; c_HREF                                                             ; 0.397   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 991.664 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
@@ -274,16 +275,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.355 ; -0.355        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -0.253 ; -0.302        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 0.126  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.411 ; -0.411        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -0.164 ; -0.376        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -0.075 ; -0.075        ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.294  ; 0.000         ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 0.294  ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.296  ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 0.298  ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 0.296  ; 0.000         ;
 ; c_PCLK                                                             ; 0.325  ; 0.000         ;
-; c_HREF                                                             ; 0.338  ; 0.000         ;
-; ASYNC_FIFO:fifo|d_available                                        ; 0.355  ; 0.000         ;
-; OV7670_Cam:cam|w_en                                                ; 1.019  ; 0.000         ;
+; c_HREF                                                             ; 0.337  ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                                        ; 0.364  ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -292,23 +292,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; ASYNC_FIFO:fifo|d_available                          ; -1.065   ; -24.993       ;
-; OV7670_Cam:cam|w_en                                  ; -0.280   ; -4.732        ;
-; MAX10_CLK1_50                                        ; 18.360   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.840 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; -4.706   ; -159.169      ;
+; c_PCLK                                               ; -1.240   ; -2.480        ;
+; MAX10_CLK1_50                                        ; 18.299   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.750 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Removal Summary                                          ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; OV7670_Cam:cam|w_en                                  ; -0.813 ; -13.813       ;
-; ASYNC_FIFO:fifo|d_available                          ; 0.681  ; 0.000         ;
-; MAX10_CLK1_50                                        ; 0.731  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.166  ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary                                         ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.804 ; 0.000         ;
+; c_PCLK                                               ; 1.060 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.354 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; 2.445 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -316,23 +316,28 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                             ; -3.000  ; -66.544       ;
-; c_HREF                                                             ; -3.000  ; -5.444        ;
+; c_PCLK                                                             ; -3.000  ; -37.216       ;
+; c_HREF                                                             ; -3.000  ; -4.222        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -1.222  ; -56.212       ;
 ; ASYNC_FIFO:fifo|d_available                                        ; -1.222  ; -41.548       ;
-; OV7670_Cam:cam|w_en                                                ; -1.222  ; -20.774       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4.714   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 9.519   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.705 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.713 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.717 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4.711   ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 9.459   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.708 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.712 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.712 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 7
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 16.920 ns
+
+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -340,16 +345,15 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -5.304  ; -41.516       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -3.039  ; -24.983       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -2.325  ; -60.590       ;
-; c_PCLK                                                             ; -2.062  ; -98.532       ;
-; ASYNC_FIFO:fifo|d_available                                        ; -0.902  ; -15.159       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.403  ; -0.403        ;
-; OV7670_Cam:cam|w_en                                                ; 0.090   ; 0.000         ;
-; c_HREF                                                             ; 0.659   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 18.803  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 994.129 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -5.807  ; -48.245       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -3.107  ; -24.935       ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -2.340  ; -56.959       ;
+; c_PCLK                                                             ; -1.992  ; -47.457       ;
+; MAX10_CLK1_50                                                      ; -0.884  ; -20.082       ;
+; ASYNC_FIFO:fifo|d_available                                        ; -0.784  ; -14.546       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.366  ; -0.366        ;
+; c_HREF                                                             ; 0.693   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 995.554 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
@@ -358,16 +362,15 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -0.075 ; -0.075        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 0.043  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 0.099  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 0.148  ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.150  ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 0.151  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -0.039 ; -0.081        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -0.001 ; -0.001        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 0.004  ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 0.111  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 0.147  ; 0.000         ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 0.148  ; 0.000         ;
 ; c_PCLK                                                             ; 0.166  ; 0.000         ;
-; c_HREF                                                             ; 0.170  ; 0.000         ;
-; ASYNC_FIFO:fifo|d_available                                        ; 0.176  ; 0.000         ;
-; OV7670_Cam:cam|w_en                                                ; 0.211  ; 0.000         ;
+; c_HREF                                                             ; 0.169  ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                                        ; 0.180  ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -376,23 +379,23 @@ No synchronizer chains to report.
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; ASYNC_FIFO:fifo|d_available                          ; -0.066   ; -0.594        ;
-; OV7670_Cam:cam|w_en                                  ; 0.341    ; 0.000         ;
-; MAX10_CLK1_50                                        ; 18.733   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1248.781 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; -2.378   ; -80.353       ;
+; c_PCLK                                               ; -0.994   ; -1.988        ;
+; MAX10_CLK1_50                                        ; 18.727   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1248.726 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Removal Summary                                          ;
-+------------------------------------------------------+--------+---------------+
-; Clock                                                ; Slack  ; End Point TNS ;
-+------------------------------------------------------+--------+---------------+
-; OV7670_Cam:cam|w_en                                  ; -0.629 ; -10.685       ;
-; ASYNC_FIFO:fifo|d_available                          ; 0.283  ; 0.000         ;
-; MAX10_CLK1_50                                        ; 0.532  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.587  ; 0.000         ;
-+------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary                                         ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.549 ; 0.000         ;
+; c_PCLK                                               ; 0.576 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.685 ; 0.000         ;
+; ASYNC_FIFO:fifo|d_available                          ; 1.231 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -400,23 +403,28 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                             ; -3.000  ; -71.922       ;
-; c_HREF                                                             ; -3.000  ; -5.482        ;
+; c_PCLK                                                             ; -3.000  ; -38.852       ;
+; c_HREF                                                             ; -3.000  ; -4.259        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -1.000  ; -46.000       ;
 ; ASYNC_FIFO:fifo|d_available                                        ; -1.000  ; -34.000       ;
-; OV7670_Cam:cam|w_en                                                ; -1.000  ; -17.000       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4.779   ; 0.000         ;
-; MAX10_CLK1_50                                                      ; 9.108   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.749 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.780 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.783 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4.767   ; 0.000         ;
+; MAX10_CLK1_50                                                      ; 9.116   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 499.755 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 624.755 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 624.779 ; 0.000         ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 7
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 18.361 ns
+
+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -424,28 +432,26 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                                               ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                    ; -11.792  ; -0.355 ; -1.242   ; -1.242  ; -3.000              ;
-;  ASYNC_FIFO:fifo|d_available                                        ; -2.936   ; 0.176  ; -1.242   ; 0.283   ; -1.222              ;
-;  MAX10_CLK1_50                                                      ; 17.536   ; 0.151  ; 18.086   ; 0.532   ; 9.108               ;
-;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -5.432   ; 0.150  ; N/A      ; N/A     ; -1.222              ;
-;  OV7670_Cam:cam|w_en                                                ; -1.040   ; 0.211  ; -0.280   ; -1.242  ; -1.222              ;
-;  c_HREF                                                             ; 0.250    ; 0.170  ; N/A      ; N/A     ; -3.000              ;
-;  c_PCLK                                                             ; -4.792   ; 0.166  ; N/A      ; N/A     ; -3.000              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -11.792  ; 0.099  ; N/A      ; N/A     ; 4.714               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 988.228  ; 0.148  ; N/A      ; N/A     ; 499.705             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -7.265   ; -0.253 ; 1247.632 ; 0.587   ; 624.713             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -1.009   ; -0.355 ; N/A      ; N/A     ; 624.717             ;
-; Design-wide TNS                                                     ; -630.929 ; -0.657 ; -30.003  ; -21.084 ; -190.522            ;
-;  ASYNC_FIFO:fifo|d_available                                        ; -64.771  ; 0.000  ; -30.003  ; 0.000   ; -41.548             ;
-;  MAX10_CLK1_50                                                      ; 0.000    ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
-;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -164.022 ; 0.000  ; N/A      ; N/A     ; -56.212             ;
-;  OV7670_Cam:cam|w_en                                                ; -14.324  ; 0.000  ; -4.732   ; -21.084 ; -20.774             ;
-;  c_HREF                                                             ; 0.000    ; 0.000  ; N/A      ; N/A     ; -5.482              ;
-;  c_PCLK                                                             ; -234.374 ; 0.000  ; N/A      ; N/A     ; -71.922             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -92.708  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+; Worst-case Slack                                                    ; -12.957  ; -0.411 ; -4.932   ; 0.549   ; -3.000              ;
+;  ASYNC_FIFO:fifo|d_available                                        ; -2.687   ; 0.180  ; -4.932   ; 1.231   ; -1.222              ;
+;  MAX10_CLK1_50                                                      ; -1.965   ; 0.111  ; 18.022   ; 0.549   ; 9.116               ;
+;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -5.157   ; 0.148  ; N/A      ; N/A     ; -1.222              ;
+;  c_HREF                                                             ; 0.341    ; 0.169  ; N/A      ; N/A     ; -3.000              ;
+;  c_PCLK                                                             ; -4.354   ; 0.166  ; -1.473   ; 0.576   ; -3.000              ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -12.957  ; -0.075 ; N/A      ; N/A     ; 4.711               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 990.822  ; 0.147  ; N/A      ; N/A     ; 499.708             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -7.221   ; -0.164 ; 1247.520 ; 0.685   ; 624.712             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.957   ; -0.411 ; N/A      ; N/A     ; 624.712             ;
+; Design-wide TNS                                                     ; -553.681 ; -0.862 ; -169.838 ; 0.0     ; -139.198            ;
+;  ASYNC_FIFO:fifo|d_available                                        ; -62.035  ; 0.000  ; -166.892 ; 0.000   ; -41.548             ;
+;  MAX10_CLK1_50                                                      ; -62.185  ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
+;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; -153.998 ; 0.000  ; N/A      ; N/A     ; -56.212             ;
+;  c_HREF                                                             ; 0.000    ; 0.000  ; N/A      ; N/A     ; -4.259              ;
+;  c_PCLK                                                             ; -106.379 ; 0.000  ; -2.946   ; 0.000   ; -38.852             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; -108.799 ; -0.075 ; N/A      ; N/A     ; 0.000               ;
 ;  pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 0.000    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -59.721  ; -0.302 ; 0.000    ; 0.000   ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -1.009   ; -0.355 ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; -59.328  ; -0.376 ; 0.000    ; 0.000   ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; -0.957   ; -0.411 ; N/A      ; N/A     ; 0.000               ;
 +---------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -482,7 +488,6 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; c_VSYNC             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; c_SDATA             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; switches[5]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; switches[0]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -496,6 +501,7 @@ No synchronizer chains to report.
 ; switches[6]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; rst_n               ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; MAX10_CLK1_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; c_VSYNC             ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; t_irq               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; c_PCLK              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; c_HREF              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -608,21 +614,21 @@ No synchronizer chains to report.
 ; From Clock                                                         ; To Clock                                                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+----------+----------+----------+----------+
 ; ASYNC_FIFO:fifo|d_available                                        ; ASYNC_FIFO:fifo|d_available                                        ; 880      ; 0        ; 0        ; 0        ;
-; c_HREF                                                             ; c_HREF                                                             ; 4        ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                                        ; c_PCLK                                                             ; 17       ; 17       ; 0        ; 0        ;
-; c_HREF                                                             ; c_PCLK                                                             ; 140      ; 60       ; 0        ; 0        ;
-; c_PCLK                                                             ; c_PCLK                                                             ; 771      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; c_PCLK                                                             ; 60       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                                      ; MAX10_CLK1_50                                                      ; 265      ; 0        ; 0        ; 0        ;
+; c_HREF                                                             ; c_HREF                                                             ; 0        ; 0        ; 0        ; 1        ;
+; c_HREF                                                             ; c_PCLK                                                             ; 27       ; 53       ; 0        ; 0        ;
+; c_PCLK                                                             ; c_PCLK                                                             ; 90       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; c_PCLK                                                             ; 26       ; 0        ; 0        ; 0        ;
+; ASYNC_FIFO:fifo|d_available                                        ; MAX10_CLK1_50                                                      ; 34       ; 34       ; 0        ; 0        ;
+; c_PCLK                                                             ; MAX10_CLK1_50                                                      ; 36       ; 0        ; 0        ; 0        ;
+; MAX10_CLK1_50                                                      ; MAX10_CLK1_50                                                      ; 932      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; MAX10_CLK1_50                                                      ; 4        ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 1484     ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 38       ; 0        ; 0        ; 0        ;
-; c_PCLK                                                             ; OV7670_Cam:cam|w_en                                                ; 16       ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 45889    ; 10       ; 0        ; 0        ;
-; MAX10_CLK1_50                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4        ; 0        ; 0        ; 0        ;
-; OV7670_Cam:cam|w_en                                                ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 16       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 2631     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 1955     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 15528    ; 0        ; 0        ; 0        ;
+; ASYNC_FIFO:fifo|d_available                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 38014    ; 13       ; 0        ; 0        ;
+; MAX10_CLK1_50                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 20       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 2517     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 1663     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 14982    ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 247      ; 6        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 3617     ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 1        ; 1        ; 0        ; 0        ;
@@ -636,21 +642,21 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                                         ; To Clock                                                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+----------+----------+----------+----------+
 ; ASYNC_FIFO:fifo|d_available                                        ; ASYNC_FIFO:fifo|d_available                                        ; 880      ; 0        ; 0        ; 0        ;
-; c_HREF                                                             ; c_HREF                                                             ; 4        ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                                        ; c_PCLK                                                             ; 17       ; 17       ; 0        ; 0        ;
-; c_HREF                                                             ; c_PCLK                                                             ; 140      ; 60       ; 0        ; 0        ;
-; c_PCLK                                                             ; c_PCLK                                                             ; 771      ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; c_PCLK                                                             ; 60       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                                      ; MAX10_CLK1_50                                                      ; 265      ; 0        ; 0        ; 0        ;
+; c_HREF                                                             ; c_HREF                                                             ; 0        ; 0        ; 0        ; 1        ;
+; c_HREF                                                             ; c_PCLK                                                             ; 27       ; 53       ; 0        ; 0        ;
+; c_PCLK                                                             ; c_PCLK                                                             ; 90       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; c_PCLK                                                             ; 26       ; 0        ; 0        ; 0        ;
+; ASYNC_FIFO:fifo|d_available                                        ; MAX10_CLK1_50                                                      ; 34       ; 34       ; 0        ; 0        ;
+; c_PCLK                                                             ; MAX10_CLK1_50                                                      ; 36       ; 0        ; 0        ; 0        ;
+; MAX10_CLK1_50                                                      ; MAX10_CLK1_50                                                      ; 932      ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; MAX10_CLK1_50                                                      ; 4        ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 1484     ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; 38       ; 0        ; 0        ; 0        ;
-; c_PCLK                                                             ; OV7670_Cam:cam|w_en                                                ; 16       ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 45889    ; 10       ; 0        ; 0        ;
-; MAX10_CLK1_50                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 4        ; 0        ; 0        ; 0        ;
-; OV7670_Cam:cam|w_en                                                ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 16       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 2631     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 1955     ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 15528    ; 0        ; 0        ; 0        ;
+; ASYNC_FIFO:fifo|d_available                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 38014    ; 13       ; 0        ; 0        ;
+; MAX10_CLK1_50                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 20       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 2517     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; 1663     ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ; 14982    ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 247      ; 6        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ; 3617     ; 0        ; 0        ; 0        ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; pll_inst|altpll_component|auto_generated|pll1|clk[3]               ; 1        ; 1        ; 0        ; 0        ;
@@ -664,10 +670,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 ; MAX10_CLK1_50                                        ; ASYNC_FIFO:fifo|d_available                          ; 68       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; ASYNC_FIFO:fifo|d_available                          ; 34       ; 0        ; 0        ; 0        ;
+; c_HREF                                               ; c_PCLK                                               ; 2        ; 2        ; 0        ; 0        ;
 ; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 10       ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                          ; OV7670_Cam:cam|w_en                                  ; 17       ; 17       ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; OV7670_Cam:cam|w_en                                  ; 17       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; OV7670_Cam:cam|w_en                                  ; 17       ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 56       ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -679,10 +684,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 ; MAX10_CLK1_50                                        ; ASYNC_FIFO:fifo|d_available                          ; 68       ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; ASYNC_FIFO:fifo|d_available                          ; 34       ; 0        ; 0        ; 0        ;
+; c_HREF                                               ; c_PCLK                                               ; 2        ; 2        ; 0        ; 0        ;
 ; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 10       ; 0        ; 0        ; 0        ;
-; ASYNC_FIFO:fifo|d_available                          ; OV7670_Cam:cam|w_en                                  ; 17       ; 17       ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; OV7670_Cam:cam|w_en                                  ; 17       ; 0        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; OV7670_Cam:cam|w_en                                  ; 17       ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 56       ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -707,8 +711,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 21    ; 21   ;
-; Unconstrained Input Port Paths  ; 236   ; 236  ;
+; Unconstrained Input Ports       ; 22    ; 22   ;
+; Unconstrained Input Port Paths  ; 264   ; 264  ;
 ; Unconstrained Output Ports      ; 18    ; 18   ;
 ; Unconstrained Output Port Paths ; 56    ; 56   ;
 +---------------------------------+-------+------+
@@ -722,7 +726,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ASYNC_FIFO:fifo|d_available                                        ; ASYNC_FIFO:fifo|d_available                                        ; Base      ; Constrained ;
 ; MAX10_CLK1_50                                                      ; MAX10_CLK1_50                                                      ; Base      ; Constrained ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ; Base      ; Constrained ;
-; OV7670_Cam:cam|w_en                                                ; OV7670_Cam:cam|w_en                                                ; Base      ; Constrained ;
 ; c_HREF                                                             ; c_HREF                                                             ; Base      ; Constrained ;
 ; c_PCLK                                                             ; c_PCLK                                                             ; Base      ; Constrained ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ; Generated ; Constrained ;
@@ -745,6 +748,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_DOUT[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_VSYNC     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -800,6 +804,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_DOUT[5]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[6]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[7]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_VSYNC     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -848,7 +853,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Feb 13 22:19:39 2025
+    Info: Processing started: Tue Feb 18 01:11:46 2025
 Info: Command: quartus_sta RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -866,189 +871,200 @@ Info (332110): Deriving PLL clocks
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock
-    Info (332105): create_clock -period 1.000 -name ASYNC_FIFO:fifo|d_available ASYNC_FIFO:fifo|d_available
-    Info (332105): create_clock -period 1.000 -name OV7670_Cam:cam|w_en OV7670_Cam:cam|w_en
     Info (332105): create_clock -period 1.000 -name c_PCLK c_PCLK
     Info (332105): create_clock -period 1.000 -name c_HREF c_HREF
+    Info (332105): create_clock -period 1.000 -name ASYNC_FIFO:fifo|d_available ASYNC_FIFO:fifo|d_available
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -11.792
+Info (332146): Worst-case setup slack is -12.957
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.792             -92.708 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -7.265             -59.721 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -5.432            -164.022 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -4.792            -234.374 c_PCLK 
-    Info (332119):    -2.936             -64.771 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -1.040             -14.324 OV7670_Cam:cam|w_en 
-    Info (332119):    -1.009              -1.009 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.250               0.000 c_HREF 
-    Info (332119):    17.536               0.000 MAX10_CLK1_50 
-    Info (332119):   988.228               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is 0.080
+    Info (332119):   -12.957            -108.799 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -7.221             -59.328 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):    -5.157            -153.998 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
+    Info (332119):    -4.354            -106.379 c_PCLK 
+    Info (332119):    -2.687             -62.035 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -1.965             -62.185 MAX10_CLK1_50 
+    Info (332119):    -0.957              -0.957 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     0.341               0.000 c_HREF 
+    Info (332119):   990.822               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case hold slack is 0.026
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.080               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.219               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.324               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.026               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
     Info (332119):     0.324               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.326               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.328               0.000 MAX10_CLK1_50 
+    Info (332119):     0.324               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.325               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
+    Info (332119):     0.326               0.000 MAX10_CLK1_50 
+    Info (332119):     0.326               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     0.359               0.000 c_PCLK 
     Info (332119):     0.371               0.000 c_HREF 
-    Info (332119):     0.386               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     1.006               0.000 OV7670_Cam:cam|w_en 
-Info (332146): Worst-case recovery slack is -1.242
+    Info (332119):     0.395               0.000 ASYNC_FIFO:fifo|d_available 
+Info (332146): Worst-case recovery slack is -4.932
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.242             -30.003 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.061               0.000 OV7670_Cam:cam|w_en 
-    Info (332119):    18.086               0.000 MAX10_CLK1_50 
-    Info (332119):  1247.632               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is -1.242
+    Info (332119):    -4.932            -166.892 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -1.473              -2.946 c_PCLK 
+    Info (332119):    18.022               0.000 MAX10_CLK1_50 
+    Info (332119):  1247.520               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.915
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.242             -21.084 OV7670_Cam:cam|w_en 
-    Info (332119):     0.724               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.849               0.000 MAX10_CLK1_50 
-    Info (332119):     1.262               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.915               0.000 MAX10_CLK1_50 
+    Info (332119):     1.146               0.000 c_PCLK 
+    Info (332119):     1.451               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     2.631               0.000 ASYNC_FIFO:fifo|d_available 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -66.544 c_PCLK 
-    Info (332119):    -3.000              -5.444 c_HREF 
+    Info (332119):    -3.000             -37.216 c_PCLK 
+    Info (332119):    -3.000              -4.222 c_HREF 
     Info (332119):    -1.222             -56.212 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
     Info (332119):    -1.222             -41.548 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -1.222             -20.774 OV7670_Cam:cam|w_en 
     Info (332119):     4.726               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     9.409               0.000 MAX10_CLK1_50 
-    Info (332119):   499.718               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):   624.725               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.728               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     9.404               0.000 MAX10_CLK1_50 
+    Info (332119):   499.717               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):   624.726               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):   624.727               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332114): Report Metastability: Found 7 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 7
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 16.620 ns
+    Info (332114): 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.147
+Info (332146): Worst-case setup slack is -11.279
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.147             -79.776 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -6.105             -49.615 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -4.913            -147.966 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -4.270            -209.358 c_PCLK 
-    Info (332119):    -2.573             -55.662 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -0.894             -12.379 OV7670_Cam:cam|w_en 
-    Info (332119):    -0.435              -0.435 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.313               0.000 c_HREF 
-    Info (332119):    17.773               0.000 MAX10_CLK1_50 
-    Info (332119):   989.328               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is -0.355
+    Info (332119):   -11.279             -92.860 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -6.012             -49.114 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):    -4.801            -138.619 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
+    Info (332119):    -3.879             -94.890 c_PCLK 
+    Info (332119):    -2.344             -53.129 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -1.664             -51.905 MAX10_CLK1_50 
+    Info (332119):    -0.381              -0.381 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     0.397               0.000 c_HREF 
+    Info (332119):   991.664               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case hold slack is -0.411
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.355              -0.355 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):    -0.253              -0.302 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.126               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -0.411              -0.411 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):    -0.164              -0.376 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):    -0.075              -0.075 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.294               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
     Info (332119):     0.294               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.296               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.298               0.000 MAX10_CLK1_50 
+    Info (332119):     0.296               0.000 MAX10_CLK1_50 
     Info (332119):     0.325               0.000 c_PCLK 
-    Info (332119):     0.338               0.000 c_HREF 
-    Info (332119):     0.355               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     1.019               0.000 OV7670_Cam:cam|w_en 
-Info (332146): Worst-case recovery slack is -1.065
+    Info (332119):     0.337               0.000 c_HREF 
+    Info (332119):     0.364               0.000 ASYNC_FIFO:fifo|d_available 
+Info (332146): Worst-case recovery slack is -4.706
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.065             -24.993 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -0.280              -4.732 OV7670_Cam:cam|w_en 
-    Info (332119):    18.360               0.000 MAX10_CLK1_50 
-    Info (332119):  1247.840               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is -0.813
+    Info (332119):    -4.706            -159.169 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -1.240              -2.480 c_PCLK 
+    Info (332119):    18.299               0.000 MAX10_CLK1_50 
+    Info (332119):  1247.750               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.804
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.813             -13.813 OV7670_Cam:cam|w_en 
-    Info (332119):     0.681               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.731               0.000 MAX10_CLK1_50 
-    Info (332119):     1.166               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.804               0.000 MAX10_CLK1_50 
+    Info (332119):     1.060               0.000 c_PCLK 
+    Info (332119):     1.354               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     2.445               0.000 ASYNC_FIFO:fifo|d_available 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -66.544 c_PCLK 
-    Info (332119):    -3.000              -5.444 c_HREF 
+    Info (332119):    -3.000             -37.216 c_PCLK 
+    Info (332119):    -3.000              -4.222 c_HREF 
     Info (332119):    -1.222             -56.212 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
     Info (332119):    -1.222             -41.548 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -1.222             -20.774 OV7670_Cam:cam|w_en 
-    Info (332119):     4.714               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     9.519               0.000 MAX10_CLK1_50 
-    Info (332119):   499.705               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):   624.713               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.717               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     4.711               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.459               0.000 MAX10_CLK1_50 
+    Info (332119):   499.708               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):   624.712               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):   624.712               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332114): Report Metastability: Found 7 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 7
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 16.920 ns
+    Info (332114): 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.304
+Info (332146): Worst-case setup slack is -5.807
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.304             -41.516 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -3.039             -24.983 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -2.325             -60.590 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -2.062             -98.532 c_PCLK 
-    Info (332119):    -0.902             -15.159 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -0.403              -0.403 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.090               0.000 OV7670_Cam:cam|w_en 
-    Info (332119):     0.659               0.000 c_HREF 
-    Info (332119):    18.803               0.000 MAX10_CLK1_50 
-    Info (332119):   994.129               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is -0.075
+    Info (332119):    -5.807             -48.245 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -3.107             -24.935 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):    -2.340             -56.959 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
+    Info (332119):    -1.992             -47.457 c_PCLK 
+    Info (332119):    -0.884             -20.082 MAX10_CLK1_50 
+    Info (332119):    -0.784             -14.546 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -0.366              -0.366 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     0.693               0.000 c_HREF 
+    Info (332119):   995.554               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+Info (332146): Worst-case hold slack is -0.039
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.075              -0.075 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.043               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.099               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.148               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.150               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.151               0.000 MAX10_CLK1_50 
+    Info (332119):    -0.039              -0.081 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):    -0.001              -0.001 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.004               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     0.111               0.000 MAX10_CLK1_50 
+    Info (332119):     0.147               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.148               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
     Info (332119):     0.166               0.000 c_PCLK 
-    Info (332119):     0.170               0.000 c_HREF 
-    Info (332119):     0.176               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.211               0.000 OV7670_Cam:cam|w_en 
-Info (332146): Worst-case recovery slack is -0.066
+    Info (332119):     0.169               0.000 c_HREF 
+    Info (332119):     0.180               0.000 ASYNC_FIFO:fifo|d_available 
+Info (332146): Worst-case recovery slack is -2.378
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.066              -0.594 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.341               0.000 OV7670_Cam:cam|w_en 
-    Info (332119):    18.733               0.000 MAX10_CLK1_50 
-    Info (332119):  1248.781               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is -0.629
+    Info (332119):    -2.378             -80.353 ASYNC_FIFO:fifo|d_available 
+    Info (332119):    -0.994              -1.988 c_PCLK 
+    Info (332119):    18.727               0.000 MAX10_CLK1_50 
+    Info (332119):  1248.726               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.549
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.629             -10.685 OV7670_Cam:cam|w_en 
-    Info (332119):     0.283               0.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):     0.532               0.000 MAX10_CLK1_50 
-    Info (332119):     0.587               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.549               0.000 MAX10_CLK1_50 
+    Info (332119):     0.576               0.000 c_PCLK 
+    Info (332119):     0.685               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     1.231               0.000 ASYNC_FIFO:fifo|d_available 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -71.922 c_PCLK 
-    Info (332119):    -3.000              -5.482 c_HREF 
+    Info (332119):    -3.000             -38.852 c_PCLK 
+    Info (332119):    -3.000              -4.259 c_HREF 
     Info (332119):    -1.000             -46.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
     Info (332119):    -1.000             -34.000 ASYNC_FIFO:fifo|d_available 
-    Info (332119):    -1.000             -17.000 OV7670_Cam:cam|w_en 
-    Info (332119):     4.779               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     9.108               0.000 MAX10_CLK1_50 
-    Info (332119):   499.749               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):   624.780               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.783               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):     4.767               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.116               0.000 MAX10_CLK1_50 
+    Info (332119):   499.755               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):   624.755               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):   624.779               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332114): Report Metastability: Found 7 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 7
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 18.361 ns
+    Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Thu Feb 13 22:19:43 2025
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Tue Feb 18 01:11:50 2025
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 

@@ -124,6 +124,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "c_VSYNC",
+					"strict" : false
+				},
+				{
 					"name" : "t_irq",
 					"strict" : false
 				},

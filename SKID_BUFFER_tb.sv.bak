@@ -1,0 +1,6 @@
+`timescale 1ns/100ps
+module SKID_BUFFER_tb;
+
+
+
+endmodule

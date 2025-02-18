@@ -75,7 +75,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ASYNC_FIFO_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH SKID_BUFFER_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME SQUARE_TOUCH_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SQUARE_TOUCH_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SQUARE_TOUCH_tb -section_id SQUARE_TOUCH_tb
@@ -154,16 +154,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE OV7670_INIT_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE OV7670_Cam.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_tb.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE SQUARE_TOUCH_tb.sv -section_id SQUARE_TOUCH_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE TOUCH_SPI_MASTER_tb.sv -section_id TOUCH_SPI_MASTER_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE STEP_CONVERSION_tb.sv -section_id STEP_CONVERSION_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME ASYNC_FIFO_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ASYNC_FIFO_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ASYNC_FIFO_tb -section_id ASYNC_FIFO_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ASYNC_FIFO_tb.sv -section_id ASYNC_FIFO_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_V5 -to c_DOUT[7]
 set_location_assignment PIN_W6 -to c_DOUT[6]
 set_location_assignment PIN_W7 -to c_DOUT[5]
@@ -198,4 +191,20 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[7]
 set_global_assignment -name SYSTEMVERILOG_FILE SWITCH_DEBOUNCE.sv
 set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE COORDINATE_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE SQUARE_TOUCH_tb.sv -section_id SQUARE_TOUCH_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE TOUCH_SPI_MASTER_tb.sv -section_id TOUCH_SPI_MASTER_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE STEP_CONVERSION_tb.sv -section_id STEP_CONVERSION_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ASYNC_FIFO_tb.sv -section_id ASYNC_FIFO_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME SKID_BUFFER_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SKID_BUFFER_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SKID_BUFFER_tb -section_id SKID_BUFFER_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE SKID_BUFFER_tb.sv -section_id SKID_BUFFER_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE_NOISY.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_FULL_FRAME.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

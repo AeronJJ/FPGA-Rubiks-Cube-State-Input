@@ -73,6 +73,7 @@ wire clk_1MHz;
 wire clk_800KHz;
 wire clk_800KHz_30;
 wire clk_25MHz;
+wire clk_13MHz;
 wire clk_200MHz;
 
 /*pll	pll_inst (
@@ -91,48 +92,27 @@ pll	pll_inst (
 	);
 
 assign clk_25MHz = internal_xclk;
+assign clk_13MHz = internal_13clk;
+
 reg internal_xclk = 1'b0;
+reg internal_13clk = 1'b0;
 always @ (posedge MAX10_CLK1_50) begin
 	internal_xclk = ~internal_xclk;
 end
 
-reg[16:0] bufferIndex = 17'd0;
-wire incBuffer;
-
-reg[8:0] x = 9'b0; // Current pixel position
-reg[7:0] y = 8'b0;
-
-always_ff @ (posedge incBuffer or posedge rst_lcd_mem_addr) begin
-	if (rst_lcd_mem_addr) begin
-		bufferIndex <= 17'b0;
-		x <= 9'b0;
-		y <= 8'b0;
-	end
-	else if (bufferIndex == 76799) begin
-		bufferIndex <= 17'b0;
-		x <= 9'b0;
-		y <= 8'b0;
-	end
-	else begin
-		bufferIndex <= bufferIndex + 1'b1;
-		if (y == 239) begin
-			y <= 8'b0;
-			x <= x + 1'b1;
-		end
-		else begin
-			y <= y + 1'b1;
-		end
-	end
+always @ (posedge clk_25MHz) begin
+	internal_13clk = ~internal_13clk;
 end
 
-// + ~400 logic units:
-//assign bufferIndex = (bufferIndex + 1'b1) % 17'(320*240); // Max buffer of 320*240
-//wire[8:0] x = 9'(bufferIndex / 240); // x and y calculations
-//wire[7:0] y = 8'(bufferIndex % 240);
+
+
 
 wire sw0_pos_edge_pulse;
 wire sw0_neg_edge_pulse;
 wire rst_lcd_mem_addr;
+
+wire rst_corner;
+assign rst_corner = rst_lcd_mem_addr || (cam_active ? c_VSYNC : 1'b0);
 
 DETECT_SWITCH_EDGE sw0_det ( 
 	switches[0],
@@ -170,6 +150,11 @@ Black = 3'b000
 
 wire p_available;
 
+wire [8:0] x;
+wire [7:0] y;
+wire incBuffer;
+wire [16:0] bufferIndex;
+
 assign p_available = cam_active ? d_available : 1'b1;
 
 LCD_SPI_CONTROLLER_RUBIK lcd (
@@ -185,7 +170,10 @@ LCD_SPI_CONTROLLER_RUBIK lcd (
 	o_lcdrst,
 	
 	p_available,
-	rst_lcd_mem_addr
+	rst_corner,
+	x,
+	y,
+	bufferIndex
 );
 
 wire [11:0] x_data; // Touch coordinates
@@ -306,7 +294,8 @@ always @ (posedge clk_1MHz) begin
 end
 
 
-always @ (*) begin
+//always @ (*) begin
+always_comb begin
 	next_state = current_state;
 	case (current_state)
 		s_IDLE: begin
@@ -347,7 +336,9 @@ wire [15:0] r_data;
 wire r_en;
 wire d_available;
 
+
 ASYNC_FIFO fifo (
+	MAX10_CLK1_50,
 	w_data,
 	w_en,
 	r_data,
@@ -355,10 +346,24 @@ ASYNC_FIFO fifo (
 	d_available
 );
 
+/*ASYNC_FIFO_FULL_FRAME fifo (
+	MAX10_CLK1_50,
+	w_data,
+	w_en,
+	r_data,
+	incBuffer,
+	x,
+	y,
+	bufferIndex,
+	d_available,
+	c_VSYNC
+);*/
+
 OV7670_Cam cam (
 	clk_800KHz,
 	clk_800KHz_30,
 	clk_25MHz,
+	//clk_13MHz,
 	
 	c_SCL,
 	c_SDATA,

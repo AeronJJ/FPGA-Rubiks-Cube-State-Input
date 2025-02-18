@@ -55,7 +55,8 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 
 	// These are values scalped from https://github.com/jonlwowski012/OV7670_NEXYS4_Verilog/blob/master/ov7670_registers_verilog.v
 	16'h12_04, // COM7,     set RGB color output
-	16'h11_80, // CLKRC     internal PLL matches input clock
+	//16'h11_80, // CLKRC     internal PLL matches input clock
+	16'h11_C0,
 	16'h0C_00, // COM3,     default settings
 	16'h3E_00, // COM14,    no scaling, normal pclock
 	16'h04_00, // COM1,     disable CCIR656
@@ -78,6 +79,7 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 	16'h03_0A, //VREF       vsync edge offset
 	16'h0F_41, //COM6       reset timings
 	16'h1E_00, //MVFP       disable mirror / flip //might have magic value of 03
+	//16'h1E_03, //MVFP       disable mirror / flip //might have magic value of 03
 	16'h33_0B, //CHLF       //magic value from the internet
 	16'h3C_78, //COM12      no HREF when VSYNC low
 	16'h69_00, //GFIX       fix gain control

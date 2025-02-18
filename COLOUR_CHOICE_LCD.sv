@@ -76,7 +76,8 @@ always_comb begin
 		end
 		
 		3'b101: begin
-			currentColour = 16'hFC0A; // Orange
+			//currentColour = 16'hFC0A; // Orange
+			currentColour = 16'hFD68;
 		end
 		
 		3'b111: begin
@@ -84,7 +85,8 @@ always_comb begin
 		end
 		
 		3'b110: begin
-			currentColour = 16'hDC05; // Yellow
+			//currentColour = 16'hDC05; // Yellow
+			currentColour = 16'hFFC0;
 		end
 		
 		default: begin

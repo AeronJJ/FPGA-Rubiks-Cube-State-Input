@@ -86,14 +86,18 @@ always_comb begin
 //			currentColour = 16'h001F; // Blue
 //			currentColour = 16'h07E0; // Green - Working, dim
 
-			currentColour = 16'h00F8; // Green - BRIGHT
+			//currentColour = 16'h00F8; // Green - BRIGHT // BGR && FLIPPED
+			
+			currentColour = 16'h07E0;
 		end
 		
 		3'b011: begin
 //			currentColour = 16'h07E0; // Green
 //			currentColour = 16'h001F; // Blue - Working, dim
 			
-			currentColour = 16'hE007; // Blue - BRIGHT
+			//currentColour = 16'hE007; // Blue - BRIGHT // BGR && FLIPPED
+			
+			currentColour = 16'h001F;
 end
 		
 		3'b100: begin
@@ -101,7 +105,9 @@ end
 
 //			currentColour = 16'h1F00; // RED - BRIGHT
 			
-			currentColour = 16'h1F00;
+			//currentColour = 16'h1F00; // BGR && FLIPPED
+			
+			currentColour = 16'hF800;
 		end
 		
 		3'b101: begin
@@ -109,7 +115,9 @@ end
 			
 			//currentColour = 16'hFF03; 
 			
-			currentColour = 16'h7F45; 
+			//currentColour = 16'h7F45; // BGR && FLIPPED
+			
+			currentColour = 16'hFD68;
 		end
 		
 		3'b111: begin
@@ -121,7 +129,9 @@ end
 			
 			//currentColour = 16'hFFC0; // Yellow
 			
-			currentColour = 16'hDF07;
+			//currentColour = 16'hDF07; // BGR && FLIPPED
+			
+			currentColour = 16'hFFC0;
 		end
 		
 		default: begin

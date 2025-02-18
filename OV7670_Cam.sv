@@ -43,6 +43,10 @@ input rst_n;
 input d_available;
 output reg [15:0] w_data;
 output reg w_en;
+//output w_en_out;
+//reg w_en;
+
+//assign w_en_out = c_PCLK ? w_en : 1'b0;
 //
 
 
@@ -189,11 +193,12 @@ logic first_byte = 1'b1;
 logic [15:0] next_pixel = 16'b0;
 logic [7:0] prev_byte = 8'b0;
 
-
+/*
 always @ (posedge c_PCLK) begin
 	w_en = 1'b0;
 	if (pixel_index == width) begin
 		pixel_index = 10'b0;
+		first_byte = 1'b1;
 	end
 	else if (capture_data && c_HREF) begin
 		if (first_byte) begin
@@ -233,6 +238,71 @@ always @ (posedge c_PCLK) begin
 		if (~d_available && first_byte) begin
 			w_en = 1'b1;
 			w_data = next_pixel;
+		end
+	end
+end
+
+always @ (posedge c_HREF) begin
+	// Start new line
+	if (line_index == 2'd2) begin
+		line_index = 2'd0;
+	end
+	else begin
+		line_index = line_index + 2'd1;
+	end
+end
+
+*/
+
+reg [1:0] skip_pixel = 2'b00; // skip_pixel[1] is the relevant signal
+reg skip_row = 1'b0;
+
+/*always @ (negedge c_HREF or posedge c_VSYNC) begin
+	if (c_VSYNC) begin
+		skip_row = 1'b0;
+	end
+	else begin
+		skip_row = ~skip_row;
+	end
+end*/
+
+always @ (negedge c_HREF) begin
+	skip_row = ~skip_row;
+end
+
+always @ (posedge c_PCLK or negedge c_HREF) begin
+	if (~c_HREF) begin
+		//first_byte = 1'b1;
+		skip_pixel = 2'b01;
+	end
+	else begin
+		w_en = 1'b0;
+		skip_pixel = skip_pixel + 1'b1;
+		
+		if (~skip_pixel[1] && ~skip_row) begin
+			/*if (pixel_index == width) begin
+				pixel_index = 10'b0;
+				first_byte = 1'b1;
+			end*/
+			if (~c_HREF) begin
+				first_byte = 1'b1;
+			end
+			else if (capture_data && c_HREF) begin
+				if (first_byte) begin
+					prev_byte = c_DOUT;
+				end
+				else begin
+					next_pixel = {prev_byte, c_DOUT};
+					//next_pixel = {c_DOUT, prev_byte};
+				end
+				first_byte = ~first_byte;
+				pixel_index = pixel_index + 1'b1;
+				
+				if (first_byte) begin
+					w_en = 1'b1;
+					w_data = next_pixel;
+				end
+			end
 		end
 	end
 end

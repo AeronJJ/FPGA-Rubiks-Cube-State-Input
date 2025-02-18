@@ -17,6 +17,20 @@ current_state.s_WAIT 0 0 1 0 0 0 1
 current_state.s_DONE 0 1 0 0 0 0 1 
 current_state.s_INIT_DONE 1 0 0 0 0 0 1 
 
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c
+Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
+switch_state_c.00 0 0 0 0 
+switch_state_c.01 0 0 1 1 
+switch_state_c.10 0 1 0 1 
+switch_state_c.11 1 0 0 1 
+
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c
+Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
+switch_state_c.00 0 0 0 0 
+switch_state_c.01 0 0 1 1 
+switch_state_c.10 0 1 0 1 
+switch_state_c.11 1 0 0 1 
+
 State Machine - |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state
 Name current_state.s_PUSH_STATE current_state.s_UPDATE_STATE current_state.s_STORE_COLOUR current_state.s_WAIT_FOR_COLOUR current_state.s_STORE_TOUCH current_state.s_ACTIVE current_state.s_IDLE 
 current_state.s_IDLE 0 0 0 0 0 0 0 

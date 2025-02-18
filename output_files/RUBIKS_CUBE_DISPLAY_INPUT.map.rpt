@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RUBIKS_CUBE_DISPLAY_INPUT
-Thu Feb 13 22:19:19 2025
+Tue Feb 18 01:11:27 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,190 +13,201 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|current_state
- 10. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|current_state
- 11. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state
- 12. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|current_state
- 13. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch|current_state
- 14. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|current_state
- 15. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|DETECT_SWITCH_EDGE:sw0_det|switch_state_c
- 16. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|current_state
- 17. Registers Protected by Synthesis
- 18. Registers Removed During Synthesis
- 19. Removed Registers Triggering Further Register Optimizations
- 20. General Register Statistics
- 21. Inverted Register Statistics
- 22. Multiplexer Restructuring Statistics (Restructuring Performed)
- 23. Source assignments for Top-level Entity: |LCD_RUBIKS_CUBE_DISPLAY
- 24. Source assignments for dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
- 25. Source assignments for dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
- 26. Source assignments for TOUCH_SPI_CONTROLLER:touch
- 27. Parameter Settings for User Entity Instance: dual_boot:u0|altera_dual_boot:dual_boot
- 28. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller
- 29. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
- 30. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
- 31. Parameter Settings for User Entity Instance: pll:pll_inst|altpll:altpll_component
- 32. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq0
- 33. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq1
- 34. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq2
- 35. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq3
- 36. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq4
- 37. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq5
- 38. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq6
- 39. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq7
- 40. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq8
- 41. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq9
- 42. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq10
- 43. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq11
- 44. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq12
- 45. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq13
- 46. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq14
- 47. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq15
- 48. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq16
- 49. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq17
- 50. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq18
- 51. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq19
- 52. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq20
- 53. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq21
- 54. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq22
- 55. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq23
- 56. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq24
- 57. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq25
- 58. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq26
- 59. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq27
- 60. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq28
- 61. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq29
- 62. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq30
- 63. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq31
- 64. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq32
- 65. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq33
- 66. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq34
- 67. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq35
- 68. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq36
- 69. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq37
- 70. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq38
- 71. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq39
- 72. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq40
- 73. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq41
- 74. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq42
- 75. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq43
- 76. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq44
- 77. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq45
- 78. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq46
- 79. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq47
- 80. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq48
- 81. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq49
- 82. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq50
- 83. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq51
- 84. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq52
- 85. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq53
- 86. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0
- 87. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq1
- 88. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq2
- 89. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq3
- 90. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0
- 91. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1
- 92. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2
- 93. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq3
- 94. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4
- 95. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5
- 96. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq00
- 97. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq01
- 98. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq02
- 99. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq10
-100. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq11
-101. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq12
-102. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq0
-103. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq1
-104. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq2
-105. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq3
-106. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq4
-107. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq5
-108. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq6
-109. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq7
-110. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq8
-111. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq9
-112. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq10
-113. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq11
-114. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq12
-115. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq13
-116. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq14
-117. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq15
-118. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq16
-119. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq17
-120. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq18
-121. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq19
-122. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq20
-123. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq21
-124. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq22
-125. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq23
-126. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq24
-127. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq25
-128. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq26
-129. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq27
-130. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq28
-131. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq29
-132. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq30
-133. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq31
-134. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq32
-135. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq33
-136. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq34
-137. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq35
-138. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq36
-139. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq37
-140. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq38
-141. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq39
-142. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq40
-143. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq41
-144. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq42
-145. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq43
-146. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq44
-147. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq45
-148. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq46
-149. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq47
-150. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq48
-151. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq49
-152. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq50
-153. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq51
-154. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq52
-155. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq53
-156. altpll Parameter Settings by Entity Instance
-157. Port Connectivity Checks: "OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam"
-158. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq49"
-159. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq31"
-160. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq28"
-161. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq25"
-162. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq22"
-163. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq4"
-164. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5"
-165. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4"
-166. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq3"
-167. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2"
-168. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1"
-169. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0"
-170. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq3"
-171. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq2"
-172. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq1"
-173. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0"
-174. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration"
-175. Port Connectivity Checks: "TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch"
-176. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq49"
-177. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq31"
-178. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq28"
-179. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq25"
-180. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq22"
-181. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq4"
-182. Port Connectivity Checks: "DETECT_SWITCH_EDGE:sw0_det"
-183. Port Connectivity Checks: "pll:pll_inst"
-184. Port Connectivity Checks: "dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
-185. Port Connectivity Checks: "dual_boot:u0|altera_reset_controller:rst_controller"
-186. Port Connectivity Checks: "dual_boot:u0|altera_dual_boot:dual_boot"
-187. Port Connectivity Checks: "dual_boot:u0"
-188. Post-Synthesis Netlist Statistics for Top Partition
-189. Elapsed Time Per Partition
-190. Analysis & Synthesis Messages
-191. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|current_state
+ 11. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|current_state
+ 12. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c
+ 13. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c
+ 14. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state
+ 15. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|current_state
+ 16. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch|current_state
+ 17. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|current_state
+ 18. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|DETECT_SWITCH_EDGE:sw0_det|switch_state_c
+ 19. State Machine - |LCD_RUBIKS_CUBE_DISPLAY|dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|current_state
+ 20. Registers Protected by Synthesis
+ 21. Registers Removed During Synthesis
+ 22. Removed Registers Triggering Further Register Optimizations
+ 23. General Register Statistics
+ 24. Inverted Register Statistics
+ 25. Registers Added for RAM Pass-Through Logic
+ 26. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 27. Source assignments for Top-level Entity: |LCD_RUBIKS_CUBE_DISPLAY
+ 28. Source assignments for dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+ 29. Source assignments for dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+ 30. Source assignments for TOUCH_SPI_CONTROLLER:touch
+ 31. Source assignments for ASYNC_FIFO:fifo|altsyncram:data_rtl_0|altsyncram_fph1:auto_generated
+ 32. Parameter Settings for User Entity Instance: dual_boot:u0|altera_dual_boot:dual_boot
+ 33. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller
+ 34. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+ 35. Parameter Settings for User Entity Instance: dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+ 36. Parameter Settings for User Entity Instance: pll:pll_inst|altpll:altpll_component
+ 37. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq0
+ 38. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq1
+ 39. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq2
+ 40. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq3
+ 41. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq4
+ 42. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq5
+ 43. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq6
+ 44. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq7
+ 45. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq8
+ 46. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq9
+ 47. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq10
+ 48. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq11
+ 49. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq12
+ 50. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq13
+ 51. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq14
+ 52. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq15
+ 53. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq16
+ 54. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq17
+ 55. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq18
+ 56. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq19
+ 57. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq20
+ 58. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq21
+ 59. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq22
+ 60. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq23
+ 61. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq24
+ 62. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq25
+ 63. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq26
+ 64. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq27
+ 65. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq28
+ 66. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq29
+ 67. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq30
+ 68. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq31
+ 69. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq32
+ 70. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq33
+ 71. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq34
+ 72. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq35
+ 73. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq36
+ 74. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq37
+ 75. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq38
+ 76. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq39
+ 77. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq40
+ 78. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq41
+ 79. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq42
+ 80. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq43
+ 81. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq44
+ 82. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq45
+ 83. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq46
+ 84. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq47
+ 85. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq48
+ 86. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq49
+ 87. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq50
+ 88. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq51
+ 89. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq52
+ 90. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq53
+ 91. Parameter Settings for User Entity Instance: LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords
+ 92. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0
+ 93. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq1
+ 94. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq2
+ 95. Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq3
+ 96. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0
+ 97. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1
+ 98. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2
+ 99. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq3
+100. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4
+101. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5
+102. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq00
+103. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq01
+104. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq02
+105. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq10
+106. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq11
+107. Parameter Settings for User Entity Instance: COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq12
+108. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq0
+109. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq1
+110. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq2
+111. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq3
+112. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq4
+113. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq5
+114. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq6
+115. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq7
+116. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq8
+117. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq9
+118. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq10
+119. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq11
+120. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq12
+121. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq13
+122. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq14
+123. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq15
+124. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq16
+125. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq17
+126. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq18
+127. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq19
+128. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq20
+129. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq21
+130. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq22
+131. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq23
+132. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq24
+133. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq25
+134. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq26
+135. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq27
+136. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq28
+137. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq29
+138. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq30
+139. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq31
+140. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq32
+141. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq33
+142. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq34
+143. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq35
+144. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq36
+145. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq37
+146. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq38
+147. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq39
+148. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq40
+149. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq41
+150. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq42
+151. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq43
+152. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq44
+153. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq45
+154. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq46
+155. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq47
+156. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq48
+157. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq49
+158. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq50
+159. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq51
+160. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq52
+161. Parameter Settings for User Entity Instance: RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq53
+162. Parameter Settings for Inferred Entity Instance: ASYNC_FIFO:fifo|altsyncram:data_rtl_0
+163. altpll Parameter Settings by Entity Instance
+164. altsyncram Parameter Settings by Entity Instance
+165. Port Connectivity Checks: "OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam"
+166. Port Connectivity Checks: "ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge"
+167. Port Connectivity Checks: "ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge"
+168. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq49"
+169. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq31"
+170. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq28"
+171. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq25"
+172. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq22"
+173. Port Connectivity Checks: "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq4"
+174. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5"
+175. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4"
+176. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq3"
+177. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2"
+178. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1"
+179. Port Connectivity Checks: "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0"
+180. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq3"
+181. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq2"
+182. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq1"
+183. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0"
+184. Port Connectivity Checks: "TOUCH_CALIBRATION:calibration"
+185. Port Connectivity Checks: "TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch"
+186. Port Connectivity Checks: "LCD_SPI_CONTROLLER_RUBIK:lcd"
+187. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq49"
+188. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq31"
+189. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq28"
+190. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq25"
+191. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq22"
+192. Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq4"
+193. Port Connectivity Checks: "DETECT_SWITCH_EDGE:sw0_det"
+194. Port Connectivity Checks: "pll:pll_inst"
+195. Port Connectivity Checks: "dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1"
+196. Port Connectivity Checks: "dual_boot:u0|altera_reset_controller:rst_controller"
+197. Port Connectivity Checks: "dual_boot:u0|altera_dual_boot:dual_boot"
+198. Port Connectivity Checks: "dual_boot:u0"
+199. Post-Synthesis Netlist Statistics for Top Partition
+200. Elapsed Time Per Partition
+201. Analysis & Synthesis Messages
+202. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -222,18 +233,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 13 22:19:19 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 18 01:11:27 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
 ; Top-level Entity Name              ; LCD_RUBIKS_CUBE_DISPLAY                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,970                                       ;
-;     Total combinational functions  ; 1,813                                       ;
-;     Dedicated logic registers      ; 843                                         ;
-; Total registers                    ; 843                                         ;
+; Total logic elements               ; 1,975                                       ;
+;     Total combinational functions  ; 1,800                                       ;
+;     Dedicated logic registers      ; 880                                         ;
+; Total registers                    ; 880                                         ;
 ; Total pins                         ; 44                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 3,200                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -380,6 +391,8 @@ refer to the applicable agreement for further details.
 ; ASYNC_FIFO.sv                                                              ; yes             ; User SystemVerilog HDL File      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ASYNC_FIFO.sv                                                              ;           ;
 ; SWITCH_DEBOUNCE.sv                                                         ; yes             ; User SystemVerilog HDL File      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SWITCH_DEBOUNCE.sv                                                         ;           ;
 ; DETECT_SWITCH_EDGE.sv                                                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE.sv                                                      ;           ;
+; COORDINATE_COUNTER.sv                                                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COORDINATE_COUNTER.sv                                                      ;           ;
+; DETECT_SWITCH_EDGE_NOISY.sv                                                ; yes             ; User SystemVerilog HDL File      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE_NOISY.sv                                                ;           ;
 ; lpm_shiftreg.tdf                                                           ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                                     ;           ;
 ; lpm_constant.inc                                                           ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                     ;           ;
 ; dffeea.inc                                                                 ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc                                                                                           ;           ;
@@ -397,6 +410,14 @@ refer to the applicable agreement for further details.
 ; stratixii_pll.inc                                                          ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                                                    ;           ;
 ; cycloneii_pll.inc                                                          ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                                                    ;           ;
 ; db/pll_altpll.v                                                            ; yes             ; Auto-Generated Megafunction      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/pll_altpll.v                                                            ;           ;
+; altsyncram.tdf                                                             ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                       ;           ;
+; stratix_ram_block.inc                                                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                ;           ;
+; lpm_mux.inc                                                                ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                          ;           ;
+; a_rdenreg.inc                                                              ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                        ;           ;
+; altrom.inc                                                                 ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                                                                           ;           ;
+; altram.inc                                                                 ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                                                                           ;           ;
+; altdpram.inc                                                               ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                                         ;           ;
+; db/altsyncram_fph1.tdf                                                     ; yes             ; Auto-Generated Megafunction      ; C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/altsyncram_fph1.tdf                                                     ;           ;
 +----------------------------------------------------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
 
 
@@ -405,23 +426,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                           ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,970                                                                           ;
+; Estimated Total logic elements              ; 1,975                                                                           ;
 ;                                             ;                                                                                 ;
-; Total combinational functions               ; 1813                                                                            ;
+; Total combinational functions               ; 1800                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                 ;
-;     -- 4 input functions                    ; 968                                                                             ;
-;     -- 3 input functions                    ; 363                                                                             ;
-;     -- <=2 input functions                  ; 482                                                                             ;
+;     -- 4 input functions                    ; 961                                                                             ;
+;     -- 3 input functions                    ; 344                                                                             ;
+;     -- <=2 input functions                  ; 495                                                                             ;
 ;                                             ;                                                                                 ;
 ; Logic elements by mode                      ;                                                                                 ;
-;     -- normal mode                          ; 1570                                                                            ;
-;     -- arithmetic mode                      ; 243                                                                             ;
+;     -- normal mode                          ; 1550                                                                            ;
+;     -- arithmetic mode                      ; 250                                                                             ;
 ;                                             ;                                                                                 ;
-; Total registers                             ; 843                                                                             ;
-;     -- Dedicated logic registers            ; 843                                                                             ;
+; Total registers                             ; 880                                                                             ;
+;     -- Dedicated logic registers            ; 880                                                                             ;
 ;     -- I/O registers                        ; 0                                                                               ;
 ;                                             ;                                                                                 ;
 ; I/O pins                                    ; 44                                                                              ;
+; Total memory bits                           ; 3200                                                                            ;
 ;                                             ;                                                                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                               ;
 ;                                             ;                                                                                 ;
@@ -429,9 +451,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                               ;
 ;                                             ;                                                                                 ;
 ; Maximum fan-out node                        ; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 656                                                                             ;
-; Total fan-out                               ; 8624                                                                            ;
-; Average fan-out                             ; 3.14                                                                            ;
+; Maximum fan-out                             ; 657                                                                             ;
+; Total fan-out                               ; 8971                                                                            ;
+; Average fan-out                             ; 3.22                                                                            ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
 
 
@@ -440,72 +462,78 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                     ; Entity Name               ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |LCD_RUBIKS_CUBE_DISPLAY                              ; 1813 (80)           ; 843 (40)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 44   ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY                                                                                                                ; LCD_RUBIKS_CUBE_DISPLAY   ; work         ;
-;    |ASYNC_FIFO:fifo|                                  ; 0 (0)               ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo                                                                                                ; ASYNC_FIFO                ; work         ;
-;    |COLOUR_CHOICE_LCD:colour_choice|                  ; 153 (83)            ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice                                                                                ; COLOUR_CHOICE_LCD         ; work         ;
-;       |SQUARE_STATE:colour_sq0|                       ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0                                                        ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:colour_sq1|                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1                                                        ; SQUARE_STATE              ; work         ;
+; |LCD_RUBIKS_CUBE_DISPLAY                              ; 1800 (28)           ; 880 (6)                   ; 3200        ; 0          ; 0            ; 0       ; 0         ; 44   ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY                                                                                                                ; LCD_RUBIKS_CUBE_DISPLAY   ; work         ;
+;    |ASYNC_FIFO:fifo|                                  ; 65 (57)             ; 78 (68)                   ; 3200        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo                                                                                                ; ASYNC_FIFO                ; work         ;
+;       |DETECT_SWITCH_EDGE_NOISY:read_edge|            ; 4 (4)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge                                                             ; DETECT_SWITCH_EDGE_NOISY  ; work         ;
+;       |DETECT_SWITCH_EDGE_NOISY:write_edge|           ; 4 (4)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge                                                            ; DETECT_SWITCH_EDGE_NOISY  ; work         ;
+;       |altsyncram:data_rtl_0|                         ; 0 (0)               ; 0 (0)                     ; 3200        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|altsyncram:data_rtl_0                                                                          ; altsyncram                ; work         ;
+;          |altsyncram_fph1:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 3200        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|altsyncram:data_rtl_0|altsyncram_fph1:auto_generated                                           ; altsyncram_fph1           ; work         ;
+;    |COLOUR_CHOICE_LCD:colour_choice|                  ; 144 (86)            ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice                                                                                ; COLOUR_CHOICE_LCD         ; work         ;
+;       |SQUARE_STATE:colour_sq0|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0                                                        ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:colour_sq1|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1                                                        ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:colour_sq2|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2                                                        ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:colour_sq3|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq3                                                        ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:colour_sq4|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4                                                        ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:colour_sq5|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5                                                        ; SQUARE_STATE              ; work         ;
-;       |SQUARE_TOUCH:touch_sq00|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq00                                                        ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq01|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq01                                                        ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq02|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq02                                                        ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq10|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq10                                                        ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq11|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq11                                                        ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq12|                       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq12                                                        ; SQUARE_TOUCH              ; work         ;
-;    |DETECT_SWITCH_EDGE:sw0_det|                       ; 28 (5)              ; 23 (6)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|DETECT_SWITCH_EDGE:sw0_det                                                                                     ; DETECT_SWITCH_EDGE        ; work         ;
+;       |SQUARE_STATE:colour_sq4|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq4                                                        ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:colour_sq5|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq5                                                        ; SQUARE_STATE              ; work         ;
+;       |SQUARE_TOUCH:touch_sq00|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq00                                                        ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq01|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq01                                                        ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq02|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq02                                                        ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq10|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq10                                                        ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq11|                       ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq11                                                        ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq12|                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq12                                                        ; SQUARE_TOUCH              ; work         ;
+;    |DETECT_SWITCH_EDGE:sw0_det|                       ; 27 (4)              ; 23 (6)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|DETECT_SWITCH_EDGE:sw0_det                                                                                     ; DETECT_SWITCH_EDGE        ; work         ;
 ;       |SWITCH_DEBOUNCE:debounce|                      ; 23 (23)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|DETECT_SWITCH_EDGE:sw0_det|SWITCH_DEBOUNCE:debounce                                                            ; SWITCH_DEBOUNCE           ; work         ;
-;    |LCD_SPI_CONTROLLER_RUBIK:lcd|                     ; 256 (243)           ; 67 (51)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd                                                                                   ; LCD_SPI_CONTROLLER_RUBIK  ; work         ;
+;    |LCD_SPI_CONTROLLER_RUBIK:lcd|                     ; 273 (214)           ; 102 (52)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd                                                                                   ; LCD_SPI_CONTROLLER_RUBIK  ; work         ;
+;       |COORDINATE_COUNTER:coords|                     ; 46 (46)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords                                                         ; COORDINATE_COUNTER        ; work         ;
 ;       |LCD_SPI_MASTER_IMPROVED:spi|                   ; 13 (13)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|LCD_SPI_MASTER_IMPROVED:spi                                                       ; LCD_SPI_MASTER_IMPROVED   ; work         ;
-;    |OV7670_Cam:cam|                                   ; 429 (118)           ; 192 (86)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam                                                                                                 ; OV7670_Cam                ; work         ;
+;    |OV7670_Cam:cam|                                   ; 387 (76)            ; 167 (61)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam                                                                                                 ; OV7670_Cam                ; work         ;
 ;       |OV7670_INIT:cam_init|                          ; 311 (214)           ; 106 (56)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init                                                                            ; OV7670_INIT               ; work         ;
 ;          |OV7670_SCCB:cam|                            ; 97 (97)             ; 50 (50)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam                                                            ; OV7670_SCCB               ; work         ;
-;    |RUBIKS_CUBE_STATE_LCD:cube|                       ; 242 (190)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube                                                                                     ; RUBIKS_CUBE_STATE_LCD     ; work         ;
-;       |SQUARE_STATE:sq0|                              ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq0                                                                    ; SQUARE_STATE              ; work         ;
+;    |RUBIKS_CUBE_STATE_LCD:cube|                       ; 242 (187)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube                                                                                     ; RUBIKS_CUBE_STATE_LCD     ; work         ;
+;       |SQUARE_STATE:sq0|                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq0                                                                    ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq10|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq10                                                                   ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq11|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq11                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq15|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq15                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq16|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq16                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq17|                             ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq17                                                                   ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq17|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq17                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq18|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq18                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq19|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq19                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq1|                              ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq1                                                                    ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq20|                             ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq20                                                                   ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq1|                              ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq1                                                                    ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq20|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq20                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq21|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq21                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq28|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq28                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq2|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq2                                                                    ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq2|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq2                                                                    ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq32|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq32                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq33|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq33                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq3|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq3                                                                    ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq3|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq3                                                                    ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq40|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq40                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq44|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq44                                                                   ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq44|                             ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq44                                                                   ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq45|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq45                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq48|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq48                                                                   ; SQUARE_STATE              ; work         ;
 ;       |SQUARE_STATE:sq51|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq51                                                                   ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq5|                              ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq5                                                                    ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq6|                              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq6                                                                    ; SQUARE_STATE              ; work         ;
-;       |SQUARE_STATE:sq9|                              ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq9                                                                    ; SQUARE_STATE              ; work         ;
-;    |RUBIKS_CUBE_STATE_TOUCH:state_touch|              ; 414 (334)           ; 347 (347)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch                                                                            ; RUBIKS_CUBE_STATE_TOUCH   ; work         ;
+;       |SQUARE_STATE:sq5|                              ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq5                                                                    ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq6|                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq6                                                                    ; SQUARE_STATE              ; work         ;
+;       |SQUARE_STATE:sq9|                              ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq9                                                                    ; SQUARE_STATE              ; work         ;
+;    |RUBIKS_CUBE_STATE_TOUCH:state_touch|              ; 423 (339)           ; 347 (347)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch                                                                            ; RUBIKS_CUBE_STATE_TOUCH   ; work         ;
 ;       |SQUARE_TOUCH:touch_sq0|                        ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq0                                                     ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq10|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq10                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq11|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq11                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq15|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq15                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq16|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq16                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq17|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq17                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq10|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq10                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq11|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq11                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq15|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq15                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq16|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq16                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq17|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq17                                                    ; SQUARE_TOUCH              ; work         ;
 ;       |SQUARE_TOUCH:touch_sq18|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq18                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq19|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq19                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq1|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq1                                                     ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq20|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq20                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq21|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq21                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq19|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq19                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq1|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq1                                                     ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq20|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq20                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq21|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq21                                                    ; SQUARE_TOUCH              ; work         ;
 ;       |SQUARE_TOUCH:touch_sq2|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq2                                                     ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq33|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq33                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq33|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq33                                                    ; SQUARE_TOUCH              ; work         ;
 ;       |SQUARE_TOUCH:touch_sq3|                        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq3                                                     ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq43|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq43                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq43|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq43                                                    ; SQUARE_TOUCH              ; work         ;
 ;       |SQUARE_TOUCH:touch_sq45|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq45                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq48|                       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq48                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq51|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq51                                                    ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq6|                        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq6                                                     ; SQUARE_TOUCH              ; work         ;
-;       |SQUARE_TOUCH:touch_sq9|                        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq9                                                     ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq48|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq48                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq51|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq51                                                    ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq6|                        ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq6                                                     ; SQUARE_TOUCH              ; work         ;
+;       |SQUARE_TOUCH:touch_sq9|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq9                                                     ; SQUARE_TOUCH              ; work         ;
 ;    |STEP_CONVERSION:convert|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|STEP_CONVERSION:convert                                                                                        ; STEP_CONVERSION           ; work         ;
 ;    |TOUCH_SPI_CONTROLLER:touch|                       ; 183 (125)           ; 113 (80)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch                                                                                     ; TOUCH_SPI_CONTROLLER      ; work         ;
 ;       |TOUCH_SPI_MASTER:touch|                        ; 58 (58)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch                                                              ; TOUCH_SPI_MASTER          ; work         ;
@@ -520,6 +548,15 @@ refer to the applicable agreement for further details.
 ;          |pll_altpll:auto_generated|                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LCD_RUBIKS_CUBE_DISPLAY|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                                                 ; pll_altpll                ; work         ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                    ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                            ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; ASYNC_FIFO:fifo|altsyncram:data_rtl_0|altsyncram_fph1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 200          ; 16           ; 200          ; 16           ; 3200 ; None ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -564,6 +601,32 @@ Encoding Type:  One-Hot
 ; current_state.s_DONE         ; 0                         ; 1                    ; 0                    ; 0                            ; 0                     ; 0                           ; 1                    ;
 ; current_state.s_INIT_DONE    ; 1                         ; 0                    ; 0                    ; 0                            ; 0                     ; 0                           ; 1                    ;
 +------------------------------+---------------------------+----------------------+----------------------+------------------------------+-----------------------+-----------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------+
+; State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c ;
++-------------------+-------------------+-------------------+-------------------+----------------------------+
+; Name              ; switch_state_c.11 ; switch_state_c.10 ; switch_state_c.01 ; switch_state_c.00          ;
++-------------------+-------------------+-------------------+-------------------+----------------------------+
+; switch_state_c.00 ; 0                 ; 0                 ; 0                 ; 0                          ;
+; switch_state_c.01 ; 0                 ; 0                 ; 1                 ; 1                          ;
+; switch_state_c.10 ; 0                 ; 1                 ; 0                 ; 1                          ;
+; switch_state_c.11 ; 1                 ; 0                 ; 0                 ; 1                          ;
++-------------------+-------------------+-------------------+-------------------+----------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c ;
++-------------------+-------------------+-------------------+-------------------+-----------------------------+
+; Name              ; switch_state_c.11 ; switch_state_c.10 ; switch_state_c.01 ; switch_state_c.00           ;
++-------------------+-------------------+-------------------+-------------------+-----------------------------+
+; switch_state_c.00 ; 0                 ; 0                 ; 0                 ; 0                           ;
+; switch_state_c.01 ; 0                 ; 0                 ; 1                 ; 1                           ;
+; switch_state_c.10 ; 0                 ; 1                 ; 0                 ; 1                           ;
+; switch_state_c.11 ; 1                 ; 0                 ; 0                 ; 1                           ;
++-------------------+-------------------+-------------------+-------------------+-----------------------------+
 
 
 Encoding Type:  One-Hot
@@ -673,12 +736,12 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 ; Register Name                                                                                                                         ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
 +---------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; current_state[1]                                                                                                                      ; yes                                                              ; yes                                        ;
+; current_state[0]                                                                                                                      ; yes                                                              ; yes                                        ;
 ; TOUCH_SPI_CONTROLLER:touch|current_state[1]                                                                                           ; yes                                                              ; yes                                        ;
 ; TOUCH_SPI_CONTROLLER:touch|current_state[0]                                                                                           ; yes                                                              ; yes                                        ;
 ; TOUCH_SPI_CONTROLLER:touch|current_state[2]                                                                                           ; yes                                                              ; yes                                        ;
 ; dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0] ; yes                                                              ; yes                                        ;
-; current_state[1]                                                                                                                      ; yes                                                              ; yes                                        ;
-; current_state[0]                                                                                                                      ; yes                                                              ; yes                                        ;
 ; dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1] ; yes                                                              ; yes                                        ;
 ; Total number of protected registers is 7                                                                                              ;                                                                  ;                                            ;
 +---------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
@@ -691,6 +754,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|boot_sel_reg                                                      ; Stuck at GND due to stuck port clock_enable                                                                                                               ;
 ; dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|boot_sel_overwrite_reg                                            ; Stuck at GND due to stuck port clock_enable                                                                                                               ;
+; OV7670_Cam:cam|next_pixel[0..15]                                                                                                                                                 ; Lost fanout                                                                                                                                               ;
 ; TOUCH_SPI_CONTROLLER:touch|touch_data_in[2,4..7]                                                                                                                                 ; Stuck at GND due to stuck port data_in                                                                                                                    ;
 ; dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|write_reg_data[0..37]                                             ; Merged with dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|write_reg_data[38]             ;
 ; TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch|internal_data_in[4..7]                                                                                                         ; Merged with TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch|internal_data_in[2]                                                                         ;
@@ -706,6 +770,10 @@ Encoding Type:  One-Hot
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|current_state~4                                                                                                                              ; Lost fanout                                                                                                                                               ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|current_state~5                                                                                                                              ; Lost fanout                                                                                                                                               ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|current_state~6                                                                                                                              ; Lost fanout                                                                                                                                               ;
+; ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c~2                                                                                                              ; Lost fanout                                                                                                                                               ;
+; ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c~3                                                                                                              ; Lost fanout                                                                                                                                               ;
+; ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c~2                                                                                                             ; Lost fanout                                                                                                                                               ;
+; ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c~3                                                                                                             ; Lost fanout                                                                                                                                               ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state~2                                                                                                                              ; Lost fanout                                                                                                                                               ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state~3                                                                                                                              ; Lost fanout                                                                                                                                               ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|current_state~4                                                                                                                              ; Lost fanout                                                                                                                                               ;
@@ -1997,7 +2065,7 @@ Encoding Type:  One-Hot
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ~1246                                                                                                                                ; Stuck at GND due to stuck port clock                                                                                                                      ;
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ~1247                                                                                                                                ; Stuck at GND due to stuck port clock                                                                                                                      ;
 ; dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|current_state.STATE_INIT                                          ; Lost fanout                                                                                                                                               ;
-; Total Number of Removed Registers = 1401                                                                                                                                         ;                                                                                                                                                           ;
+; Total Number of Removed Registers = 1421                                                                                                                                         ;                                                                                                                                                           ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -2079,12 +2147,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 843   ;
-; Number of registers using Synchronous Clear  ; 182   ;
-; Number of registers using Synchronous Load   ; 49    ;
-; Number of registers using Asynchronous Clear ; 237   ;
+; Total registers                              ; 880   ;
+; Number of registers using Synchronous Clear  ; 183   ;
+; Number of registers using Synchronous Load   ; 52    ;
+; Number of registers using Asynchronous Clear ; 222   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 550   ;
+; Number of registers using Clock Enable       ; 574   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -2101,23 +2169,78 @@ Encoding Type:  One-Hot
 ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                                     ; 52      ;
 ; OV7670_Cam:cam|cam_rst_n                                                                                                               ; 57      ;
 ; dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ; 10      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                                   ; 21      ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[17]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[46]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[112]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[43]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[40]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[91]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[88]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[118]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[22]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[19]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[31]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[7]                                                                                      ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[97]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[94]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[85]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[79]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[82]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[73]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[16]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[115]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[76]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[100]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[10]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[4]                                                                                      ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[34]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[25]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[28]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[1]                                                                                      ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[109]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[103]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[37]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[106]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[13]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[111]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[117]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[87]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[81]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[72]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[63]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[57]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[48]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[66]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[51]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[75]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[90]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[105]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[108]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[93]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[84]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[78]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[69]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[60]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[54]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[96]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[102]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[99]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[114]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[68]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[53]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[140]                                                                                    ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[125]                                                                                    ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[77]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[53]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[68]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[140]                                                                                    ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[92]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[17]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[143]                                                                                    ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[128]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[71]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[11]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[95]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[86]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[62]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[56]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[143]                                                                                    ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[71]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[80]                                                                                     ; 2       ;
+; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[11]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[20]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[23]                                                                                     ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[131]                                                                                    ; 2       ;
@@ -2134,67 +2257,53 @@ Encoding Type:  One-Hot
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[5]                                                                                      ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[8]                                                                                      ; 2       ;
 ; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[14]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[16]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[115]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[94]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[85]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[79]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[43]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[40]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[118]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[22]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[46]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[112]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[91]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[88]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[19]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[82]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[73]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[100]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[10]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[76]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[28]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[34]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[25]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[106]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[97]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[109]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[103]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[1]                                                                                      ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[37]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[31]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[4]                                                                                      ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[13]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[7]                                                                                      ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[114]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[90]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[75]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[66]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[51]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[99]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[93]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[84]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[78]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[69]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[60]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[54]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[111]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[87]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[81]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[72]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[63]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[57]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[48]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[117]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[96]                                                                                     ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[102]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[105]                                                                                    ; 2       ;
-; RUBIKS_CUBE_STATE_TOUCH:state_touch|cube_state[108]                                                                                    ; 2       ;
 ; dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[0]  ; 1       ;
 ; dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]  ; 1       ;
-; OV7670_Cam:cam|first_byte                                                                                                              ; 4       ;
+; OV7670_Cam:cam|first_byte                                                                                                              ; 3       ;
+; OV7670_Cam:cam|skip_pixel[0]                                                                                                           ; 3       ;
 ; Total number of inverted registers = 99                                                                                                ;         ;
 +----------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                         ;
++---------------------------------------+----------------------------+
+; Register Name                         ; RAM Name                   ;
++---------------------------------------+----------------------------+
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[0]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[1]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[2]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[3]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[4]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[5]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[6]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[7]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[8]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[9]  ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[10] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[11] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[12] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[13] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[14] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[15] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[16] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[17] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[18] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[19] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[20] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[21] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[22] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[23] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[24] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[25] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[26] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[27] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[28] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[29] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[30] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[31] ; ASYNC_FIFO:fifo|data_rtl_0 ;
+; ASYNC_FIFO:fifo|data_rtl_0_bypass[32] ; ASYNC_FIFO:fifo|data_rtl_0 ;
++---------------------------------------+----------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2202,26 +2311,29 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|delay_left[16]                                                                           ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|delay_left[18]                                                                               ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|delay_left[0]                                                                                                 ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|delay_left[1]                                                            ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|delay_left[11]                                                                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|x[0]                                                                                                                         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|y[1]                                                                                                                         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|pixel_index[7]                                                                                                ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|delay_left[6]                                                                                   ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|touch_data_in[1]                                                                                  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|data_index[4]                                                            ;
-; 11:1               ; 24 bits   ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|delay_left[14]                                                                                    ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|delay_left[15]                                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|delay_left[19]                                                                               ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|delay_left[21]                                                                                                ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|delay_left[10]                                                           ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|delay_left[23]                                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords|y[3]                                                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords|x[0]                                                                  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|delay_left[20]                                                                                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|touch_data_in[0]                                                                                  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|data_index[1]                                                            ;
+; 11:1               ; 24 bits   ; 168 LEs       ; 48 LEs               ; 120 LEs                ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|delay_left[11]                                                                                    ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|current_state[1]                                                                                                             ;
 ; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|timeout[1]                                                                                        ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|current_state[1]                                                                                  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|i_data[0]                                                                                       ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|i_data[1]                                                                                       ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|current_state[0]                                                                                  ;
+; 26:1               ; 2 bits    ; 34 LEs        ; 14 LEs               ; 20 LEs                 ; Yes        ; |LCD_RUBIKS_CUBE_DISPLAY|LCD_SPI_CONTROLLER_RUBIK:lcd|i_data[3]                                                                                       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|current_state                                                                                                 ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|alt_dual_boot:alt_dual_boot|current_state ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|Selector6                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|tempPixel[15]                                                                                                                ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|COLOUR_CHOICE_LCD:colour_choice|Selector3                                                                                    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch|Selector24                                                                 ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|Selector201                                                                              ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|RUBIKS_CUBE_STATE_TOUCH:state_touch|Selector198                                                                              ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |LCD_RUBIKS_CUBE_DISPLAY|OV7670_Cam:cam|OV7670_INIT:cam_init|current_state                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -2265,6 +2377,15 @@ Encoding Type:  One-Hot
 ; PRESERVE_REGISTER ; on    ; -    ; current_state[1] ;
 ; PRESERVE_REGISTER ; on    ; -    ; current_state[0] ;
 +-------------------+-------+------+------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Source assignments for ASYNC_FIFO:fifo|altsyncram:data_rtl_0|altsyncram_fph1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------+
+; Assignment                      ; Value              ; From ; To                            ;
++---------------------------------+--------------------+------+-------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                             ;
++---------------------------------+--------------------+------+-------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -3415,6 +3536,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; x_count        ; 320   ; Signed Integer                                                             ;
+; y_count        ; 240   ; Signed Integer                                                             ;
+; x_width        ; 9     ; Signed Integer                                                             ;
+; y_width        ; 8     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0 ;
 +----------------+-------+-------------------------------------------------------------------------+
@@ -4325,6 +4459,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ASYNC_FIFO:fifo|altsyncram:data_rtl_0 ;
++------------------------------------+----------------------+----------------------------+
+; Parameter Name                     ; Value                ; Type                       ;
++------------------------------------+----------------------+----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                    ;
+; WIDTH_A                            ; 16                   ; Untyped                    ;
+; WIDTHAD_A                          ; 8                    ; Untyped                    ;
+; NUMWORDS_A                         ; 200                  ; Untyped                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WIDTH_B                            ; 16                   ; Untyped                    ;
+; WIDTHAD_B                          ; 8                    ; Untyped                    ;
+; NUMWORDS_B                         ; 200                  ; Untyped                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                    ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                    ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                    ;
+; CBXI_PARAMETER                     ; altsyncram_fph1      ; Untyped                    ;
++------------------------------------+----------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                         ;
 +-------------------------------+--------------------------------------+
@@ -4342,6 +4537,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+--------------------------------------+
 
 
++-----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                  ;
++-------------------------------------------+---------------------------------------+
+; Name                                      ; Value                                 ;
++-------------------------------------------+---------------------------------------+
+; Number of entity instances                ; 1                                     ;
+; Entity Instance                           ; ASYNC_FIFO:fifo|altsyncram:data_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                             ;
+;     -- WIDTH_A                            ; 16                                    ;
+;     -- NUMWORDS_A                         ; 200                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                          ;
+;     -- WIDTH_B                            ; 16                                    ;
+;     -- NUMWORDS_B                         ; 200                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                          ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                              ;
++-------------------------------------------+---------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam"                                ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -4350,6 +4565,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; ack  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge"                                              ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; neg_edge_pulse    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; either_edge_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge"                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; neg_edge_pulse    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; either_edge_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -4530,6 +4765,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LCD_SPI_CONTROLLER_RUBIK:lcd"                                                              ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; bufferIndex ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------+
 ; Port Connectivity Checks: "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq49" ;
 +--------------+-------+----------+----------------------------------------+
@@ -4687,34 +4931,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 843                         ;
-;     CLR               ; 109                         ;
-;     CLR SCLR          ; 8                           ;
+; cycloneiii_ff         ; 880                         ;
+;     CLR               ; 94                          ;
+;     CLR SCLR          ; 9                           ;
 ;     CLR SLD           ; 13                          ;
-;     ENA               ; 294                         ;
+;     ENA               ; 315                         ;
 ;     ENA CLR           ; 67                          ;
-;     ENA CLR SCLR      ; 9                           ;
+;     ENA CLR SCLR      ; 8                           ;
 ;     ENA CLR SLD       ; 31                          ;
-;     ENA SCLR          ; 149                         ;
+;     ENA SCLR          ; 150                         ;
+;     ENA SLD           ; 3                           ;
 ;     SCLR              ; 16                          ;
 ;     SLD               ; 5                           ;
-;     plain             ; 142                         ;
+;     plain             ; 169                         ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 1815                        ;
-;     arith             ; 243                         ;
-;         2 data inputs ; 241                         ;
+; cycloneiii_lcell_comb ; 1802                        ;
+;     arith             ; 250                         ;
+;         2 data inputs ; 248                         ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 1572                        ;
+;     normal            ; 1552                        ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 116                         ;
-;         2 data inputs ; 123                         ;
-;         3 data inputs ; 361                         ;
-;         4 data inputs ; 968                         ;
+;         1 data inputs ; 118                         ;
+;         2 data inputs ; 127                         ;
+;         3 data inputs ; 342                         ;
+;         4 data inputs ; 961                         ;
 ; cycloneiii_pll        ; 1                           ;
+; cycloneiii_ram_block  ; 16                          ;
 ; fiftyfivenm_rublock   ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 5.06                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 4.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -4733,7 +4979,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Feb 13 22:19:02 2025
+    Info: Processing started: Tue Feb 18 01:11:08 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -4799,7 +5045,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file switch_
     Info (12023): Found entity 1: SWITCH_DEBOUNCE File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SWITCH_DEBOUNCE.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file detect_switch_edge.sv
     Info (12023): Found entity 1: DETECT_SWITCH_EDGE File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file coordinate_counter.sv
+    Info (12023): Found entity 1: COORDINATE_COUNTER File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COORDINATE_COUNTER.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file skid_buffer.sv
+    Info (12023): Found entity 1: SKID_BUFFER File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SKID_BUFFER.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file skid_buffer_tb.sv
+    Info (12023): Found entity 1: SKID_BUFFER_tb File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SKID_BUFFER_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file detect_switch_edge_noisy.sv
+    Info (12023): Found entity 1: DETECT_SWITCH_EDGE_NOISY File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE_NOISY.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file async_fifo_full_frame.sv
+    Info (12023): Found entity 1: ASYNC_FIFO_FULL_FRAME File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ASYNC_FIFO_FULL_FRAME.sv Line: 1
 Info (12127): Elaborating entity "LCD_RUBIKS_CUBE_DISPLAY" for the top level hierarchy
+Warning (10306): Invalid value "none" for synthesis attribute "syn_encoding" at LCD_RUBIKS_CUBE_DISPLAY.sv(254) File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 254
+Warning (10036): Verilog HDL or VHDL warning at LCD_RUBIKS_CUBE_DISPLAY.sv(76): object "clk_13MHz" assigned a value but never read File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 76
 Info (12128): Elaborating entity "dual_boot" for hierarchy "dual_boot:u0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 63
 Info (12128): Elaborating entity "altera_dual_boot" for hierarchy "dual_boot:u0|altera_dual_boot:dual_boot" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/dual_boot.v Line: 25
 Info (12128): Elaborating entity "alt_dual_boot_avmm" for hierarchy "dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/submodules/altera_dual_boot.v Line: 50
@@ -4829,7 +5087,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "dual_b
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "dual_boot:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (12128): Elaborating entity "STEP_CONVERSION" for hierarchy "STEP_CONVERSION:convert" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 69
-Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 91
+Info (12128): Elaborating entity "pll" for hierarchy "pll:pll_inst" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 92
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:pll_inst|altpll:altpll_component" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ip/pll.v Line: 106
 Info (12130): Elaborated megafunction instantiation "pll:pll_inst|altpll:altpll_component" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ip/pll.v Line: 106
 Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ip/pll.v Line: 106
@@ -4906,9 +5164,9 @@ Info (12133): Instantiated megafunction "pll:pll_inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "DETECT_SWITCH_EDGE" for hierarchy "DETECT_SWITCH_EDGE:sw0_det" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 144
+Info (12128): Elaborating entity "DETECT_SWITCH_EDGE" for hierarchy "DETECT_SWITCH_EDGE:sw0_det" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 124
 Info (12128): Elaborating entity "SWITCH_DEBOUNCE" for hierarchy "DETECT_SWITCH_EDGE:sw0_det|SWITCH_DEBOUNCE:debounce" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/DETECT_SWITCH_EDGE.sv Line: 27
-Info (12128): Elaborating entity "RUBIKS_CUBE_STATE_LCD" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 157
+Info (12128): Elaborating entity "RUBIKS_CUBE_STATE_LCD" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 137
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 14
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 15
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq2" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 16
@@ -4963,17 +5221,18 @@ Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq51" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 65
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq52" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 66
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "RUBIKS_CUBE_STATE_LCD:cube|SQUARE_STATE:sq53" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_LCD.sv Line: 67
-Info (12128): Elaborating entity "LCD_SPI_CONTROLLER_RUBIK" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 189
-Info (12128): Elaborating entity "LCD_SPI_MASTER_IMPROVED" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd|LCD_SPI_MASTER_IMPROVED:spi" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_SPI_CONTROLLER_RUBIK.sv Line: 57
-Info (12128): Elaborating entity "TOUCH_SPI_CONTROLLER" for hierarchy "TOUCH_SPI_CONTROLLER:touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 207
+Info (12128): Elaborating entity "LCD_SPI_CONTROLLER_RUBIK" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 177
+Info (12128): Elaborating entity "COORDINATE_COUNTER" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_SPI_CONTROLLER_RUBIK.sv Line: 55
+Info (12128): Elaborating entity "LCD_SPI_MASTER_IMPROVED" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd|LCD_SPI_MASTER_IMPROVED:spi" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_SPI_CONTROLLER_RUBIK.sv Line: 76
+Info (12128): Elaborating entity "TOUCH_SPI_CONTROLLER" for hierarchy "TOUCH_SPI_CONTROLLER:touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 195
 Info (12128): Elaborating entity "TOUCH_SPI_MASTER" for hierarchy "TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_SPI_CONTROLLER.sv Line: 38
-Info (12128): Elaborating entity "TOUCH_CALIBRATION" for hierarchy "TOUCH_CALIBRATION:calibration" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 223
+Info (12128): Elaborating entity "TOUCH_CALIBRATION" for hierarchy "TOUCH_CALIBRATION:calibration" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 211
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_CALIBRATION.sv Line: 37
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_CALIBRATION.sv Line: 38
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq2" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_CALIBRATION.sv Line: 39
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq3" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_CALIBRATION.sv Line: 40
-Info (12128): Elaborating entity "COLOUR_CHOICE_LCD" for hierarchy "COLOUR_CHOICE_LCD:colour_choice" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 243
-Info (10264): Verilog HDL Case Statement information at COLOUR_CHOICE_LCD.sv(95): all case item expressions in this case statement are onehot File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 95
+Info (12128): Elaborating entity "COLOUR_CHOICE_LCD" for hierarchy "COLOUR_CHOICE_LCD:colour_choice" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 231
+Info (10264): Verilog HDL Case Statement information at COLOUR_CHOICE_LCD.sv(97): all case item expressions in this case statement are onehot File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 97
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 35
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 36
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_STATE:colour_sq2" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 37
@@ -4986,7 +5245,7 @@ Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "COLOUR_CHOICE_LCD
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq10" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 51
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq11" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 52
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "COLOUR_CHOICE_LCD:colour_choice|SQUARE_TOUCH:touch_sq12" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COLOUR_CHOICE_LCD.sv Line: 53
-Info (12128): Elaborating entity "RUBIKS_CUBE_STATE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 257
+Info (12128): Elaborating entity "RUBIKS_CUBE_STATE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 245
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 16
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq1" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 17
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq2" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 18
@@ -5041,41 +5300,80 @@ Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq51" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 69
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq52" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 70
 Info (12128): Elaborating entity "SQUARE_TOUCH" for hierarchy "RUBIKS_CUBE_STATE_TOUCH:state_touch|SQUARE_TOUCH:touch_sq53" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/RUBIKS_CUBE_STATE_TOUCH.sv Line: 71
-Info (12128): Elaborating entity "ASYNC_FIFO" for hierarchy "ASYNC_FIFO:fifo" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 356
-Info (12128): Elaborating entity "OV7670_Cam" for hierarchy "OV7670_Cam:cam" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 378
-Info (12128): Elaborating entity "OV7670_INIT" for hierarchy "OV7670_Cam:cam|OV7670_INIT:cam_init" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_Cam.sv Line: 93
-Warning (10030): Net "INIT_SEQ.data_a" at OV7670_INIT.sv(138) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 138
-Warning (10030): Net "INIT_SEQ.waddr_a" at OV7670_INIT.sv(138) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 138
-Warning (10030): Net "INIT_SEQ.we_a" at OV7670_INIT.sv(138) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 138
+Info (12128): Elaborating entity "ASYNC_FIFO" for hierarchy "ASYNC_FIFO:fifo" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 347
+Info (12128): Elaborating entity "DETECT_SWITCH_EDGE_NOISY" for hierarchy "ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/ASYNC_FIFO.sv Line: 93
+Info (12128): Elaborating entity "OV7670_Cam" for hierarchy "OV7670_Cam:cam" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 383
+Info (12128): Elaborating entity "OV7670_INIT" for hierarchy "OV7670_Cam:cam|OV7670_INIT:cam_init" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_Cam.sv Line: 97
+Warning (10030): Net "INIT_SEQ.data_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
+Warning (10030): Net "INIT_SEQ.waddr_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
+Warning (10030): Net "INIT_SEQ.we_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
 Info (12128): Elaborating entity "OV7670_SCCB" for hierarchy "OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 41
 Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (78) in the Memory Initialization File "C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/RUBIKS_CUBE_DISPLAY_INPUT.ram0_OV7670_INIT_cfd62e96.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (276020): Inferred RAM node "ASYNC_FIFO:fifo|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ" is uninferred because MIF is not supported for the selected family File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 138
+    Info (276013): RAM logic "OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ" is uninferred because MIF is not supported for the selected family File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ASYNC_FIFO:fifo|data_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 200
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 200
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "ASYNC_FIFO:fifo|altsyncram:data_rtl_0"
+Info (12133): Instantiated megafunction "ASYNC_FIFO:fifo|altsyncram:data_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "200"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "200"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fph1.tdf
+    Info (12023): Found entity 1: altsyncram_fph1 File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/altsyncram_fph1.tdf Line: 27
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_SPI_MASTER.sv Line: 19
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "c_PWRN" is stuck at GND File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 58
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 25 registers lost all their fanouts during netlist optimizations.
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register OV7670_Cam:cam|skip_pixel[0] will power up to High File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_Cam.sv Line: 279
+Info (17049): 45 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp|dual_boot_int_clk" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/submodules/rtl/alt_dual_boot_avmm.v Line: 43
 Info (144001): Generated suppressed messages file C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/RUBIKS_CUBE_DISPLAY_INPUT.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15899): PLL "pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|pll1" has parameters clk4_multiply_by and clk4_divide_by specified but port CLK[4] is not connected File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/pll_altpll.v Line: 43
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "c_VSYNC" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 52
-Info (21057): Implemented 2036 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2048 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 18 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 1990 logic cells
+    Info (21061): Implemented 1986 logic cells
+    Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Thu Feb 13 22:19:19 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Tue Feb 18 01:11:27 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
