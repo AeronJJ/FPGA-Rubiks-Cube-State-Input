@@ -124,7 +124,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "c_VSYNC",
+					"name" : "c_PCLK",
+					"strict" : false
+				},
+				{
+					"name" : "c_HREF",
+					"strict" : false
+				},
+				{
+					"name" : "c_VSYNC_noisy",
 					"strict" : false
 				},
 				{
@@ -132,11 +140,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "c_PCLK",
-					"strict" : false
-				},
-				{
-					"name" : "c_HREF",
+					"name" : "t_sdo",
 					"strict" : false
 				},
 				{
@@ -169,10 +173,6 @@
 				},
 				{
 					"name" : "c_DOUT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "t_sdo",
 					"strict" : false
 				}
 			]

@@ -1,0 +1,229 @@
+module HARRIS_CORNER_DETECTOR_V2 #() (
+	input [15:0] window5x5 [0:24],
+	output isCorner,
+	output [15:0] pixel
+);
+
+// Get gradients of central 3x3 square:
+
+wire signed [8:0] I_x_r [8:0];
+wire signed [8:0] I_x_g [8:0];
+wire signed [8:0] I_x_b [8:0];
+wire signed [8:0] I_y_r [8:0];
+wire signed [8:0] I_y_g [8:0];
+wire signed [8:0] I_y_b [8:0];
+
+SOBEL_FILTER_RGB565_V2 edge0 (
+	{window5x5[0:2], window5x5[5:7], window5x5[10:12]},
+	I_x_r[0],
+	I_x_g[0],
+	I_x_b[0],
+	I_y_r[0],
+	I_y_g[0],
+	I_y_b[0]
+);
+
+SOBEL_FILTER_RGB565_V2 edge1 (
+	{window5x5[1:3], window5x5[6:8], window5x5[11:13]},
+	I_x_r[1],
+	I_x_g[1],
+	I_x_b[1],
+	I_y_r[1],
+	I_y_g[1],
+	I_y_b[1]
+);
+
+SOBEL_FILTER_RGB565_V2 edge2 (
+	{window5x5[2:4], window5x5[7:9], window5x5[12:14]},
+	I_x_r[2],
+	I_x_g[2],
+	I_x_b[2],
+	I_y_r[2],
+	I_y_g[2],
+	I_y_b[2]
+);
+
+SOBEL_FILTER_RGB565_V2 edge3 (
+	{window5x5[5:7], window5x5[10:12], window5x5[15:17]},
+	I_x_r[3],
+	I_x_g[3],
+	I_x_b[3],
+	I_y_r[3],
+	I_y_g[3],
+	I_y_b[3]
+);
+
+SOBEL_FILTER_RGB565_V2 edge4 (
+	{window5x5[6:8], window5x5[11:13], window5x5[16:18]},
+	I_x_r[4],
+	I_x_g[4],
+	I_x_b[4],
+	I_y_r[4],
+	I_y_g[4],
+	I_y_b[4]
+);
+
+SOBEL_FILTER_RGB565_V2 edge5 (
+	{window5x5[7:9], window5x5[12:14], window5x5[17:19]},
+	I_x_r[5],
+	I_x_g[5],
+	I_x_b[5],
+	I_y_r[5],
+	I_y_g[5],
+	I_y_b[5]
+);
+
+SOBEL_FILTER_RGB565_V2 edge6 (
+	{window5x5[10:12], window5x5[15:17], window5x5[20:22]},
+	I_x_r[6],
+	I_x_g[6],
+	I_x_b[6],
+	I_y_r[6],
+	I_y_g[6],
+	I_y_b[6]
+);
+
+SOBEL_FILTER_RGB565_V2 edge7 (
+	{window5x5[11:13], window5x5[16:18], window5x5[21:23]},
+	I_x_r[7],
+	I_x_g[7],
+	I_x_b[7],
+	I_y_r[7],
+	I_y_g[7],
+	I_y_b[7]
+);
+
+SOBEL_FILTER_RGB565_V2 edge8 (
+	{window5x5[12:14], window5x5[17:19], window5x5[22:24]},
+	I_x_r[8],
+	I_x_g[8],
+	I_x_b[8],
+	I_y_r[8],
+	I_y_g[8],
+	I_y_b[8]
+);
+
+// Harris Corner Detection:
+
+localparam threshold = 25'h0FFFFFF;
+
+wire signed [20:0] I_x_r_squared_sum;
+wire signed [20:0] I_x_g_squared_sum;
+wire signed [20:0] I_x_b_squared_sum;
+
+assign I_x_r_squared_sum = I_x_r[0]*I_x_r[0] +
+									I_x_r[1]*I_x_r[1] +
+									I_x_r[2]*I_x_r[2] +
+									I_x_r[3]*I_x_r[3] +
+									I_x_r[4]*I_x_r[4] +
+									I_x_r[5]*I_x_r[5] +
+									I_x_r[6]*I_x_r[6] +
+									I_x_r[7]*I_x_r[7] +
+									I_x_r[8]*I_x_r[8];
+									
+assign I_x_g_squared_sum = I_x_g[0]*I_x_g[0] +
+									I_x_g[1]*I_x_g[1] +
+									I_x_g[2]*I_x_g[2] +
+									I_x_g[3]*I_x_g[3] +
+									I_x_g[4]*I_x_g[4] +
+									I_x_g[5]*I_x_g[5] +
+									I_x_g[6]*I_x_g[6] +
+									I_x_g[7]*I_x_g[7] +
+									I_x_g[8]*I_x_g[8];
+									
+assign I_x_b_squared_sum = I_x_b[0]*I_x_b[0] +
+									I_x_b[1]*I_x_b[1] +
+									I_x_b[2]*I_x_b[2] +
+									I_x_b[3]*I_x_b[3] +
+									I_x_b[4]*I_x_b[4] +
+									I_x_b[5]*I_x_b[5] +
+									I_x_b[6]*I_x_b[6] +
+									I_x_b[7]*I_x_b[7] +
+									I_x_b[8]*I_x_b[8];
+
+wire signed [20:0] I_y_r_squared_sum;
+wire signed [20:0] I_y_g_squared_sum;
+wire signed [20:0] I_y_b_squared_sum;
+									
+assign I_y_r_squared_sum = I_y_r[0]*I_y_r[0] +
+									I_y_r[1]*I_y_r[1] +
+									I_y_r[2]*I_y_r[2] +
+									I_y_r[3]*I_y_r[3] +
+									I_y_r[4]*I_y_r[4] +
+									I_y_r[5]*I_y_r[5] +
+									I_y_r[6]*I_y_r[6] +
+									I_y_r[7]*I_y_r[7] +
+									I_y_r[8]*I_y_r[8];
+									
+assign I_y_g_squared_sum = I_y_g[0]*I_y_g[0] +
+									I_y_g[1]*I_y_g[1] +
+									I_y_g[2]*I_y_g[2] +
+									I_y_g[3]*I_y_g[3] +
+									I_y_g[4]*I_y_g[4] +
+									I_y_g[5]*I_y_g[5] +
+									I_y_g[6]*I_y_g[6] +
+									I_y_g[7]*I_y_g[7] +
+									I_y_g[8]*I_y_g[8];
+									
+assign I_y_b_squared_sum = I_y_b[0]*I_y_b[0] +
+									I_y_b[1]*I_y_b[1] +
+									I_y_b[2]*I_y_b[2] +
+									I_y_b[3]*I_y_b[3] +
+									I_y_b[4]*I_y_b[4] +
+									I_y_b[5]*I_y_b[5] +
+									I_y_b[6]*I_y_b[6] +
+									I_y_b[7]*I_y_b[7] +
+									I_y_b[8]*I_y_b[8];
+
+wire signed [20:0] I_x_r_I_y_r_sum;
+wire signed [20:0] I_x_g_I_y_g_sum;
+wire signed [20:0] I_x_b_I_y_b_sum;
+									
+assign I_x_r_I_y_r_sum =   I_x_r[0]*I_y_r[0] +
+									I_x_r[1]*I_y_r[1] +
+									I_x_r[2]*I_y_r[2] +
+									I_x_r[3]*I_y_r[3] +
+									I_x_r[4]*I_y_r[4] +
+									I_x_r[5]*I_y_r[5] +
+									I_x_r[6]*I_y_r[6] +
+									I_x_r[7]*I_y_r[7] +
+									I_x_r[8]*I_y_r[8];
+									
+assign I_x_g_I_y_g_sum =   I_x_g[0]*I_y_g[0] +
+									I_x_g[1]*I_y_g[1] +
+									I_x_g[2]*I_y_g[2] +
+									I_x_g[3]*I_y_g[3] +
+									I_x_g[4]*I_y_g[4] +
+									I_x_g[5]*I_y_g[5] +
+									I_x_g[6]*I_y_g[6] +
+									I_x_g[7]*I_y_g[7] +
+									I_x_g[8]*I_y_g[8];
+									
+assign I_x_b_I_y_b_sum =   I_x_b[0]*I_y_b[0] +
+									I_x_b[1]*I_y_b[1] +
+									I_x_b[2]*I_y_b[2] +
+									I_x_b[3]*I_y_b[3] +
+									I_x_b[4]*I_y_b[4] +
+									I_x_b[5]*I_y_b[5] +
+									I_x_b[6]*I_y_b[6] +
+									I_x_b[7]*I_y_b[7] +
+									I_x_b[8]*I_y_b[8];
+
+									
+									
+wire signed [23:0] det_I_r = I_x_r_squared_sum*I_y_r_squared_sum - I_x_r_I_y_r_sum*I_x_r_I_y_r_sum;
+wire signed [23:0] det_I_g = I_x_g_squared_sum*I_y_g_squared_sum - I_x_g_I_y_g_sum*I_x_g_I_y_g_sum;
+wire signed [23:0] det_I_b = I_x_b_squared_sum*I_y_b_squared_sum - I_x_b_I_y_b_sum*I_x_b_I_y_b_sum;
+
+wire signed [24:0] R_r = det_I_r - ((I_x_r_squared_sum + I_y_r_squared_sum)*(I_x_r_squared_sum + I_y_r_squared_sum) >> 5);
+wire signed [24:0] R_g = det_I_g - ((I_x_g_squared_sum + I_y_g_squared_sum)*(I_x_g_squared_sum + I_y_g_squared_sum) >> 5);
+wire signed [24:0] R_b = det_I_b - ((I_x_b_squared_sum + I_y_b_squared_sum)*(I_x_b_squared_sum + I_y_b_squared_sum) >> 5);
+
+wire internal_isCorner;
+
+assign isCorner = internal_isCorner;
+
+assign internal_isCorner = (R_r > threshold || R_g > threshold || R_b > threshold);
+assign pixel = internal_isCorner ? 16'hFFFF : 16'h0000;
+
+endmodule

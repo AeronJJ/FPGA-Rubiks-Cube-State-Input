@@ -17,14 +17,28 @@ current_state.s_WAIT 0 0 1 0 0 0 1
 current_state.s_DONE 0 1 0 0 0 0 1 
 current_state.s_INIT_DONE 1 0 0 0 0 0 1 
 
-State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|DETECT_SWITCH_EDGE_NOISY:vsync_edge|switch_state_c
 Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
 switch_state_c.00 0 0 0 0 
 switch_state_c.01 0 0 1 1 
 switch_state_c.10 0 1 0 1 
 switch_state_c.11 1 0 0 1 
 
-State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FIFO:fifo|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|DETECT_SWITCH_EDGE_NOISY:read_edge|switch_state_c
+Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
+switch_state_c.00 0 0 0 0 
+switch_state_c.01 0 0 1 1 
+switch_state_c.10 0 1 0 1 
+switch_state_c.11 1 0 0 1 
+
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|DETECT_SWITCH_EDGE_NOISY:write_edge|switch_state_c
+Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
+switch_state_c.00 0 0 0 0 
+switch_state_c.01 0 0 1 1 
+switch_state_c.10 0 1 0 1 
+switch_state_c.11 1 0 0 1 
+
+State Machine - |LCD_RUBIKS_CUBE_DISPLAY|ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|switch_state_c
 Name switch_state_c.11 switch_state_c.10 switch_state_c.01 switch_state_c.00 
 switch_state_c.00 0 0 0 0 
 switch_state_c.01 0 0 1 1 

@@ -1,0 +1,9 @@
+module LETTER_GENERATOR #(parameter xpos = 0, ypos = 0, size = 1, logic [7:0] letter [0:7] = FONT_A) (
+	input [8:0] x,
+	input [7:0] y,
+	output active
+);
+
+assign active = letter[x-xpos][y-ypos] ? 1'b1 : 1'b0;
+
+endmodule

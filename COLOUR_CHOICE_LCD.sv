@@ -52,6 +52,8 @@ SQUARE_TOUCH #(.x_touch_corner(1923), .y_touch_corner(985),  .x_touch_length(568
 SQUARE_TOUCH #(.x_touch_corner(1326), .y_touch_corner(985),  .x_touch_length(568), .y_touch_length(748)) touch_sq11 (x_touch, y_touch, active, sq_touched[4]);
 SQUARE_TOUCH #(.x_touch_corner(730),  .y_touch_corner(985),  .x_touch_length(568), .y_touch_length(748)) touch_sq12 (x_touch, y_touch, active, sq_touched[5]);
 
+import MSP2807_COLOURS::*;
+
 always_comb begin
 	currentColour = 16'b0;
 	colours = 3'b0;
@@ -59,38 +61,46 @@ always_comb begin
 		colours |= sqCol[i];
 	end
 	case (colours)
-		3'b000: begin
-			currentColour = 16'h0000; // Black
+		3'b000: begin // Black
+			//currentColour = 16'h0000;
+			currentColour = MSP_BLACK;
 		end
 		
-		3'b010: begin
-			currentColour = 16'h07E0; // Green
+		3'b010: begin // Green
+			//currentColour = 16'h07E0;
+			currentColour = MSP_GREEN;
 		end
 		
-		3'b011: begin
-			currentColour = 16'h001F; // Blue
+		3'b011: begin // Blue
+			//currentColour = 16'h001F;
+			currentColour = MSP_BLUE;
 		end
 		
-		3'b100: begin
-			currentColour = 16'hF800; // Red
+		3'b100: begin // Red
+			//currentColour = 16'hF800;
+			currentColour = MSP_RED;
 		end
 		
-		3'b101: begin
-			//currentColour = 16'hFC0A; // Orange
-			currentColour = 16'hFD68;
+		3'b101: begin // Orange
+			//currentColour = 16'hFC0A;
+			//currentColour = 16'hFD68;
+			currentColour = MSP_ORANGE;
 		end
 		
-		3'b111: begin
-			currentColour = 16'hFFFF; // White
+		3'b111: begin // White
+			//currentColour = 16'hFFFF;
+			currentColour = MSP_WHITE;
 		end
 		
-		3'b110: begin
-			//currentColour = 16'hDC05; // Yellow
-			currentColour = 16'hFFC0;
+		3'b110: begin // Yellow
+			//currentColour = 16'hDC05;
+			//currentColour = 16'hFFC0;
+			currentColour = MSP_YELLOW;
 		end
 		
-		default: begin
-			currentColour = 16'h0000; // Black
+		default: begin // Black
+			//currentColour = 16'h0000;
+			currentColour = MSP_BLACK;
 		end
 	endcase
 	

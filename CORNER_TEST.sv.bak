@@ -1,0 +1,74 @@
+module CORNER_TEST (
+	input MAX10_CLK1_50,
+	
+	output o_cs,
+	output o_dcrs,
+	output o_sdi,
+	output o_sck,
+	output o_lcdrst,
+	
+	input t_sdo,
+	input t_irq,
+	output t_sdi,
+	output t_sck,
+	output t_cs,
+	
+	input [9:0] switches,
+	output reg [5:0] leds,
+	input rst_n,
+	
+	output c_SCL,
+	inout wire c_SDATA,
+	input c_VSYNC_noisy,
+	input c_HREF,
+	input c_PCLK,
+	output c_XCLK,
+	input [7:0] c_DOUT,
+	output c_RST,
+	output c_PWRN
+);
+
+// Clock Assignments
+
+wire clk_100MHz;
+wire clk_1MHz;
+wire clk_800KHz;
+wire clk_800KHz_30;
+wire clk_25MHz;
+wire clk_200MHz;
+
+pll	pll_inst (
+	.inclk0 ( MAX10_CLK1_50 ),
+	.c0 ( clk_100MHz ),
+	.c1 ( clk_1MHz ),
+	.c2 ( clk_800KHz ),
+	.c3 ( clk_800KHz_30 ),
+	.c4 ( clk_200MHz )
+	);
+
+assign clk_25MHz = internal_xclk;
+reg internal_xclk = 1'b0;
+
+always @ (posedge MAX10_CLK1_50) begin
+	internal_xclk = ~internal_xclk;
+end
+
+logic [15:0] window5x5 [24:0] = '{
+    16'h0011, 16'h0022, 16'h0033, 16'h0044, 16'h0055,
+    16'h0066, 16'h0077, 16'h0088, 16'h0099, 16'h00AA,
+    16'h00BB, 16'h00CC, 16'h00DD, 16'h00EE, 16'h00FF,
+    16'h0111, 16'h0222, 16'h0333, 16'h0444, 16'h0555,
+    16'h0666, 16'h0777, 16'h0888, 16'h0999, 16'h0AAA
+};
+
+wire isCorner;
+wire [15:0] corner_pixel;
+
+HARRIS_CORNER_DETECTOR_V2 test (
+	.window5x5(window5x5),
+	.isCorner(isCorner),
+	.pixel(corner_pixel)
+);
+
+
+endmodule

@@ -3,10 +3,11 @@ module COORDINATE_COUNTER #(parameter x_count = 320, y_count = 240, x_width = 9,
 	rst,
 	x,
 	y,
-	index
+	index,
+	en
 );
 
-localparam size = x_count * y_count;
+localparam lcd_size = x_count * y_count;
 
 input increment;
 input rst;
@@ -15,18 +16,21 @@ output reg[y_width-1:0] y = 8'b0;
 
 output reg[16:0] index = 17'd0;
 
+input en;
+
+//always_ff @ (posedge increment) begin// or posedge rst) begin
 always_ff @ (posedge increment or posedge rst) begin
 	if (rst) begin
 		index <= 17'b0;
 		x <= '0;
 		y <= '0;
 	end
-	else if (index == size-1) begin
+	else if (index == lcd_size-1'b1) begin
 		index <= 17'b0;
 		x <= '0;
 		y <= '0;
 	end
-	else begin
+	else if (en) begin
 		index <= index + 1'b1;
 		if (x == x_count-1) begin
 			x <= '0;

@@ -1,0 +1,212 @@
+module ASYNC_FRAME_BUFFER_CORNER_DETECTION (
+	input clk,
+	input [15:0] w_data,
+	input w_en,
+	input [16:0] w_bufferIndex,
+	output [15:0] r_data,
+	input r_en,
+	input [8:0] r_x,
+	input [7:0] r_y,
+	input [16:0] r_bufferIndex,
+	output reg d_available,
+	input vsync
+);
+
+// IO Setup
+initial d_available = 1'b0;
+//
+
+
+/**/
+reg [15:0] window [0:24];
+wire isCorner;
+
+HARRIS_CORNER_DETECTOR_V2 #() (
+	.window5x5(window),
+	.isCorner(isCorner),
+	.pixel(r_data)
+);
+
+// 
+localparam width = 76800;
+localparam num_memory_banks = 5;
+localparam mem_length = width/num_memory_banks;
+localparam lcd_width = 320;
+
+reg [15:0] mem_0 [0:mem_length-1];
+reg [15:0] mem_1 [0:mem_length-1];
+reg [15:0] mem_2 [0:mem_length-1];
+reg [15:0] mem_3 [0:mem_length-1];
+reg [15:0] mem_4 [0:mem_length-1];
+
+wire [14:0] r_memory_index;
+wire [14:0] w_memory_index;
+
+wire [2:0] r_data_selector;
+wire [2:0] w_data_selector;
+
+always_comb begin
+	r_memory_index = (r_bufferIndex/(num_memory_banks*lcd_width)) * lcd_width + (r_bufferIndex%lcd_width);
+	w_memory_index = (w_bufferIndex/(num_memory_banks*lcd_width)) * lcd_width + (w_bufferIndex%lcd_width);
+	
+	r_data_selector = (r_bufferIndex%(num_memory_banks*lcd_width)) / lcd_width;
+	w_data_selector = (w_bufferIndex%(num_memory_banks*lcd_width)) / lcd_width;
+end
+
+logic [15:0] read_data_0, read_data_1, read_data_2, read_data_3, read_data_4;
+
+always_comb begin
+	if (w_bufferIndex == 0 && r_bufferIndex > 0 && r_bufferIndex < 76800) begin
+		d_available = 1'b1;
+	end
+	else if (r_bufferIndex > w_bufferIndex || w_bufferIndex == 0 || (w_bufferIndex == 76800 && r_bufferIndex == 0)) begin
+		d_available = 1'b0;
+	end
+	else begin
+		d_available = 1'b1;
+	end
+end
+
+always_ff @ (posedge clk) begin
+	if (write_posedge) begin
+		if (w_data_selector == 3'b000) begin
+			mem_0[w_memory_index] <= w_data;
+		end
+		else if (w_data_selector == 3'b001) begin
+			mem_1[w_memory_index] <= w_data;
+		end
+		else if (w_data_selector == 3'b010) begin
+			mem_2[w_memory_index] <= w_data;
+		end
+		else if (w_data_selector == 3'b011) begin
+			mem_3[w_memory_index] <= w_data;
+		end
+		else if (w_data_selector == 3'b100) begin
+			mem_4[w_memory_index] <= w_data;
+		end
+	end
+	
+	if (read_posedge && d_available) begin
+		read_data_0 <= mem_0[r_memory_index];
+		read_data_1 <= mem_1[r_memory_index];
+		read_data_2 <= mem_2[r_memory_index];
+		read_data_3 <= mem_3[r_memory_index];
+		read_data_4 <= mem_4[r_memory_index];
+						
+		window[0] <= window[1];
+		window[1] <= window[2];
+		window[2] <= window[3];
+		window[3] <= window[4];
+		//window[4] <= read_data_0;
+		
+		window[5] <= window[6];
+		window[6] <= window[7];
+		window[7] <= window[8];
+		window[8] <= window[9];
+		//window[9] <= read_data_0;
+		
+		window[10] <= window[11];
+		window[11] <= window[12];
+		window[12] <= window[13];
+		window[13] <= window[14];
+		//window[14] <= read_data_0;
+		
+		window[15] <= window[16];
+		window[16] <= window[17];
+		window[17] <= window[18];
+		window[18] <= window[19];
+		//window[19] <= read_data_0;
+		
+		window[20] <= window[21];
+		window[21] <= window[22];
+		window[22] <= window[23];
+		window[23] <= window[24];
+		//window[24] <= read_data_0;
+		
+		case (r_data_selector) 
+			3'b000: begin				
+				window[4] <= read_data_2;
+				window[9] <= read_data_3;
+				window[14] <= read_data_4;
+				window[19] <= read_data_0;
+				window[24] <= read_data_1;
+			end
+			
+			3'b001: begin				
+				window[4] <= read_data_3;
+				window[9] <= read_data_4;
+				window[14] <= read_data_0;
+				window[19] <= read_data_1;
+				window[24] <= read_data_2;
+			end
+			
+			3'b010: begin				
+				window[4] <= read_data_4;
+				window[9] <= read_data_0;
+				window[14] <= read_data_1;
+				window[19] <= read_data_2;
+				window[24] <= read_data_3;
+			end
+			
+			3'b011: begin				
+				window[4] <= read_data_0;
+				window[9] <= read_data_1;
+				window[14] <= read_data_2;
+				window[19] <= read_data_3;
+				window[24] <= read_data_4;
+			end
+			
+			3'b100: begin				
+				window[4] <= read_data_1;
+				window[9] <= read_data_2;
+				window[14] <= read_data_3;
+				window[19] <= read_data_4;
+				window[24] <= read_data_0;
+			end
+		endcase			
+	end
+end
+
+
+
+// Detect edges of r_en and w_en and vsync
+logic [5:0] dummy;
+
+wire write_posedge;
+wire read_posedge;
+wire vsync_posedge;
+wire vsync_negedge;
+
+DETECT_SWITCH_EDGE_NOISY write_edge ( 
+	w_en,
+	clk,
+	
+	write_posedge,
+	dummy[0],
+	dummy[1]
+);
+
+DETECT_SWITCH_EDGE_NOISY read_edge ( 
+	r_en,
+	clk,
+	
+	read_posedge,
+	dummy[2],
+	dummy[3]
+);
+
+DETECT_SWITCH_EDGE_NOISY vsync_edge ( 
+	vsync,
+	clk,
+	
+	vsync_posedge,
+	//dummy[4],
+	vsync_negedge,
+	dummy[5]
+);
+//
+
+
+
+endmodule
+

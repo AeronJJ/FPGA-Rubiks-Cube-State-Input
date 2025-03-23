@@ -1,0 +1,18 @@
+module SQUARE_STATE_MOVABLE (
+	input [8:0] isX, 
+	input [7:0] isY,
+	input [8:0] X_pos,
+	input [7:0] Y_pos,
+	input [2:0] colourSet,
+	output isSet, 
+	output [2:0] colour
+);
+
+parameter length = 26;
+parameter border = 3;
+
+// If isX > x + length && isY > y + length then isSet = true
+assign isSet = (isX > X_pos) && (isX < (X_pos + length)) && (isY > Y_pos) && (isY < (Y_pos + length));
+assign colour = (isX < (X_pos + border)) || (isX > (X_pos + length - border)) || (isY < (Y_pos + border)) || (isY > (Y_pos + length - border)) ? 3'b000 : colourSet;
+
+endmodule

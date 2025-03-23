@@ -19,7 +19,7 @@ module LCD_RUBIKS_CUBE_DISPLAY (
 	
 	c_SCL,
 	c_SDATA,
-	c_VSYNC,
+	c_VSYNC_noisy,
 	c_HREF,
 	c_PCLK,
 	c_XCLK,
@@ -49,7 +49,7 @@ input rst_n;
 
 output c_SCL;
 inout wire c_SDATA;
-input c_VSYNC;
+input c_VSYNC_noisy;
 input c_HREF;
 input c_PCLK;
 output c_XCLK;
@@ -68,12 +68,14 @@ STEP_CONVERSION convert (
 	leds
 );
 
+// Clock Assignments
+
 wire clk_100MHz;
 wire clk_1MHz;
 wire clk_800KHz;
 wire clk_800KHz_30;
 wire clk_25MHz;
-wire clk_13MHz;
+//wire clk_13MHz;
 wire clk_200MHz;
 
 /*pll	pll_inst (
@@ -92,27 +94,43 @@ pll	pll_inst (
 	);
 
 assign clk_25MHz = internal_xclk;
-assign clk_13MHz = internal_13clk;
-
 reg internal_xclk = 1'b0;
-reg internal_13clk = 1'b0;
+
 always @ (posedge MAX10_CLK1_50) begin
 	internal_xclk = ~internal_xclk;
 end
 
+/*
+assign clk_13MHz = internal_13clk;
+reg internal_13clk = 1'b0;
+
 always @ (posedge clk_25MHz) begin
 	internal_13clk = ~internal_13clk;
 end
+*/
+
+//
 
 
+// Clean VSYNC:
+wire c_VSYNC;
+/*assign c_VSYNC = c_VSYNC_noisy;*/
+
+SWITCH_DEBOUNCE #(.delay(6000)) vsync_debounce (
+	MAX10_CLK1_50,
+	c_VSYNC_noisy,
+	c_VSYNC
+);
+//
 
 
+// Camera - Net switch control
 wire sw0_pos_edge_pulse;
 wire sw0_neg_edge_pulse;
 wire rst_lcd_mem_addr;
 
 wire rst_corner;
-assign rst_corner = rst_lcd_mem_addr || (cam_active ? c_VSYNC : 1'b0);
+assign rst_corner = sw0_neg_edge_pulse || (cam_active ? c_VSYNC : 1'b0);
 
 DETECT_SWITCH_EDGE sw0_det ( 
 	switches[0],
@@ -122,7 +140,11 @@ DETECT_SWITCH_EDGE sw0_det (
 	sw0_neg_edge_pulse,
 	rst_lcd_mem_addr
 );
+//
 
+
+
+// Rubik's Cube Net pixel generator
 
 //wire[143:0] cube_state = 144'h9249246db6dbffffffb6db6d492492db6db6; // Solved State
 wire[143:0] cube_state;
@@ -136,6 +158,8 @@ RUBIKS_CUBE_STATE_LCD cube (
 	currentPixel_cubestate
 );
 
+//
+
 
 /*
 Red = 3'b100
@@ -147,6 +171,9 @@ Yellow = 3'b110
 Black = 3'b000
 // Solved State = 144'h924924492492ffffff6db6dbdb6db6b6db6d 
 */
+
+
+// LCD interface
 
 wire p_available;
 
@@ -176,6 +203,11 @@ LCD_SPI_CONTROLLER_RUBIK lcd (
 	bufferIndex
 );
 
+//
+
+
+// Touch panel interface
+
 wire [11:0] x_data; // Touch coordinates
 wire [11:0] y_data;
 wire new_touch_input; // Pulses when touch detected and coordinates are ready for analysis
@@ -194,8 +226,13 @@ TOUCH_SPI_CONTROLLER touch (
 	rst_n
 );
 
+//
+
+
 //assign cube_state = (y_data > 450 && x_data > 450) ? 144'hE94D2556779A7FCAD4B9ACEE5BF57FD6475E : 144'h9249246db6dbffffffb6db6d492492db6db6;
 
+
+// Touch Screen Calibration (Not in use)
 
 reg active = 1'b0;
 wire [15:0] currentPixel_calibration;
@@ -210,8 +247,14 @@ TOUCH_CALIBRATION calibration (
 	currentPixel_calibration
 );
 
+//
+
+
+
 //assign currentPixel = (y_data > 450 && x_data > 450) ? currentPixel_calibration : currentPixel_cubestate;
 //assign currentPixel = 1'b1 ? currentPixel_calibration : currentPixel_cubestate;
+
+// Colour Choice pixel generator
 
 reg colour_choice_active;
 reg cube_state_active;
@@ -230,6 +273,11 @@ COLOUR_CHOICE_LCD colour_choice (
 	new_colour
 );
 
+//
+
+
+// Rubik's Cube current state control
+
 wire activate_colour_choice;
 
 RUBIKS_CUBE_STATE_TOUCH state_touch (
@@ -244,8 +292,11 @@ RUBIKS_CUBE_STATE_TOUCH state_touch (
 	MAX10_CLK1_50
 );
 
+//
+
 
 // State machine to control which screen is being displayed, will be expanded in the future.
+// (Should be modularised)
 localparam s_IDLE = 2'b00;
 localparam s_STATE_DISPLAY = 2'b01;
 localparam s_COLOUR_CHOICE_DISPLAY = 2'b10;
@@ -330,6 +381,11 @@ always_comb begin
 	endcase
 end
 
+//
+
+
+// Camera interface and frame buffer
+
 wire [15:0] w_data;
 wire w_en;
 wire [15:0] r_data;
@@ -337,19 +393,21 @@ wire r_en;
 wire d_available;
 
 
-ASYNC_FIFO fifo (
+/*ASYNC_FIFO fifo (
 	MAX10_CLK1_50,
 	w_data,
 	w_en,
 	r_data,
 	incBuffer,
 	d_available
-);
+);*/
 
-/*ASYNC_FIFO_FULL_FRAME fifo (
+/*
+ASYNC_FIFO_FULL_FRAME fifo ( // frame buffer not a fifo
 	MAX10_CLK1_50,
 	w_data,
 	w_en,
+	cam_bufferIndex,
 	r_data,
 	incBuffer,
 	x,
@@ -358,6 +416,32 @@ ASYNC_FIFO fifo (
 	d_available,
 	c_VSYNC
 );*/
+
+
+wire sw1;
+
+SWITCH_DEBOUNCE sw1_debounce (
+	MAX10_CLK1_50,
+	switches[1],
+	sw1
+);
+
+ASYNC_FRAME_BUFFER_CORNER_DETECTION frame_buffer (
+	MAX10_CLK1_50,
+	w_data,
+	w_en,
+	cam_bufferIndex,
+	r_data,
+	incBuffer,
+	x,
+	y,
+	bufferIndex,
+	d_available,
+	c_VSYNC,
+	sw1
+);
+
+wire [16:0] cam_bufferIndex;
 
 OV7670_Cam cam (
 	clk_800KHz,
@@ -379,8 +463,11 @@ OV7670_Cam cam (
 	
 	d_available,
 	w_data,
-	w_en
+	w_en,
+	cam_bufferIndex
 );
+
+//
 
 endmodule
 

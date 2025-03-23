@@ -1,0 +1,59 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/simulation/modelsim
+vLCD_RUBIKS_CUBE_DISPLAY
+Z1 !s110 1741303609
+!i10b 1
+!s100 R3Fhl[CRlbB^MP^zGX_Li0
+IYW4VKZQTPgY;BceRYSaL@3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1741291171
+8RUBIKS_CUBE_DISPLAY_INPUT.vo
+FRUBIKS_CUBE_DISPLAY_INPUT.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1741303607.000000
+!s107 RUBIKS_CUBE_DISPLAY_INPUT.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|RUBIKS_CUBE_DISPLAY_INPUT.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z4 tCvgOpt 0
+n@l@c@d_@r@u@b@i@k@s_@c@u@b@e_@d@i@s@p@l@a@y
+vSOBEL_FILTER_RGB565_tb
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 niOk]E9@<Y5eBoTbTQW592
+ISGR0`LzfKnhngE;6[m_kU0
+R2
+!s105 SOBEL_FILTER_RGB565_tb_sv_unit
+S1
+R0
+w1740618190
+8C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SOBEL_FILTER_RGB565_tb.sv
+FC:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SOBEL_FILTER_RGB565_tb.sv
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1741303609.000000
+!s107 C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SOBEL_FILTER_RGB565_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input|C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/SOBEL_FILTER_RGB565_tb.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input
+R4
+n@s@o@b@e@l_@f@i@l@t@e@r_@r@g@b565_tb

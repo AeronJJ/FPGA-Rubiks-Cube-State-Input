@@ -24,8 +24,8 @@ output reg fifoClk;
 reg bufferClk;
 
 reg lowByte = 1'b0;
-assign bufferClk = pixel_available ? !lowByte : 1'b0;
-//assign bufferClk = !lowByte;
+//assign bufferClk = pixel_available ? !lowByte : 1'b0;
+assign bufferClk = !lowByte;
 
 output o_cs;
 output o_dcrs;
@@ -42,16 +42,24 @@ output [8:0] x;
 output [7:0] y;
 
 output [16:0] bufferIndex;
+
+reg rst_buffer;
+
+//assign rst_buffer = ((bufferIndex == 17'd76799) ? 1'b1 : 1'b0) || rst_coord;
+
+assign rst_buffer = rst_coord;
 	
 localparam CLK_FREQ_MHz = 100;
 
 
 COORDINATE_COUNTER coords (
 	bufferClk,
-	rst_coord,
+	//rst_coord,
+	rst_buffer,
 	x,
 	y,
-	bufferIndex
+	bufferIndex,
+	pixel_available
 );
 
 reg i_en;

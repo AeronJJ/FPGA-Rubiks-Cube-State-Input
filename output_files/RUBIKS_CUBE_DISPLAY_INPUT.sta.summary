@@ -2,424 +2,520 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -12.957
-TNS   : -108.799
-
-Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -7.221
-TNS   : -59.328
-
-Type  : Slow 1200mV 85C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : -5.157
-TNS   : -153.998
-
-Type  : Slow 1200mV 85C Model Setup 'c_PCLK'
-Slack : -4.354
-TNS   : -106.379
-
-Type  : Slow 1200mV 85C Model Setup 'ASYNC_FIFO:fifo|d_available'
-Slack : -2.687
-TNS   : -62.035
+Type  : Slow 1200mV 85C Model Setup 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -58.886
+TNS   : -793.856
 
 Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
-Slack : -1.965
-TNS   : -62.185
+Slack : -28.364
+TNS   : -22113.133
+
+Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -12.899
+TNS   : -140.953
+
+Type  : Slow 1200mV 85C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : -10.382
+TNS   : -250.134
+
+Type  : Slow 1200mV 85C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -8.137
+TNS   : -273.804
+
+Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -7.630
+TNS   : -63.496
+
+Type  : Slow 1200mV 85C Model Setup 'c_PCLK'
+Slack : -5.791
+TNS   : -323.452
+
+Type  : Slow 1200mV 85C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -3.604
+TNS   : -145.905
 
 Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : -0.957
-TNS   : -0.957
+Slack : -1.022
+TNS   : -1.022
 
 Type  : Slow 1200mV 85C Model Setup 'c_HREF'
 Slack : 0.341
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 990.822
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : 0.026
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.324
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 0.324
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : 0.325
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
-Slack : 0.326
+Slack : 988.675
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.326
+Slack : -0.669
+TNS   : -0.950
+
+Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.093
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'c_PCLK'
-Slack : 0.359
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.326
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : 0.327
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'c_HREF'
 Slack : 0.371
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ASYNC_FIFO:fifo|d_available'
-Slack : 0.395
+Type  : Slow 1200mV 85C Model Hold 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : 3.092
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'ASYNC_FIFO:fifo|d_available'
-Slack : -4.932
-TNS   : -166.892
+Type  : Slow 1200mV 85C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -4.067
+TNS   : -135.373
 
 Type  : Slow 1200mV 85C Model Recovery 'c_PCLK'
-Slack : -1.473
-TNS   : -2.946
+Slack : -1.669
+TNS   : -17.402
+
+Type  : Slow 1200mV 85C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -0.746
+TNS   : -39.352
 
 Type  : Slow 1200mV 85C Model Recovery 'MAX10_CLK1_50'
-Slack : 18.022
+Slack : 18.837
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 1247.520
+Slack : 1247.424
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'MAX10_CLK1_50'
-Slack : 0.915
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.851
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'c_PCLK'
-Slack : 1.146
+Slack : 0.871
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 1.451
+Slack : 1.323
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'ASYNC_FIFO:fifo|d_available'
-Slack : 2.631
+Type  : Slow 1200mV 85C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 2.706
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'c_PCLK'
 Slack : -3.000
-TNS   : -37.216
+TNS   : -79.444
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'c_HREF'
 Slack : -3.000
-TNS   : -4.222
+TNS   : -4.281
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -1.222
+TNS   : -73.320
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
 Slack : -1.222
 TNS   : -56.212
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ASYNC_FIFO:fifo|d_available'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
 Slack : -1.222
 TNS   : -41.548
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -1.222
+TNS   : -21.996
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.726
+Slack : 4.725
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
-Slack : 9.404
+Slack : 9.429
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 499.717
+Slack : 499.718
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 624.726
+Slack : 624.725
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
 Slack : 624.727
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -11.279
-TNS   : -92.860
-
-Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -6.012
-TNS   : -49.114
-
-Type  : Slow 1200mV 0C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : -4.801
-TNS   : -138.619
-
-Type  : Slow 1200mV 0C Model Setup 'c_PCLK'
-Slack : -3.879
-TNS   : -94.890
-
-Type  : Slow 1200mV 0C Model Setup 'ASYNC_FIFO:fifo|d_available'
-Slack : -2.344
-TNS   : -53.129
+Type  : Slow 1200mV 0C Model Setup 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -53.406
+TNS   : -719.648
 
 Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -1.664
-TNS   : -51.905
+Slack : -25.686
+TNS   : -20012.043
+
+Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -11.192
+TNS   : -121.353
+
+Type  : Slow 1200mV 0C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : -9.332
+TNS   : -223.895
+
+Type  : Slow 1200mV 0C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -7.395
+TNS   : -249.349
+
+Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -6.446
+TNS   : -53.069
+
+Type  : Slow 1200mV 0C Model Setup 'c_PCLK'
+Slack : -5.279
+TNS   : -293.453
+
+Type  : Slow 1200mV 0C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -3.169
+TNS   : -125.698
 
 Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : -0.381
-TNS   : -0.381
+Slack : -0.447
+TNS   : -0.447
 
 Type  : Slow 1200mV 0C Model Setup 'c_HREF'
 Slack : 0.397
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 991.664
+Slack : 989.638
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : -0.411
-TNS   : -0.411
-
-Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -0.164
-TNS   : -0.376
 
 Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.075
-TNS   : -0.075
+Slack : -1.068
+TNS   : -1.781
 
-Type  : Slow 1200mV 0C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : 0.294
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : -0.342
+TNS   : -0.342
 
-Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.294
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : 0.296
+Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.035
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'c_PCLK'
-Slack : 0.325
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : 0.297
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'c_HREF'
 Slack : 0.337
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'ASYNC_FIFO:fifo|d_available'
-Slack : 0.364
+Type  : Slow 1200mV 0C Model Hold 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : 2.841
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'ASYNC_FIFO:fifo|d_available'
-Slack : -4.706
-TNS   : -159.169
+Type  : Slow 1200mV 0C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -4.071
+TNS   : -135.816
 
 Type  : Slow 1200mV 0C Model Recovery 'c_PCLK'
-Slack : -1.240
-TNS   : -2.480
+Slack : -1.403
+TNS   : -12.514
+
+Type  : Slow 1200mV 0C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -0.574
+TNS   : -29.466
 
 Type  : Slow 1200mV 0C Model Recovery 'MAX10_CLK1_50'
-Slack : 18.299
+Slack : 18.949
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 1247.750
+Slack : 1247.669
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'MAX10_CLK1_50'
-Slack : 0.804
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'c_PCLK'
-Slack : 1.060
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.789
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 1.354
+Slack : 1.224
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'ASYNC_FIFO:fifo|d_available'
-Slack : 2.445
+Type  : Slow 1200mV 0C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 3.116
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'c_PCLK'
 Slack : -3.000
-TNS   : -37.216
+TNS   : -77.542
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'c_HREF'
 Slack : -3.000
 TNS   : -4.222
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -1.222
+TNS   : -73.320
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
 Slack : -1.222
 TNS   : -56.212
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ASYNC_FIFO:fifo|d_available'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
 Slack : -1.222
 TNS   : -41.548
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -1.222
+TNS   : -21.996
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.711
+Slack : 4.707
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
-Slack : 9.459
+Slack : 9.447
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 499.708
+Slack : 499.707
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 624.712
+Slack : 624.713
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : 624.712
+Slack : 624.716
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.807
-TNS   : -48.245
-
-Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -3.107
-TNS   : -24.935
-
-Type  : Fast 1200mV 0C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : -2.340
-TNS   : -56.959
-
-Type  : Fast 1200mV 0C Model Setup 'c_PCLK'
-Slack : -1.992
-TNS   : -47.457
+Type  : Fast 1200mV 0C Model Setup 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -27.909
+TNS   : -372.430
 
 Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -0.884
-TNS   : -20.082
+Slack : -13.616
+TNS   : -10380.870
 
-Type  : Fast 1200mV 0C Model Setup 'ASYNC_FIFO:fifo|d_available'
-Slack : -0.784
-TNS   : -14.546
+Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.188
+TNS   : -68.171
+
+Type  : Fast 1200mV 0C Model Setup 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : -4.906
+TNS   : -106.135
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -3.729
+TNS   : -124.707
+
+Type  : Fast 1200mV 0C Model Setup 'c_PCLK'
+Slack : -3.216
+TNS   : -175.608
+
+Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -3.202
+TNS   : -26.661
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -1.633
+TNS   : -61.070
 
 Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : -0.366
-TNS   : -0.366
+Slack : -0.415
+TNS   : -0.415
 
 Type  : Fast 1200mV 0C Model Setup 'c_HREF'
 Slack : 0.693
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 995.554
+Slack : 994.361
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.504
+TNS   : -0.824
+
+Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.055
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -0.039
-TNS   : -0.081
+Slack : 0.077
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.001
-TNS   : -0.001
-
-Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : 0.004
+Type  : Fast 1200mV 0C Model Hold 'c_PCLK'
+Slack : 0.123
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : 0.111
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
 Slack : 0.147
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
-Slack : 0.148
+Type  : Fast 1200mV 0C Model Hold 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.149
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'c_PCLK'
-Slack : 0.166
+Type  : Fast 1200mV 0C Model Hold 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
+Slack : 0.150
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'c_HREF'
 Slack : 0.169
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ASYNC_FIFO:fifo|d_available'
-Slack : 0.180
+Type  : Fast 1200mV 0C Model Hold 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : 1.494
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'ASYNC_FIFO:fifo|d_available'
-Slack : -2.378
-TNS   : -80.353
+Type  : Fast 1200mV 0C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : -2.062
+TNS   : -68.260
 
 Type  : Fast 1200mV 0C Model Recovery 'c_PCLK'
-Slack : -0.994
-TNS   : -1.988
+Slack : -1.010
+TNS   : -4.255
+
+Type  : Fast 1200mV 0C Model Recovery 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.158
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'MAX10_CLK1_50'
-Slack : 18.727
+Slack : 19.368
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 1248.726
+Slack : 1248.687
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'MAX10_CLK1_50'
-Slack : 0.549
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : 0.316
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'c_PCLK'
-Slack : 0.576
+Slack : 0.526
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 0.685
+Slack : 0.637
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'ASYNC_FIFO:fifo|d_available'
-Slack : 1.231
+Type  : Fast 1200mV 0C Model Removal 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
+Slack : 1.379
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'c_PCLK'
 Slack : -3.000
-TNS   : -38.852
+TNS   : -89.511
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'c_HREF'
 Slack : -3.000
-TNS   : -4.259
+TNS   : -4.441
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk'
+Slack : -1.000
+TNS   : -60.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock'
 Slack : -1.000
 TNS   : -46.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ASYNC_FIFO:fifo|d_available'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte'
 Slack : -1.000
 TNS   : -34.000
 
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse'
+Slack : -1.000
+TNS   : -18.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.767
+Slack : 4.754
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
-Slack : 9.116
+Slack : 9.263
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 499.755
+Slack : 499.756
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 624.755
+Slack : 624.756
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll_inst|altpll_component|auto_generated|pll1|clk[3]'
-Slack : 624.779
+Slack : 624.781
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -141,7 +141,56 @@ end
 end
 
 assign current_pixel = (isSqSet ? currentColour : 16'hFFFF); // If the current pixel is within any of the squares, set the pixel colour to the colour of the square.
+/*
+wire [15:0] text_pixel;
+wire [3:0] text_active;
 
+wire [15:0] text_pixel0;
+wire [15:0] text_pixel1;
+wire [15:0] text_pixel2;
+wire [15:0] text_pixel3;
+
+assign text_pixel = text_pixel0 | text_pixel1 | text_pixel2 | text_pixel3;
+
+assign current_pixel = |text_active ? text_pixel : (isSqSet ? currentColour : 16'hFFFF);
+
+import FONT_DEFINITION::*;
+
+import MSP2807_COLOURS::*;
+
+TEXT_GENERATOR #(.xpos(0), .ypos(FONT_HEIGHT*3), .size(3), .colour(MSP_RED)) text0 (
+	.en(1'b1),
+	.x_pixel(x),
+	.y_pixel(y),
+	.pixel(text_pixel0),
+	.active(text_active[0])
+);
+
+TEXT_GENERATOR #(.xpos(0), .ypos(FONT_HEIGHT), .size(2), .length(11), .text('{FONT_H, FONT_e, FONT_l, FONT_l, FONT_o, FONT_space, FONT_W, FONT_o, FONT_r, FONT_l, FONT_d})) text1 (
+	.en(1'b1),
+	.x_pixel(x),
+	.y_pixel(y),
+	.pixel(text_pixel1),
+	.active(text_active[1])
+);
+
+TEXT_GENERATOR #(.xpos(0), .ypos(0), .size(1), .colour(MSP_YELLOW)) text2 (
+	.en(1'b1),
+	.x_pixel(x),
+	.y_pixel(y),
+	.pixel(text_pixel2),
+	.active(text_active[2])
+);
+//, length = 4, logic [0:7] text [0:length-1][0:7] = '{FONT_T, FONT_e, FONT_s, FONT_t}
+
+TEXT_GENERATOR #(.xpos(0), .ypos(FONT_HEIGHT*7), .size(4)) text3 (
+	.en(1'b1),
+	.x_pixel(x),
+	.y_pixel(y),
+	.pixel(text_pixel3),
+	.active(text_active[3])
+);
+*/
 endmodule
 
 

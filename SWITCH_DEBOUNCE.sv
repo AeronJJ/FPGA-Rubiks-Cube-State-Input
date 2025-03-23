@@ -1,4 +1,4 @@
-module SWITCH_DEBOUNCE (
+module SWITCH_DEBOUNCE #(parameter delay = 16'd65535) (
 	clk,
 	sw_in,
 	sw_out
@@ -21,8 +21,11 @@ always @ (posedge clk) begin
 	end
 	else begin
 		counter <= counter + 1'b1;
-		if (counter == 16'd65535) begin
+		if (counter == delay) begin
 			sw_out <= sw_in;
+		end
+		else begin
+			sw_out <= 1'b0;
 		end
 	end
 end

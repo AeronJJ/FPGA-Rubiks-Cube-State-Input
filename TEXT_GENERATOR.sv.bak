@@ -1,0 +1,12 @@
+module TEXT_GENERATOR #(parameter xpos = 0, ypos = 0, length = 4, logic [7:0] text [0:7][0:length] = {FONT_T, FONT_e, FONT_s, FONT_t}) ( // "Test"
+	//input clk,
+	input en,
+	input [8:0] x_pixel,
+	input [7:0] y_pixel,
+	output [15:0] pixel,
+	output active
+);
+`include "FONT_DEFINITION.sv"
+
+
+endmodule

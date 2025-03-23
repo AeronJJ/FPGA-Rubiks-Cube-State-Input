@@ -18,7 +18,8 @@ module OV7670_Cam (
 	
 	d_available,
 	w_data,
-	w_en
+	w_en,
+	bufferIndex
 );
 
 // IO Setup
@@ -41,12 +42,15 @@ output reg c_PWRN;
 input rst_n;
 
 input d_available;
-output reg [15:0] w_data;
+output reg [15:0] w_data; // UNCOMMENT THIS
+//output [15:0] w_data;
 output reg w_en;
 //output w_en_out;
 //reg w_en;
 
 //assign w_en_out = c_PCLK ? w_en : 1'b0;
+
+output reg [16:0] bufferIndex;
 //
 
 
@@ -270,10 +274,17 @@ always @ (negedge c_HREF) begin
 	skip_row = ~skip_row;
 end
 
-always @ (posedge c_PCLK or negedge c_HREF) begin
-	if (~c_HREF) begin
+always @ (posedge c_PCLK or negedge c_HREF or posedge c_VSYNC) begin
+	if (c_VSYNC) begin
+		bufferIndex <= 17'b0;
+	end
+//always @ (posedge c_PCLK or negedge c_HREF) begin
+	else if (~c_HREF) begin
 		//first_byte = 1'b1;
 		skip_pixel = 2'b01;
+	end
+	else if (bufferIndex == 17'd76800) begin
+		bufferIndex <= 17'b0;
 	end
 	else begin
 		w_en = 1'b0;
@@ -283,27 +294,48 @@ always @ (posedge c_PCLK or negedge c_HREF) begin
 			/*if (pixel_index == width) begin
 				pixel_index = 10'b0;
 				first_byte = 1'b1;
-			end*/
+			end
 			if (~c_HREF) begin
 				first_byte = 1'b1;
 			end
-			else if (capture_data && c_HREF) begin
+			else*/ if (capture_data && c_HREF) begin
 				if (first_byte) begin
 					prev_byte = c_DOUT;
 				end
 				else begin
 					next_pixel = {prev_byte, c_DOUT};
 					//next_pixel = {c_DOUT, prev_byte};
+					bufferIndex <= bufferIndex + 1'b1;
 				end
-				first_byte = ~first_byte;
+				//first_byte = ~first_byte;
 				pixel_index = pixel_index + 1'b1;
 				
 				if (first_byte) begin
 					w_en = 1'b1;
-					w_data = next_pixel;
+					w_data = next_pixel; // UNCOMMENT HERE
+					/*
+					window[0] <= window[1];
+					window[1] <= window[2];
+					window[2] <= window[3];
+					window[3] <= window[4];
+					window[4] <= window[5];
+					window[5] <= window[6];
+					window[6] <= window[7];
+					window[7] <= window[8];
+					window[8] <= next_pixel;
+					*/
 				end
 			end
 		end
+	end
+end
+
+always_ff @ (posedge c_PCLK or negedge c_HREF) begin
+	if (~c_HREF) begin // Reset condition
+		first_byte = 1'b1;
+	end
+	else if (c_PCLK) begin
+		first_byte = ~first_byte;
 	end
 end
 
@@ -317,7 +349,15 @@ always @ (posedge c_HREF) begin
 	end
 end
 
+/*
+reg [15:0] window [8:0];
 
+SOBEL_FILTER_RGB565 filter (
+	w_en,
+	window,
+	w_data
+);
+*/
 
 
 /*

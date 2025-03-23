@@ -534,7 +534,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y2        :        :                   :         : 3         :                
 c_SCL                        : Y3        : output : 3.3-V LVTTL       :         : 3         : Y              
-c_VSYNC                      : Y4        : input  : 3.3-V LVTTL       :         : 3         : Y              
+c_VSYNC_noisy                : Y4        : input  : 3.3-V LVTTL       :         : 3         : Y              
 c_PCLK                       : Y5        : input  : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3         :                
 o_cs                         : Y7        : output : 3.3-V LVTTL       :         : 3         : Y              

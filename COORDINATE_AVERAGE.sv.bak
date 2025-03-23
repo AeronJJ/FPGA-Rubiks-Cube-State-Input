@@ -1,0 +1,51 @@
+module COORDINATE_AVERAGE (
+	input rst, // Connect to VSYNC
+	input [8:0] x,
+	input [7:0] y,
+	input en,
+	output reg [8:0] x_avg,
+	output reg [7:0] y_avg
+	output reg active
+);
+
+reg [17:0] counter;
+reg [20:0] x_cummulative;
+reg [20:0] y_cummulative;
+
+wire [8:0] internal_x_avg,
+wire [7:0] internal_y_avg
+
+assign internal_x_avg = x_cummulative / counter;
+assign internal_x_avg = y_cummulative / counter;
+
+always_ff @ (posedge x[0] or posedge rst) begin
+	if (rst) begin
+		x_avg <= internal_x_avg;
+		y_avg <= internal_y_avg;
+		active <= internal_active;
+		counter <= 1'b0;
+		x_cummulative <= 21'b0;
+		y_cummulative <= 21'b0;
+	end
+	else if (en) begin
+		counter <= counter + 1'b1;
+		x_cummulative <= x_cummulative + x;
+		y_cummulative <= y_cummulative + y;
+	end
+end
+
+localparam lower_corner_threshold = 256;
+localparam upper_corner_threshold = 4096;
+
+wire internal_active;
+
+always_comb begin
+	if (counter >= lower_corner_threshold && counter < upper_corner_threshold) begin
+		internal_active = 1'b1;
+	end
+	else begin
+		internal_active = 1'b0;
+	end
+end
+
+endmodule
