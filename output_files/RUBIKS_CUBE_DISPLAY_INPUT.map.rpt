@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RUBIKS_CUBE_DISPLAY_INPUT
-Sun Mar 23 15:41:39 2025
+Wed Apr 02 01:54:52 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -351,7 +351,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 23 15:41:39 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 02 01:54:52 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
 ; Top-level Entity Name              ; LCD_RUBIKS_CUBE_DISPLAY                     ;
@@ -464,7 +464,7 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -10172,7 +10172,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:26     ;
+; Top            ; 00:00:30     ;
 +----------------+--------------+
 
 
@@ -10182,7 +10182,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Mar 23 15:40:58 2025
+    Info: Processing started: Wed Apr 02 01:53:54 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -10301,6 +10301,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file corner_
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/multiplier/mult_9x9_signed.v
     Info (12023): Found entity 1: mult_9x9_signed File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/Multiplier/mult_9x9_signed.v Line: 39
 Info (12127): Elaborating entity "LCD_RUBIKS_CUBE_DISPLAY" for the top level hierarchy
+Warning (10306): Invalid value "none" for synthesis attribute "syn_encoding" at LCD_RUBIKS_CUBE_DISPLAY.sv(305) File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 305
 Info (12128): Elaborating entity "dual_boot" for hierarchy "dual_boot:u0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 63
 Info (12128): Elaborating entity "altera_dual_boot" for hierarchy "dual_boot:u0|altera_dual_boot:dual_boot" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/dual_boot.v Line: 25
 Info (12128): Elaborating entity "alt_dual_boot_avmm" for hierarchy "dual_boot:u0|altera_dual_boot:dual_boot|alt_dual_boot_avmm:alt_dual_boot_avmm_comp" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/output_files/output_files/synthesis/submodules/altera_dual_boot.v Line: 50
@@ -10469,6 +10470,7 @@ Info (12128): Elaborating entity "LCD_SPI_CONTROLLER_RUBIK" for hierarchy "LCD_S
 Info (12128): Elaborating entity "COORDINATE_COUNTER" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_SPI_CONTROLLER_RUBIK.sv Line: 63
 Info (12128): Elaborating entity "LCD_SPI_MASTER_IMPROVED" for hierarchy "LCD_SPI_CONTROLLER_RUBIK:lcd|LCD_SPI_MASTER_IMPROVED:spi" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_SPI_CONTROLLER_RUBIK.sv Line: 84
 Info (12128): Elaborating entity "TOUCH_SPI_CONTROLLER" for hierarchy "TOUCH_SPI_CONTROLLER:touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 227
+Warning (10306): Invalid value "none" for synthesis attribute "syn_encoding" at TOUCH_SPI_CONTROLLER.sv(45) File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_SPI_CONTROLLER.sv Line: 45
 Info (12128): Elaborating entity "TOUCH_SPI_MASTER" for hierarchy "TOUCH_SPI_CONTROLLER:touch|TOUCH_SPI_MASTER:touch" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_SPI_CONTROLLER.sv Line: 38
 Info (12128): Elaborating entity "TOUCH_CALIBRATION" for hierarchy "TOUCH_CALIBRATION:calibration" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 248
 Info (12128): Elaborating entity "SQUARE_STATE" for hierarchy "TOUCH_CALIBRATION:calibration|SQUARE_STATE:cali_sq0" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/TOUCH_CALIBRATION.sv Line: 37
@@ -10560,9 +10562,9 @@ Warning (10230): Verilog HDL assignment warning at COORDINATE_AVERAGE.sv(154): t
 Info (12128): Elaborating entity "DETECT_SWITCH_EDGE_NOISY" for hierarchy "ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/COORDINATE_AVERAGE.sv Line: 107
 Info (12128): Elaborating entity "OV7670_Cam" for hierarchy "OV7670_Cam:cam" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/LCD_RUBIKS_CUBE_DISPLAY.sv Line: 468
 Info (12128): Elaborating entity "OV7670_INIT" for hierarchy "OV7670_Cam:cam|OV7670_INIT:cam_init" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_Cam.sv Line: 101
-Warning (10030): Net "INIT_SEQ.data_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
-Warning (10030): Net "INIT_SEQ.waddr_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
-Warning (10030): Net "INIT_SEQ.we_a" at OV7670_INIT.sv(140) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
+Warning (10030): Net "INIT_SEQ.data_a" at OV7670_INIT.sv(141) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 141
+Warning (10030): Net "INIT_SEQ.waddr_a" at OV7670_INIT.sv(141) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 141
+Warning (10030): Net "INIT_SEQ.we_a" at OV7670_INIT.sv(141) has no driver or initial value, using a default initial value '0' File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 141
 Info (12128): Elaborating entity "OV7670_SCCB" for hierarchy "OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam" File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 41
 Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (78) in the Memory Initialization File "C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/db/RUBIKS_CUBE_DISPLAY_INPUT.ram0_OV7670_INIT_cfd62e96.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (276027): Inferred dual-clock RAM node "ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|mem_0_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
@@ -10571,7 +10573,7 @@ Warning (276027): Inferred dual-clock RAM node "ASYNC_FRAME_BUFFER_CORNER_DETECT
 Warning (276027): Inferred dual-clock RAM node "ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|mem_3_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|mem_4_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ" is uninferred because MIF is not supported for the selected family File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 140
+    Info (276013): RAM logic "OV7670_Cam:cam|OV7670_INIT:cam_init|INIT_SEQ" is uninferred because MIF is not supported for the selected family File: C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/OV7670_INIT.sv Line: 141
 Info (19000): Inferred 5 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|mem_0_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -10900,11 +10902,11 @@ Info (21057): Implemented 10459 device resources after synthesis - the final res
     Info (21064): Implemented 160 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 144 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4950 megabytes
-    Info: Processing ended: Sun Mar 23 15:41:39 2025
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:51
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4985 megabytes
+    Info: Processing ended: Wed Apr 02 01:54:53 2025
+    Info: Elapsed time: 00:00:59
+    Info: Total CPU time (on all processors): 00:00:57
 
 
 +------------------------------------------+

@@ -133,6 +133,7 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 	16'h13_e5, //COM8, enable AGC / AEC
 	16'h1E_23, //Mirror Image
 	16'h69_06  //gain of RGB(manually adjusted)
+	//16'h70_BA // Test mode
 	/*,
 	16'h12_80,
 	16'h70_B5,

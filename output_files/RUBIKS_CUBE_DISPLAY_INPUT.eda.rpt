@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RUBIKS_CUBE_DISPLAY_INPUT
-Sun Mar 23 15:42:54 2025
+Wed Apr 02 01:56:11 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Mar 23 15:42:54 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr 02 01:56:11 2025 ;
 ; Revision Name             ; RUBIKS_CUBE_DISPLAY_INPUT             ;
 ; Top-level Entity Name     ; LCD_RUBIKS_CUBE_DISPLAY               ;
 ; Family                    ; MAX 10                                ;
@@ -81,15 +81,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Mar 23 15:42:51 2025
+    Info: Processing started: Wed Apr 02 01:56:08 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file RUBIKS_CUBE_DISPLAY_INPUT.vo in folder "C:/Users/Aeron/Documents/University/ELEC3885/Github/FPGA-Rubiks-Cube-State-Input/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Sun Mar 23 15:42:54 2025
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Wed Apr 02 01:56:11 2025
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

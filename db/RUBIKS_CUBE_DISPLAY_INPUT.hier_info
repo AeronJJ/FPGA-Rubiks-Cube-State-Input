@@ -1,15 +1,15 @@
 |LCD_RUBIKS_CUBE_DISPLAY
 MAX10_CLK1_50 => MAX10_CLK1_50.IN7
-o_cs << LCD_SPI_CONTROLLER_RUBIK:lcd.port3
-o_dcrs << LCD_SPI_CONTROLLER_RUBIK:lcd.port4
-o_sdi << LCD_SPI_CONTROLLER_RUBIK:lcd.port5
-o_sck << LCD_SPI_CONTROLLER_RUBIK:lcd.port6
-o_lcdrst << LCD_SPI_CONTROLLER_RUBIK:lcd.port7
+o_cs <= LCD_SPI_CONTROLLER_RUBIK:lcd.port3
+o_dcrs <= LCD_SPI_CONTROLLER_RUBIK:lcd.port4
+o_sdi <= LCD_SPI_CONTROLLER_RUBIK:lcd.port5
+o_sck <= LCD_SPI_CONTROLLER_RUBIK:lcd.port6
+o_lcdrst <= LCD_SPI_CONTROLLER_RUBIK:lcd.port7
 t_sdo => t_sdo.IN1
 t_irq => t_irq.IN1
-t_sdi << TOUCH_SPI_CONTROLLER:touch.port4
-t_sck << TOUCH_SPI_CONTROLLER:touch.port5
-t_cs << TOUCH_SPI_CONTROLLER:touch.port3
+t_sdi <= TOUCH_SPI_CONTROLLER:touch.port4
+t_sck <= TOUCH_SPI_CONTROLLER:touch.port5
+t_cs <= TOUCH_SPI_CONTROLLER:touch.port3
 switches[0] => switches[0].IN2
 switches[1] => switches[1].IN2
 switches[2] => switches[2].IN1
@@ -20,19 +20,19 @@ switches[6] => switches[6].IN1
 switches[7] => switches[7].IN1
 switches[8] => switches[8].IN1
 switches[9] => switches[9].IN1
-leds[0] << STEP_CONVERSION:convert.port2
-leds[1] << STEP_CONVERSION:convert.port2
-leds[2] << STEP_CONVERSION:convert.port2
-leds[3] << STEP_CONVERSION:convert.port2
-leds[4] << STEP_CONVERSION:convert.port2
-leds[5] << STEP_CONVERSION:convert.port2
+leds[0] <= STEP_CONVERSION:convert.port2
+leds[1] <= STEP_CONVERSION:convert.port2
+leds[2] <= STEP_CONVERSION:convert.port2
+leds[3] <= STEP_CONVERSION:convert.port2
+leds[4] <= STEP_CONVERSION:convert.port2
+leds[5] <= STEP_CONVERSION:convert.port2
 rst_n => rst_n.IN2
-c_SCL << OV7670_Cam:cam.port3
+c_SCL <= OV7670_Cam:cam.port3
 c_SDATA <> OV7670_Cam:cam.port4
 c_VSYNC_noisy => c_VSYNC_noisy.IN1
 c_HREF => c_HREF.IN1
 c_PCLK => c_PCLK.IN1
-c_XCLK << OV7670_Cam:cam.port8
+c_XCLK <= OV7670_Cam:cam.port8
 c_DOUT[0] => c_DOUT[0].IN1
 c_DOUT[1] => c_DOUT[1].IN1
 c_DOUT[2] => c_DOUT[2].IN1
@@ -41,8 +41,8 @@ c_DOUT[4] => c_DOUT[4].IN1
 c_DOUT[5] => c_DOUT[5].IN1
 c_DOUT[6] => c_DOUT[6].IN1
 c_DOUT[7] => c_DOUT[7].IN1
-c_RST << OV7670_Cam:cam.port10
-c_PWRN << OV7670_Cam:cam.port11
+c_RST <= OV7670_Cam:cam.port10
+c_PWRN <= OV7670_Cam:cam.port11
 
 
 |LCD_RUBIKS_CUBE_DISPLAY|dual_boot:u0

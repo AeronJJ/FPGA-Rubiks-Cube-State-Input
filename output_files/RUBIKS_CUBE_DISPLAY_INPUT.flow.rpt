@@ -1,5 +1,5 @@
 Flow report for RUBIKS_CUBE_DISPLAY_INPUT
-Sun Mar 23 15:42:54 2025
+Wed Apr 02 01:56:11 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 23 15:42:54 2025       ;
+; Flow Status                        ; Successful - Wed Apr 02 01:56:11 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
 ; Top-level Entity Name              ; LCD_RUBIKS_CUBE_DISPLAY                     ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------------+
 ; Option            ; Setting                   ;
 +-------------------+---------------------------+
-; Start date & time ; 03/23/2025 15:41:00       ;
+; Start date & time ; 04/02/2025 01:53:57       ;
 ; Main task         ; Compilation               ;
 ; Revision Name     ; RUBIKS_CUBE_DISPLAY_INPUT ;
 +-------------------+---------------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+------------------------+
 ; Assignment Name                      ; Value                                                        ; Default Value             ; Entity Name             ; Section Id             ;
 +--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+------------------------+
-; COMPILER_SIGNATURE_ID                ; 39908810502323.174274445911348                               ; --                        ; --                      ; --                     ;
+; COMPILER_SIGNATURE_ID                ; 1096040230861.174355523637308                                ; --                        ; --                      ; --                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; SKID_BUFFER_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
@@ -144,12 +144,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 4950 MB             ; 00:00:49                           ;
-; Fitter                    ; 00:00:55     ; 1.7                     ; 6251 MB             ; 00:02:22                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4721 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 3.3                     ; 4950 MB             ; 00:00:20                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4763 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:48     ; --                      ; --                  ; 00:03:37                           ;
+; Analysis & Synthesis      ; 00:00:56     ; 1.0                     ; 4985 MB             ; 00:00:55                           ;
+; Fitter                    ; 00:00:58     ; 1.7                     ; 6252 MB             ; 00:02:25                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4722 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 3.1                     ; 4950 MB             ; 00:00:18                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4762 MB             ; 00:00:04                           ;
+; Total                     ; 00:02:07     ; --                      ; --                  ; 00:03:45                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
