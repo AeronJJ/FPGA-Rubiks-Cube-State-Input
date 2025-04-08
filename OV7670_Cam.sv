@@ -291,39 +291,19 @@ always @ (posedge c_PCLK or negedge c_HREF or posedge c_VSYNC) begin
 		skip_pixel = skip_pixel + 1'b1;
 		
 		if (~skip_pixel[1] && ~skip_row) begin
-			/*if (pixel_index == width) begin
-				pixel_index = 10'b0;
-				first_byte = 1'b1;
-			end
-			if (~c_HREF) begin
-				first_byte = 1'b1;
-			end
-			else*/ if (capture_data && c_HREF) begin
+			if (capture_data && c_HREF) begin
 				if (first_byte) begin
 					prev_byte = c_DOUT;
 				end
 				else begin
 					next_pixel = {prev_byte, c_DOUT};
-					//next_pixel = {c_DOUT, prev_byte};
 					bufferIndex <= bufferIndex + 1'b1;
 				end
-				//first_byte = ~first_byte;
 				pixel_index = pixel_index + 1'b1;
 				
 				if (first_byte) begin
 					w_en = 1'b1;
-					w_data = next_pixel; // UNCOMMENT HERE
-					/*
-					window[0] <= window[1];
-					window[1] <= window[2];
-					window[2] <= window[3];
-					window[3] <= window[4];
-					window[4] <= window[5];
-					window[5] <= window[6];
-					window[6] <= window[7];
-					window[7] <= window[8];
-					window[8] <= next_pixel;
-					*/
+					w_data = next_pixel;
 				end
 			end
 		end
@@ -348,32 +328,5 @@ always @ (posedge c_HREF) begin
 		line_index = line_index + 2'd1;
 	end
 end
-
-/*
-reg [15:0] window [8:0];
-
-SOBEL_FILTER_RGB565 filter (
-	w_en,
-	window,
-	w_data
-);
-*/
-
-
-/*
-reg [15:0] w_data;
-reg w_en;
-wire [15:0] r_data;
-reg r_en;
-wire d_available;
-
-ASYNC_FIFO fifo (
-	w_data,
-	w_en,
-	r_data,
-	r_en,
-	d_available
-);
-*/
 
 endmodule

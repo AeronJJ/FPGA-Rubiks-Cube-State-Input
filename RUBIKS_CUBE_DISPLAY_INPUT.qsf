@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY LCD_RUBIKS_CUBE_DISPLAY
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:11:31  NOVEMBER 22, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
@@ -119,24 +119,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switches[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to switches[0]
 set_location_assignment PIN_B8 -to rst_n
 set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to rst_n
-set_global_assignment -name QIP_FILE output_files/output_files/synthesis/dual_boot.qip
-set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_MASTER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RUBIKS_CUBE_STATE_LCD.sv
-set_global_assignment -name SYSTEMVERILOG_FILE LCD_SPI_MASTER_IMPROVED.sv
-set_global_assignment -name SYSTEMVERILOG_FILE LCD_SPI_CONTROLLER_RUBIK.sv
-set_global_assignment -name SYSTEMVERILOG_FILE LCD_RUBIKS_CUBE_DISPLAY.sv
-set_global_assignment -name QIP_FILE ip/pll.qip
-set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_CONTROLLER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_STATE.sv
-set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_CALIBRATION.sv
-set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
-set_global_assignment -name SYSTEMVERILOG_FILE COLOUR_CHOICE_LCD.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_TOUCH.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RUBIKS_CUBE_STATE_TOUCH.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_TOUCH_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_MASTER_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE STEP_CONVERSION.sv
-set_global_assignment -name SYSTEMVERILOG_FILE STEP_CONVERSION_tb.sv
 set_global_assignment -name ENABLE_OCT_DONE ON
 set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
@@ -147,13 +129,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name SYSTEMVERILOG_FILE OV7670_SCCB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE OV7670_SCCB_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE OV7670_INIT.sv
-set_global_assignment -name SYSTEMVERILOG_FILE OV7670_INIT_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE OV7670_Cam.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME ASYNC_FIFO_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ASYNC_FIFO_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ASYNC_FIFO_tb -section_id ASYNC_FIFO_tb
@@ -188,28 +163,14 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_DOUT[7]
-set_global_assignment -name SYSTEMVERILOG_FILE SWITCH_DEBOUNCE.sv
-set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE.sv
-set_global_assignment -name SYSTEMVERILOG_FILE COORDINATE_COUNTER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME SKID_BUFFER_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SKID_BUFFER_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SKID_BUFFER_tb -section_id SKID_BUFFER_tb
-set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE_NOISY.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_FULL_FRAME.sv
 set_location_assignment PIN_Y4 -to c_VSYNC_noisy
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to c_VSYNC_noisy
-set_global_assignment -name SYSTEMVERILOG_FILE FONT_DEFINITION.sv
-set_global_assignment -name SYSTEMVERILOG_FILE TEXT_GENERATOR.sv
-set_global_assignment -name SYSTEMVERILOG_FILE LETTER_GENERATOR.sv
-set_global_assignment -name SYSTEMVERILOG_FILE TEXT_GENERATOR_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME TEXT_GENERATOR_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id TEXT_GENERATOR_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME TEXT_GENERATOR_tb -section_id TEXT_GENERATOR_tb
-set_global_assignment -name SYSTEMVERILOG_FILE MSP2807_COLOURS.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SOBEL_FILTER_RGB565.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SOBEL_FILTER_RGB565_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_FILE SQUARE_TOUCH_tb.sv -section_id SQUARE_TOUCH_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE TOUCH_SPI_MASTER_tb.sv -section_id TOUCH_SPI_MASTER_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE STEP_CONVERSION_tb.sv -section_id STEP_CONVERSION_tb
@@ -220,6 +181,49 @@ set_global_assignment -name EDA_TEST_BENCH_NAME SOBEL_FILTER_RGB565_tb -section_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SOBEL_FILTER_RGB565_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SOBEL_FILTER_RGB565_tb -section_id SOBEL_FILTER_RGB565_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE SOBEL_FILTER_RGB565_tb.sv -section_id SOBEL_FILTER_RGB565_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SDC_FILE CORNER_TEST.sdc
+set_global_assignment -name QIP_FILE output_files/dual_boot/synthesis/dual_boot.qip
+set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_MASTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RUBIKS_CUBE_STATE_LCD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LCD_SPI_MASTER_IMPROVED.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LCD_SPI_CONTROLLER_RUBIK.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LCD_RUBIKS_CUBE_DISPLAY.sv
+set_global_assignment -name QIP_FILE ip/pll.qip
+set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_CONTROLLER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_STATE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_CALIBRATION.sv
+set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
+set_global_assignment -name SYSTEMVERILOG_FILE COLOUR_CHOICE_LCD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_TOUCH.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RUBIKS_CUBE_STATE_TOUCH.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_TOUCH_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TOUCH_SPI_MASTER_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE STEP_CONVERSION.sv
+set_global_assignment -name SYSTEMVERILOG_FILE STEP_CONVERSION_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_SCCB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_SCCB_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_INIT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_INIT_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_Cam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SWITCH_DEBOUNCE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE COORDINATE_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SKID_BUFFER_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE DETECT_SWITCH_EDGE_NOISY.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ASYNC_FIFO_FULL_FRAME.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FONT_DEFINITION.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TEXT_GENERATOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE LETTER_GENERATOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TEXT_GENERATOR_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MSP2807_COLOURS.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SOBEL_FILTER_RGB565.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SOBEL_FILTER_RGB565_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE HARRIS_CORNER_DETECTOR.sv
 set_global_assignment -name QIP_FILE ip/mem/mem.qip
 set_global_assignment -name SYSTEMVERILOG_FILE HARRIS_CORNER_DETECTOR_V2.sv
@@ -230,7 +234,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE SQUARE_STATE_MOVABLE.sv
 set_global_assignment -name SYSTEMVERILOG_FILE TRACK_OBJECT.sv
 set_global_assignment -name SYSTEMVERILOG_FILE CORNER_TEST.sv
 set_global_assignment -name QIP_FILE output_files/Multiplier/mult_9x9_signed.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

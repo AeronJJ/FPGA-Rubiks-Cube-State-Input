@@ -1,0 +1,75 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading output_files/dual_boot.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dual_boot [altera_dual_boot 20.1]
+Progress: Parameterizing module dual_boot
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: dual_boot: Generating dual_boot "dual_boot" for SIM_VERILOG
+Info: dual_boot: "dual_boot" instantiated altera_dual_boot "dual_boot"
+Info: rst_controller: "dual_boot" instantiated altera_reset_controller "rst_controller"
+Info: dual_boot: Done "dual_boot" with 3 modules, 16 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/dual_boot.spd --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/dual_boot.spd --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot.qsys --block-symbol-file --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading output_files/dual_boot.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dual_boot [altera_dual_boot 20.1]
+Progress: Parameterizing module dual_boot
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot.qsys --synthesis=VERILOG --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading output_files/dual_boot.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dual_boot [altera_dual_boot 20.1]
+Progress: Parameterizing module dual_boot
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: dual_boot: Generating dual_boot "dual_boot" for QUARTUS_SYNTH
+Info: dual_boot: generating top-level entity altera_dual_boot
+Info: dual_boot: "dual_boot" instantiated altera_dual_boot "dual_boot"
+Info: rst_controller: "dual_boot" instantiated altera_reset_controller "rst_controller"
+Info: dual_boot: Done "dual_boot" with 3 modules, 7 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

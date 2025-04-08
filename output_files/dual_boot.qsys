@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element clk_0
@@ -48,20 +48,20 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
- <module name="clk_0" kind="clock_source" version="17.1" enabled="1">
+ <module name="clk_0" kind="clock_source" version="20.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
- <module name="dual_boot" kind="altera_dual_boot" version="17.1" enabled="1">
+ <module name="dual_boot" kind="altera_dual_boot" version="20.1" enabled="1">
   <parameter name="CLOCK_FREQUENCY" value="50.0" />
   <parameter name="INTENDED_DEVICE_FAMILY" value="MAX 10" />
  </module>
- <connection kind="clock" version="17.1" start="clk_0.clk" end="dual_boot.clk" />
+ <connection kind="clock" version="20.1" start="clk_0.clk" end="dual_boot.clk" />
  <connection
    kind="reset"
-   version="17.1"
+   version="20.1"
    start="clk_0.clk_reset"
    end="dual_boot.nreset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

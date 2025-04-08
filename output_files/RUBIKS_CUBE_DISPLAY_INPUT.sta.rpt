@@ -1,13 +1,13 @@
-TimeQuest Timing Analyzer report for RUBIKS_CUBE_DISPLAY_INPUT
-Sun Mar 23 15:42:50 2025
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Timing Analyzer report for RUBIKS_CUBE_DISPLAY_INPUT
+Tue Apr  8 16:33:41 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. TimeQuest Timing Analyzer Summary
+  2. Timing Analyzer Summary
   3. Parallel Compilation
   4. SDC File List
   5. Clocks
@@ -49,16 +49,16 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  41. Unconstrained Output Ports
  42. Unconstrained Input Ports
  43. Unconstrained Output Ports
- 44. TimeQuest Timing Analyzer Messages
+ 44. Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -68,15 +68,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +-----------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                           ;
+; Timing Analyzer Summary                                                     ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Timing Analyzer       ; TimeQuest                                           ;
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; RUBIKS_CUBE_DISPLAY_INPUT                           ;
 ; Device Family         ; MAX 10                                              ;
 ; Device Name           ; 10M50DAF484C6GES                                    ;
@@ -91,103 +92,82 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 3.30        ;
-; Maximum used               ; 8           ;
+; Average used               ; 2.59        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  36.4%      ;
-;     Processor 3            ;  32.5%      ;
-;     Processor 4            ;  32.4%      ;
-;     Processors 5-8         ;  32.1%      ;
+;     Processor 2            ;  53.7%      ;
+;     Processor 3            ;  52.5%      ;
+;     Processor 4            ;  52.4%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; SDC File List                                                                                                  ;
-+----------------------------------------------------------------------------+--------+--------------------------+
-; SDC File Path                                                              ; Status ; Read at                  ;
-+----------------------------------------------------------------------------+--------+--------------------------+
-; output_files/output_files/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Sun Mar 23 15:42:45 2025 ;
-+----------------------------------------------------------------------------+--------+--------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                               ;
++-------------------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                           ; Status ; Read at                  ;
++-------------------------------------------------------------------------+--------+--------------------------+
+; CORNER_TEST.sdc                                                         ; OK     ; Tue Apr  8 16:33:35 2025 ;
+; output_files/dual_boot/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Tue Apr  8 16:33:35 2025 ;
++-------------------------------------------------------------------------+--------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------+----------+------------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Clock Name                                                                                                              ; Type      ; Period   ; Frequency  ; Rise    ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master        ; Source                                                 ; Targets                                                                                                                     ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------+----------+------------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse } ;
-; c_HREF                                                                                                                  ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { c_HREF }                                                                                                                  ;
-; c_PCLK                                                                                                                  ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { c_PCLK }                                                                                                                  ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk }                                                                                    ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte }                                                                                    ;
-; MAX10_CLK1_50                                                                                                           ; Base      ; 20.000   ; 50.0 MHz   ; 0.000   ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { MAX10_CLK1_50 }                                                                                                           ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; Base      ; 1.000    ; 1000.0 MHz ; 0.000   ; 0.500   ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock }                                                      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; Generated ; 10.000   ; 100.0 MHz  ; 0.000   ; 5.000   ; 50.00      ; 1         ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] }                                                                    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; Generated ; 1000.000 ; 1.0 MHz    ; 0.000   ; 500.000 ; 50.00      ; 50        ; 1           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[1] }                                                                    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; Generated ; 1250.000 ; 0.8 MHz    ; 0.000   ; 625.000 ; 50.00      ; 125       ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[2] }                                                                    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; Generated ; 1250.000 ; 0.8 MHz    ; 104.166 ; 729.166 ; 50.00      ; 125       ; 2           ; 30.0  ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[3] }                                                                    ;
-+-------------------------------------------------------------------------------------------------------------------------+-----------+----------+------------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                                      ;
++------------------------------------------------------+-----------+----------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+----------------------------------------------------------+
+; Clock Name                                           ; Type      ; Period   ; Frequency ; Rise    ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master        ; Source                                                 ; Targets                                                  ;
++------------------------------------------------------+-----------+----------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+----------------------------------------------------------+
+; c_XCLK                                               ; Base      ; 40.000   ; 25.0 MHz  ; 0.000   ; 20.000  ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { c_XCLK }                                               ;
+; MAX10_CLK1_50                                        ; Base      ; 20.000   ; 50.0 MHz  ; 0.000   ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;               ;                                                        ; { MAX10_CLK1_50 }                                        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; 10.000   ; 100.0 MHz ; 0.000   ; 5.000   ; 50.00      ; 1         ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] } ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; Generated ; 1000.000 ; 1.0 MHz   ; 0.000   ; 500.000 ; 50.00      ; 50        ; 1           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[1] } ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; Generated ; 1250.000 ; 0.8 MHz   ; 0.000   ; 625.000 ; 50.00      ; 125       ; 2           ;       ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[2] } ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; Generated ; 1250.000 ; 0.8 MHz   ; 104.166 ; 729.166 ; 50.00      ; 125       ; 2           ; 30.0  ;        ;           ;            ; false    ; MAX10_CLK1_50 ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[3] } ;
++------------------------------------------------------+-----------+----------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+---------------+--------------------------------------------------------+----------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                                                                 ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; Fmax        ; Restricted Fmax ; Clock Name                                                         ; Note                                                          ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; 13.3 MHz    ; 13.3 MHz        ; MAX10_CLK1_50                                                      ;                                                               ;
-; 87.86 MHz   ; 87.86 MHz       ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
-; 88.3 MHz    ; 88.3 MHz        ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
-; 118.88 MHz  ; 118.88 MHz      ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                               ;                                                               ;
-; 150.81 MHz  ; 150.81 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
-; 153.14 MHz  ; 153.14 MHz      ; c_PCLK                                                             ;                                                               ;
-; 158.35 MHz  ; 158.35 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
-; 401.12 MHz  ; 401.12 MHz      ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                               ;                                                               ;
-; 1517.45 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                    ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                           ; Note                                           ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
+; 14.15 MHz   ; 14.15 MHz       ; MAX10_CLK1_50                                        ;                                                ;
+; 99.44 MHz   ; 99.44 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ;                                                ;
+; 169.87 MHz  ; 169.87 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
+; 186.08 MHz  ; 186.08 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ;                                                ;
+; 1615.51 MHz ; 450.05 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                                                                                                               ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -58.886 ; -793.856      ;
-; MAX10_CLK1_50                                                                                                           ; -28.364 ; -22113.133    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -12.899 ; -140.953      ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -10.382 ; -250.134      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -8.137  ; -273.804      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; -7.630  ; -63.496       ;
-; c_PCLK                                                                                                                  ; -5.791  ; -323.452      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -3.604  ; -145.905      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -1.022  ; -1.022        ;
-; c_HREF                                                                                                                  ; 0.341   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 988.675 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                             ;
++------------------------------------------------------+----------+---------------+
+; Clock                                                ; Slack    ; End Point TNS ;
++------------------------------------------------------+----------+---------------+
+; MAX10_CLK1_50                                        ; -25.326  ; -25.326       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1.488    ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 989.944  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1138.015 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1249.381 ; 0.000         ;
++------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                                                                                               ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                                                                   ; Slack  ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -0.669 ; -0.950        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 0.093  ; 0.000         ;
-; c_PCLK                                                                                                                  ; 0.290  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 0.310  ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 0.323  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 0.323  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0.325  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0.326  ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 0.327  ; 0.000         ;
-; c_HREF                                                                                                                  ; 0.371  ; 0.000         ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; 3.092  ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                           ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.324 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.413 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.422 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.422 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 0.431 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -195,11 +175,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; -4.067   ; -135.373      ;
-; c_PCLK                                               ; -1.669   ; -17.402       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; -0.746   ; -39.352       ;
-; MAX10_CLK1_50                                        ; 18.837   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.424 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 18.127   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1245.906 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
@@ -208,99 +185,69 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+-------+---------------+
 ; Clock                                                ; Slack ; End Point TNS ;
 +------------------------------------------------------+-------+---------------+
-; MAX10_CLK1_50                                        ; 0.371 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 0.851 ; 0.000         ;
-; c_PCLK                                               ; 0.871 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.323 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 2.706 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 0.907 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 3.146 ; 0.000         ;
 +------------------------------------------------------+-------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                                                                                  ; -3.000  ; -79.444       ;
-; c_HREF                                                                                                                  ; -3.000  ; -4.281        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -1.222  ; -73.320       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -1.222  ; -56.212       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -1.222  ; -41.548       ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -1.222  ; -21.996       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 4.725   ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 9.429   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 499.718 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 624.725 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 624.727 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                              ;
++------------------------------------------------------+---------+---------------+
+; Clock                                                ; Slack   ; End Point TNS ;
++------------------------------------------------------+---------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 4.756   ; 0.000         ;
+; MAX10_CLK1_50                                        ; 9.420   ; 0.000         ;
+; c_XCLK                                               ; 32.000  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 499.741 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 624.755 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 624.756 ; 0.000         ;
++------------------------------------------------------+---------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 4
-Shortest Synchronizer Chain: 3 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 16.027 ns
+No synchronizer chains to report.
 
 
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                                                  ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; Fmax        ; Restricted Fmax ; Clock Name                                                         ; Note                                                          ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
-; 14.63 MHz   ; 14.63 MHz       ; MAX10_CLK1_50                                                      ;                                                               ;
-; 96.51 MHz   ; 96.51 MHz       ; pll_inst|altpll_component|auto_generated|pll1|clk[1]               ;                                                               ;
-; 96.79 MHz   ; 96.79 MHz       ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock ;                                                               ;
-; 132.17 MHz  ; 132.17 MHz      ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                               ;                                                               ;
-; 167.28 MHz  ; 167.28 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]               ;                                                               ;
-; 168.35 MHz  ; 168.35 MHz      ; c_PCLK                                                             ;                                                               ;
-; 174.09 MHz  ; 174.09 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0]               ;                                                               ;
-; 443.66 MHz  ; 443.66 MHz      ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                               ;                                                               ;
-; 1658.37 MHz ; 250.0 MHz       ; c_HREF                                                             ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-------------+-----------------+--------------------------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                     ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                           ; Note                                           ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
+; 15.53 MHz   ; 15.53 MHz       ; MAX10_CLK1_50                                        ;                                                ;
+; 107.77 MHz  ; 107.77 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ;                                                ;
+; 184.57 MHz  ; 184.57 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
+; 202.43 MHz  ; 202.43 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ;                                                ;
+; 1661.13 MHz ; 450.05 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -53.406 ; -719.648      ;
-; MAX10_CLK1_50                                                                                                           ; -25.686 ; -20012.043    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -11.192 ; -121.353      ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -9.332  ; -223.895      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -7.395  ; -249.349      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; -6.446  ; -53.069       ;
-; c_PCLK                                                                                                                  ; -5.279  ; -293.453      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -3.169  ; -125.698      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -0.447  ; -0.447        ;
-; c_HREF                                                                                                                  ; 0.397   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 989.638 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                              ;
++------------------------------------------------------+----------+---------------+
+; Clock                                                ; Slack    ; End Point TNS ;
++------------------------------------------------------+----------+---------------+
+; MAX10_CLK1_50                                        ; -22.189  ; -22.189       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.715    ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 990.721  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1138.755 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1249.398 ; 0.000         ;
++------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                                                                   ; Slack  ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -1.068 ; -1.781        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -0.342 ; -0.342        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 0.035  ; 0.000         ;
-; c_PCLK                                                                                                                  ; 0.273  ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 0.293  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 0.293  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0.294  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0.295  ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 0.297  ; 0.000         ;
-; c_HREF                                                                                                                  ; 0.337  ; 0.000         ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; 2.841  ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                            ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.293 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.341 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.349 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.349 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 0.358 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -308,11 +255,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; -4.071   ; -135.816      ;
-; c_PCLK                                               ; -1.403   ; -12.514       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; -0.574   ; -29.466       ;
-; MAX10_CLK1_50                                        ; 18.949   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.669 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 18.441   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1246.266 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
@@ -321,81 +265,55 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+-------+---------------+
 ; Clock                                                ; Slack ; End Point TNS ;
 +------------------------------------------------------+-------+---------------+
-; MAX10_CLK1_50                                        ; 0.360 ; 0.000         ;
-; c_PCLK                                               ; 0.717 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 0.789 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.224 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 3.116 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 0.793 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 2.887 ; 0.000         ;
 +------------------------------------------------------+-------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary                                                                                                  ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                                                                                  ; -3.000  ; -77.542       ;
-; c_HREF                                                                                                                  ; -3.000  ; -4.222        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -1.222  ; -73.320       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -1.222  ; -56.212       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -1.222  ; -41.548       ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -1.222  ; -21.996       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 4.707   ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 9.447   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 499.707 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 624.713 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 624.716 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                               ;
++------------------------------------------------------+---------+---------------+
+; Clock                                                ; Slack   ; End Point TNS ;
++------------------------------------------------------+---------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 4.715   ; 0.000         ;
+; MAX10_CLK1_50                                        ; 9.447   ; 0.000         ;
+; c_XCLK                                               ; 32.000  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 499.707 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 624.713 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 624.713 ; 0.000         ;
++------------------------------------------------------+---------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 4
-Shortest Synchronizer Chain: 3 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 16.395 ns
+No synchronizer chains to report.
 
 
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                              ;
++------------------------------------------------------+----------+---------------+
+; Clock                                                ; Slack    ; End Point TNS ;
++------------------------------------------------------+----------+---------------+
+; MAX10_CLK1_50                                        ; -6.678   ; -6.678        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 5.697    ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 995.159  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1141.733 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1249.714 ; 0.000         ;
++------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -27.909 ; -372.430      ;
-; MAX10_CLK1_50                                                                                                           ; -13.616 ; -10380.870    ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -6.188  ; -68.171       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -4.906  ; -106.135      ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -3.729  ; -124.707      ;
-; c_PCLK                                                                                                                  ; -3.216  ; -175.608      ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; -3.202  ; -26.661       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -1.633  ; -61.070       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -0.415  ; -0.415        ;
-; c_HREF                                                                                                                  ; 0.693   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 994.361 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                                                                   ; Slack  ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -0.504 ; -0.824        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 0.055  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 0.077  ; 0.000         ;
-; c_PCLK                                                                                                                  ; 0.123  ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 0.146  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0.147  ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 0.147  ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0.149  ; 0.000         ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 0.150  ; 0.000         ;
-; c_HREF                                                                                                                  ; 0.169  ; 0.000         ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; 1.494  ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+--------+---------------+
++------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                            ;
++------------------------------------------------------+-------+---------------+
+; Clock                                                ; Slack ; End Point TNS ;
++------------------------------------------------------+-------+---------------+
+; MAX10_CLK1_50                                        ; 0.148 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.204 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.207 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.208 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 0.210 ; 0.000         ;
++------------------------------------------------------+-------+---------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -403,11 +321,8 @@ Worst Case Available Settling Time: 16.395 ns
 +------------------------------------------------------+----------+---------------+
 ; Clock                                                ; Slack    ; End Point TNS ;
 +------------------------------------------------------+----------+---------------+
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; -2.062   ; -68.260       ;
-; c_PCLK                                               ; -1.010   ; -4.255        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 0.158    ; 0.000         ;
-; MAX10_CLK1_50                                        ; 19.368   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1248.687 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 18.805   ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1247.847 ; 0.000         ;
 +------------------------------------------------------+----------+---------------+
 
 
@@ -416,75 +331,51 @@ Worst Case Available Settling Time: 16.395 ns
 +------------------------------------------------------+-------+---------------+
 ; Clock                                                ; Slack ; End Point TNS ;
 +------------------------------------------------------+-------+---------------+
-; MAX10_CLK1_50                                        ; 0.147 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 0.316 ; 0.000         ;
-; c_PCLK                                               ; 0.526 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.637 ; 0.000         ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 1.379 ; 0.000         ;
+; MAX10_CLK1_50                                        ; 0.515 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1.554 ; 0.000         ;
 +------------------------------------------------------+-------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary                                                                                                  ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                                                                   ; Slack   ; End Point TNS ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
-; c_PCLK                                                                                                                  ; -3.000  ; -89.511       ;
-; c_HREF                                                                                                                  ; -3.000  ; -4.441        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -1.000  ; -60.000       ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -1.000  ; -46.000       ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -1.000  ; -34.000       ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -1.000  ; -18.000       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 4.754   ; 0.000         ;
-; MAX10_CLK1_50                                                                                                           ; 9.263   ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 499.756 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 624.756 ; 0.000         ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 624.781 ; 0.000         ;
-+-------------------------------------------------------------------------------------------------------------------------+---------+---------------+
++--------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                               ;
++------------------------------------------------------+---------+---------------+
+; Clock                                                ; Slack   ; End Point TNS ;
++------------------------------------------------------+---------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 4.803   ; 0.000         ;
+; MAX10_CLK1_50                                        ; 9.080   ; 0.000         ;
+; c_XCLK                                               ; 32.000  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 499.796 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 624.796 ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 624.801 ; 0.000         ;
++------------------------------------------------------+---------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 4
-Shortest Synchronizer Chain: 3 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 18.062 ns
+No synchronizer chains to report.
 
 
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                                                                       ;
-+--------------------------------------------------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
-; Clock                                                                                                                    ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+--------------------------------------------------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                                                                         ; -58.886    ; -1.068 ; -4.071   ; 0.147   ; -3.000              ;
-;  ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -58.886    ; 1.494  ; N/A      ; N/A     ; -1.222              ;
-;  LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -3.604     ; 0.149  ; -0.746   ; 0.316   ; -1.222              ;
-;  LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -8.137     ; 0.147  ; -4.071   ; 1.379   ; -1.222              ;
-;  MAX10_CLK1_50                                                                                                           ; -28.364    ; 0.146  ; 18.837   ; 0.147   ; 9.263               ;
-;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -10.382    ; 0.150  ; N/A      ; N/A     ; -1.222              ;
-;  c_HREF                                                                                                                  ; 0.341      ; 0.169  ; N/A      ; N/A     ; -3.000              ;
-;  c_PCLK                                                                                                                  ; -5.791     ; 0.123  ; -1.669   ; 0.526   ; -3.000              ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -12.899    ; -1.068 ; N/A      ; N/A     ; 4.707               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 988.675    ; 0.147  ; N/A      ; N/A     ; 499.707             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; -7.630     ; 0.035  ; 1247.424 ; 0.637   ; 624.713             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -1.022     ; -0.342 ; N/A      ; N/A     ; 624.716             ;
-; Design-wide TNS                                                                                                          ; -24105.755 ; -2.123 ; -192.127 ; 0.0     ; -276.801            ;
-;  ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; -793.856   ; 0.000  ; N/A      ; N/A     ; -21.996             ;
-;  LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; -145.905   ; 0.000  ; -39.352  ; 0.000   ; -73.320             ;
-;  LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; -273.804   ; 0.000  ; -135.816 ; 0.000   ; -41.548             ;
-;  MAX10_CLK1_50                                                                                                           ; -22113.133 ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
-;  OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; -250.134   ; 0.000  ; N/A      ; N/A     ; -56.212             ;
-;  c_HREF                                                                                                                  ; 0.000      ; 0.000  ; N/A      ; N/A     ; -4.441              ;
-;  c_PCLK                                                                                                                  ; -323.452   ; 0.000  ; -17.402  ; 0.000   ; -89.511             ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; -140.953   ; -1.781 ; N/A      ; N/A     ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 0.000      ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; -63.496    ; 0.000  ; 0.000    ; 0.000   ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; -1.022     ; -0.342 ; N/A      ; N/A     ; 0.000               ;
-+--------------------------------------------------------------------------------------------------------------------------+------------+--------+----------+---------+---------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                 ;
++-------------------------------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                                                 ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                                      ; -25.326  ; 0.148 ; 18.127   ; 0.515   ; 4.715               ;
+;  MAX10_CLK1_50                                        ; -25.326  ; 0.148 ; 18.127   ; 0.515   ; 9.080               ;
+;  c_XCLK                                               ; N/A      ; N/A   ; N/A      ; N/A     ; 32.000              ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1.488    ; 0.208 ; N/A      ; N/A     ; 4.715               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 989.944  ; 0.204 ; N/A      ; N/A     ; 499.707             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 1138.015 ; 0.207 ; 1245.906 ; 1.554   ; 624.713             ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1249.381 ; 0.210 ; N/A      ; N/A     ; 624.713             ;
+; Design-wide TNS                                       ; -25.326  ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  MAX10_CLK1_50                                        ; -25.326  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  c_XCLK                                               ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 0.000    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 0.000    ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 0.000    ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++-------------------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -531,8 +422,8 @@ Worst Case Available Settling Time: 18.062 ns
 ; switches[7]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; switches[1]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; switches[6]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; rst_n               ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; MAX10_CLK1_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; rst_n               ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; c_PCLK              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; c_HREF              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; c_VSYNC_noisy       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -608,7 +499,7 @@ Worst Case Available Settling Time: 18.062 ns
 ; c_RST        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0547 V           ; 0.314 V                              ; 0.224 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0547 V          ; 0.314 V                             ; 0.224 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
 ; c_PWRN       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0547 V           ; 0.314 V                              ; 0.224 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0547 V          ; 0.314 V                             ; 0.224 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
 ; c_SDATA      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
-; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0115 V           ; 0.13 V                               ; 0.065 V                              ; 6.31e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0115 V          ; 0.13 V                              ; 0.065 V                             ; 6.31e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -636,83 +527,43 @@ Worst Case Available Settling Time: 18.062 ns
 ; c_RST        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 ; c_PWRN       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 ; c_SDATA      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0396 V           ; 0.362 V                              ; 0.108 V                              ; 3.11e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0396 V          ; 0.362 V                             ; 0.108 V                             ; 3.11e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                                                                                                                                                                                           ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
-; From Clock                                                                                                              ; To Clock                                                                                                                ; RR Paths     ; FR Paths     ; RF Paths     ; FF Paths ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; > 2147483647 ; 0            ; 0            ; 0        ;
-; c_HREF                                                                                                                  ; c_HREF                                                                                                                  ; 0            ; 0            ; 0            ; 1        ;
-; c_HREF                                                                                                                  ; c_PCLK                                                                                                                  ; 59           ; 117          ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; c_PCLK                                                                                                                  ; 1682         ; 0            ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; c_PCLK                                                                                                                  ; 44           ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; c_PCLK                                                                                                                  ; 58           ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 633          ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0            ; 293          ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0            ; 60           ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 1156         ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 0            ; 2788     ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 34           ; 0        ;
-; c_PCLK                                                                                                                  ; MAX10_CLK1_50                                                                                                           ; > 2147483647 ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; MAX10_CLK1_50                                                                                                           ; 4            ; 4            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; MAX10_CLK1_50                                                                                                           ; 0            ; > 2147483647 ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; MAX10_CLK1_50                                                                                                           ; 3352         ; 0            ; > 2147483647 ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 1484         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 38           ; 0            ; 0            ; 0        ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 2078         ; 0            ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 544          ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 1            ; 1            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 35           ; 36964        ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 33           ; 8            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 2489         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 1704         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 15806        ; 0            ; 0            ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 247          ; 6            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 3617         ; 0            ; 0            ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 1            ; 1            ; 0            ; 0        ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                             ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths     ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
+; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 3351     ; 0        ; > 2147483647 ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; MAX10_CLK1_50                                        ; 4        ; 0        ; 0            ; 0        ;
+; MAX10_CLK1_50                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 34       ; 8        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2523     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1703     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 15148    ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 3554     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 6        ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1        ; 0        ; 0            ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                                                                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
-; From Clock                                                                                                              ; To Clock                                                                                                                ; RR Paths     ; FR Paths     ; RF Paths     ; FF Paths ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; > 2147483647 ; 0            ; 0            ; 0        ;
-; c_HREF                                                                                                                  ; c_HREF                                                                                                                  ; 0            ; 0            ; 0            ; 1        ;
-; c_HREF                                                                                                                  ; c_PCLK                                                                                                                  ; 59           ; 117          ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; c_PCLK                                                                                                                  ; 1682         ; 0            ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; c_PCLK                                                                                                                  ; 44           ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; c_PCLK                                                                                                                  ; 58           ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 633          ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0            ; 293          ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; 0            ; 60           ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 1156         ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 0            ; 2788     ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; 0            ; 0            ; 34           ; 0        ;
-; c_PCLK                                                                                                                  ; MAX10_CLK1_50                                                                                                           ; > 2147483647 ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; MAX10_CLK1_50                                                                                                           ; 4            ; 4            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; MAX10_CLK1_50                                                                                                           ; 0            ; > 2147483647 ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; MAX10_CLK1_50                                                                                                           ; 3352         ; 0            ; > 2147483647 ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 1484         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; 38           ; 0            ; 0            ; 0        ;
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 2078         ; 0            ; 0            ; 0        ;
-; c_PCLK                                                                                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 544          ; 0            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 1            ; 1            ; 0            ; 0        ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 35           ; 36964        ; 0            ; 0        ;
-; MAX10_CLK1_50                                                                                                           ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 33           ; 8            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 2489         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; 1704         ; 0            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; 15806        ; 0            ; 0            ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 247          ; 6            ; 0            ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; 3617         ; 0            ; 0            ; 0        ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; 1            ; 1            ; 0            ; 0        ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+--------------+--------------+--------------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                              ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths     ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
+; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 3351     ; 0        ; > 2147483647 ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; MAX10_CLK1_50                                        ; 4        ; 0        ; 0            ; 0        ;
+; MAX10_CLK1_50                                        ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 34       ; 8        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2523     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1703     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; 15148    ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 3554     ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 6        ; 0        ; 0            ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; 1        ; 0        ; 0            ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+--------------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -721,11 +572,6 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; c_HREF                                               ; c_PCLK                                               ; 3        ; 3        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; c_PCLK                                               ; 19       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 60       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 0        ; 0        ; 68       ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 0        ; 0        ; 34       ; 0        ;
 ; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 10       ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 56       ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
@@ -737,11 +583,6 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
-; c_HREF                                               ; c_PCLK                                               ; 3        ; 3        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; c_PCLK                                               ; 19       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                 ; 60       ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                        ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 0        ; 0        ; 68       ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                 ; 0        ; 0        ; 34       ; 0        ;
 ; MAX10_CLK1_50                                        ; MAX10_CLK1_50                                        ; 10       ; 0        ; 0        ; 0        ;
 ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; 56       ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
@@ -766,31 +607,32 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 22    ; 22   ;
-; Unconstrained Input Port Paths  ; 262   ; 262  ;
-; Unconstrained Output Ports      ; 18    ; 18   ;
-; Unconstrained Output Port Paths ; 56    ; 56   ;
+; Unconstrained Clocks            ; 6     ; 6    ;
+; Unconstrained Input Ports       ; 23    ; 23   ;
+; Unconstrained Input Port Paths  ; 323   ; 323  ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 55    ; 55   ;
 +---------------------------------+-------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                                                                                                                                                                                        ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-----------+-------------+
-; Target                                                                                                                  ; Clock                                                                                                                   ; Type      ; Status      ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-----------+-------------+
-; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ; Base      ; Constrained ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ; Base      ; Constrained ;
-; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ; Base      ; Constrained ;
-; MAX10_CLK1_50                                                                                                           ; MAX10_CLK1_50                                                                                                           ; Base      ; Constrained ;
-; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ; Base      ; Constrained ;
-; c_HREF                                                                                                                  ; c_HREF                                                                                                                  ; Base      ; Constrained ;
-; c_PCLK                                                                                                                  ; c_PCLK                                                                                                                  ; Base      ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; Generated ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; Generated ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; Generated ; Constrained ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; Generated ; Constrained ;
-+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-----------+-------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+---------------+
+; Target                                                                                                                  ; Clock                                                ; Type      ; Status        ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+---------------+
+; ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ;                                                      ; Base      ; Unconstrained ;
+; LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk                                                                                    ;                                                      ; Base      ; Unconstrained ;
+; LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte                                                                                    ;                                                      ; Base      ; Unconstrained ;
+; MAX10_CLK1_50                                                                                                           ; MAX10_CLK1_50                                        ; Base      ; Constrained   ;
+; OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock                                                      ;                                                      ; Base      ; Unconstrained ;
+; c_HREF                                                                                                                  ;                                                      ; Base      ; Unconstrained ;
+; c_PCLK                                                                                                                  ;                                                      ; Base      ; Unconstrained ;
+; c_XCLK                                                                                                                  ; c_XCLK                                               ; Base      ; Constrained   ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; Constrained   ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[1]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[1] ; Generated ; Constrained   ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[2]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[2] ; Generated ; Constrained   ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[3]                                                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[3] ; Generated ; Constrained   ;
++-------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------+---------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -806,6 +648,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_DOUT[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_HREF        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_VSYNC_noisy ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -831,7 +674,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_RST       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_SCL       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_SDATA     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; c_XCLK      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -862,6 +704,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_DOUT[5]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[6]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_DOUT[7]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_HREF        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_VSYNC_noisy ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; rst_n         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switches[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -887,7 +730,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; c_RST       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_SCL       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; c_SDATA     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; c_XCLK      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; leds[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -905,251 +747,194 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+------------------------------------+
-; TimeQuest Timing Analyzer Messages ;
-+------------------------------------+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Mar 23 15:42:42 2025
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr  8 16:33:34 2025
 Info: Command: quartus_sta RUBIKS_CUBE_DISPLAY_INPUT -c RUBIKS_CUBE_DISPLAY_INPUT
-Info: qsta_default_script.tcl version: #3
+Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (332104): Reading SDC File: 'output_files/output_files/synthesis/submodules/altera_reset_controller.sdc'
-Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332104): Reading SDC File: 'CORNER_TEST.sdc'
+Warning (332174): Ignored filter at CORNER_TEST.sdc(41): altera_reserved_tck could not be matched with a port File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 41
+Warning (332049): Ignored create_clock at CORNER_TEST.sdc(41): Argument <targets> is an empty collection File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 41
+    Info (332050): create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.000 } [get_ports {altera_reserved_tck}] File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 41
 Info (332110): Deriving PLL clocks
-    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name MAX10_CLK1_50 MAX10_CLK1_50
     Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 2 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[0]} {pll_inst|altpll_component|auto_generated|pll1|clk[0]}
     Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 50 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[1]} {pll_inst|altpll_component|auto_generated|pll1|clk[1]}
     Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 125 -multiply_by 2 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[2]} {pll_inst|altpll_component|auto_generated|pll1|clk[2]}
     Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 125 -multiply_by 2 -phase 30.00 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[3]} {pll_inst|altpll_component|auto_generated|pll1|clk[3]}
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock
-    Info (332105): create_clock -period 1.000 -name LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte
-    Info (332105): create_clock -period 1.000 -name c_PCLK c_PCLK
-    Info (332105): create_clock -period 1.000 -name c_HREF c_HREF
-    Info (332105): create_clock -period 1.000 -name ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse
-    Info (332105): create_clock -period 1.000 -name LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332174): Ignored filter at CORNER_TEST.sdc(85): altera_reserved_tck could not be matched with a clock File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 85
+Warning (332049): Ignored set_clock_groups at CORNER_TEST.sdc(85): Argument -group with value [get_clocks {altera_reserved_tck}] contains zero elements File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 85
+    Info (332050): set_clock_groups -asynchronous -group [get_clocks {altera_reserved_tck}]  File: /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/CORNER_TEST.sdc Line: 85
+Info (332104): Reading SDC File: 'output_files/dual_boot/synthesis/submodules/altera_reset_controller.sdc'
+Warning (332060): Node: OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|data_index[2] is being clocked by OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords|index[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte
+Warning (332060): Node: c_PCLK was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|bufferIndex[13] is being clocked by c_PCLK
+Warning (332060): Node: c_HREF was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|skip_row is being clocked by c_HREF
+Warning (332060): Node: ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|y_avg[0] is being clocked by ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|counter[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -58.886
+Info (332146): Worst-case setup slack is -25.326
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -58.886            -793.856 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):   -28.364          -22113.133 MAX10_CLK1_50 
-    Info (332119):   -12.899            -140.953 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):   -10.382            -250.134 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -8.137            -273.804 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -7.630             -63.496 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -5.791            -323.452 c_PCLK 
-    Info (332119):    -3.604            -145.905 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -1.022              -1.022 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.341               0.000 c_HREF 
-    Info (332119):   988.675               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is -0.669
+    Info (332119):   -25.326             -25.326 MAX10_CLK1_50 
+    Info (332119):     1.488               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):   989.944               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):  1138.015               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):  1249.381               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case hold slack is 0.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.669              -0.950 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.093               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.290               0.000 c_PCLK 
-    Info (332119):     0.310               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.323               0.000 MAX10_CLK1_50 
-    Info (332119):     0.323               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.325               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):     0.326               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     0.327               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.371               0.000 c_HREF 
-    Info (332119):     3.092               0.000 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-Info (332146): Worst-case recovery slack is -4.067
+    Info (332119):     0.324               0.000 MAX10_CLK1_50 
+    Info (332119):     0.413               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.422               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.422               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.431               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case recovery slack is 18.127
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.067            -135.373 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.669             -17.402 c_PCLK 
-    Info (332119):    -0.746             -39.352 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    18.837               0.000 MAX10_CLK1_50 
-    Info (332119):  1247.424               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is 0.371
+    Info (332119):    18.127               0.000 MAX10_CLK1_50 
+    Info (332119):  1245.906               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.907
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.371               0.000 MAX10_CLK1_50 
-    Info (332119):     0.851               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     0.871               0.000 c_PCLK 
-    Info (332119):     1.323               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     2.706               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     0.907               0.000 MAX10_CLK1_50 
+    Info (332119):     3.146               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 4.756
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -79.444 c_PCLK 
-    Info (332119):    -3.000              -4.281 c_HREF 
-    Info (332119):    -1.222             -73.320 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -1.222             -56.212 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -1.222             -41.548 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.222             -21.996 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):     4.725               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     9.429               0.000 MAX10_CLK1_50 
-    Info (332119):   499.718               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):   624.725               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.727               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 4
-    Info (332114): Shortest Synchronizer Chain: 3 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 16.027 ns
-    Info (332114): 
+    Info (332119):     4.756               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.420               0.000 MAX10_CLK1_50 
+    Info (332119):    32.000               0.000 c_XCLK 
+    Info (332119):   499.741               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):   624.755               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):   624.756               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332060): Node: OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|data_index[2] is being clocked by OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords|index[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte
+Warning (332060): Node: c_PCLK was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|bufferIndex[13] is being clocked by c_PCLK
+Warning (332060): Node: c_HREF was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|skip_row is being clocked by c_HREF
+Warning (332060): Node: ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|y_avg[0] is being clocked by ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|counter[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -53.406
+Info (332146): Worst-case setup slack is -22.189
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -53.406            -719.648 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):   -25.686          -20012.043 MAX10_CLK1_50 
-    Info (332119):   -11.192            -121.353 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -9.332            -223.895 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -7.395            -249.349 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -6.446             -53.069 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -5.279            -293.453 c_PCLK 
-    Info (332119):    -3.169            -125.698 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -0.447              -0.447 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.397               0.000 c_HREF 
-    Info (332119):   989.638               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is -1.068
+    Info (332119):   -22.189             -22.189 MAX10_CLK1_50 
+    Info (332119):     2.715               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):   990.721               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):  1138.755               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):  1249.398               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case hold slack is 0.293
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.068              -1.781 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -0.342              -0.342 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.035               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.273               0.000 c_PCLK 
     Info (332119):     0.293               0.000 MAX10_CLK1_50 
-    Info (332119):     0.293               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.294               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):     0.295               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     0.297               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.337               0.000 c_HREF 
-    Info (332119):     2.841               0.000 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-Info (332146): Worst-case recovery slack is -4.071
+    Info (332119):     0.341               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.349               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.349               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.358               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case recovery slack is 18.441
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.071            -135.816 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.403             -12.514 c_PCLK 
-    Info (332119):    -0.574             -29.466 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    18.949               0.000 MAX10_CLK1_50 
-    Info (332119):  1247.669               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is 0.360
+    Info (332119):    18.441               0.000 MAX10_CLK1_50 
+    Info (332119):  1246.266               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.793
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.360               0.000 MAX10_CLK1_50 
-    Info (332119):     0.717               0.000 c_PCLK 
-    Info (332119):     0.789               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     1.224               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     3.116               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     0.793               0.000 MAX10_CLK1_50 
+    Info (332119):     2.887               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 4.715
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -77.542 c_PCLK 
-    Info (332119):    -3.000              -4.222 c_HREF 
-    Info (332119):    -1.222             -73.320 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -1.222             -56.212 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -1.222             -41.548 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.222             -21.996 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):     4.707               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.715               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     9.447               0.000 MAX10_CLK1_50 
+    Info (332119):    32.000               0.000 c_XCLK 
     Info (332119):   499.707               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
     Info (332119):   624.713               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.716               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 4
-    Info (332114): Shortest Synchronizer Chain: 3 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 16.395 ns
-    Info (332114): 
+    Info (332119):   624.713               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332060): Node: OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|data_index[2] is being clocked by OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register LCD_SPI_CONTROLLER_RUBIK:lcd|COORDINATE_COUNTER:coords|index[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte
+Warning (332060): Node: c_PCLK was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|bufferIndex[13] is being clocked by c_PCLK
+Warning (332060): Node: c_HREF was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register OV7670_Cam:cam|skip_row is being clocked by c_HREF
+Warning (332060): Node: ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|y_avg[0] is being clocked by ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse
+Warning (332060): Node: LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|counter[0] is being clocked by LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -27.909
+Info (332146): Worst-case setup slack is -6.678
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -27.909            -372.430 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):   -13.616          -10380.870 MAX10_CLK1_50 
-    Info (332119):    -6.188             -68.171 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):    -4.906            -106.135 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -3.729            -124.707 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -3.216            -175.608 c_PCLK 
-    Info (332119):    -3.202             -26.661 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):    -1.633             -61.070 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -0.415              -0.415 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.693               0.000 c_HREF 
-    Info (332119):   994.361               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-Info (332146): Worst-case hold slack is -0.504
+    Info (332119):    -6.678              -6.678 MAX10_CLK1_50 
+    Info (332119):     5.697               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):   995.159               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):  1141.733               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):  1249.714               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.504              -0.824 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.055               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-    Info (332119):     0.077               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     0.123               0.000 c_PCLK 
-    Info (332119):     0.146               0.000 MAX10_CLK1_50 
-    Info (332119):     0.147               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):     0.147               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):     0.149               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     0.150               0.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):     0.169               0.000 c_HREF 
-    Info (332119):     1.494               0.000 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-Info (332146): Worst-case recovery slack is -2.062
+    Info (332119):     0.148               0.000 MAX10_CLK1_50 
+    Info (332119):     0.204               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):     0.207               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+    Info (332119):     0.208               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.210               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+Info (332146): Worst-case recovery slack is 18.805
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.062             -68.260 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.010              -4.255 c_PCLK 
-    Info (332119):     0.158               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    19.368               0.000 MAX10_CLK1_50 
-    Info (332119):  1248.687               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-Info (332146): Worst-case removal slack is 0.147
+    Info (332119):    18.805               0.000 MAX10_CLK1_50 
+    Info (332119):  1247.847               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case removal slack is 0.515
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.147               0.000 MAX10_CLK1_50 
-    Info (332119):     0.316               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):     0.526               0.000 c_PCLK 
-    Info (332119):     0.637               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):     1.379               0.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     0.515               0.000 MAX10_CLK1_50 
+    Info (332119):     1.554               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 4.803
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -89.511 c_PCLK 
-    Info (332119):    -3.000              -4.441 c_HREF 
-    Info (332119):    -1.000             -60.000 LCD_SPI_CONTROLLER_RUBIK:lcd|fifoClk 
-    Info (332119):    -1.000             -46.000 OV7670_Cam:cam|OV7670_INIT:cam_init|OV7670_SCCB:cam|internal_clock 
-    Info (332119):    -1.000             -34.000 LCD_SPI_CONTROLLER_RUBIK:lcd|lowByte 
-    Info (332119):    -1.000             -18.000 ASYNC_FRAME_BUFFER_CORNER_DETECTION:frame_buffer|COORDINATE_AVERAGE:avg|DETECT_SWITCH_EDGE_NOISY:rst_det|neg_edge_pulse 
-    Info (332119):     4.754               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     9.263               0.000 MAX10_CLK1_50 
-    Info (332119):   499.756               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
-    Info (332119):   624.756               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
-    Info (332119):   624.781               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
-Info (332114): Report Metastability: Found 4 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 4
-    Info (332114): Shortest Synchronizer Chain: 3 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 18.062 ns
-    Info (332114): 
+    Info (332119):     4.803               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.080               0.000 MAX10_CLK1_50 
+    Info (332119):    32.000               0.000 c_XCLK 
+    Info (332119):   499.796               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[1] 
+    Info (332119):   624.796               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[3] 
+    Info (332119):   624.801               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[2] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4950 megabytes
-    Info: Processing ended: Sun Mar 23 15:42:50 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 818 megabytes
+    Info: Processing ended: Tue Apr  8 16:33:41 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:18
 
 

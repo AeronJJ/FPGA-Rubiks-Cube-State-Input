@@ -1,0 +1,145 @@
+IP Upgrade report for RUBIKS_CUBE_DISPLAY_INPUT
+Mon Mar 31 15:16:26 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Mon Mar 31 15:16:26 2025           ;
+; Quartus Prime Version        ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
+; Top-level Entity Name        ; LCD_RUBIKS_CUBE_DISPLAY                     ;
+; Family                       ; MAX 10                                      ;
++------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                                                                 ;
++-------------+----------------+---------+---------------------------------------------------+-----------------------------+------------------------------------------------+---------+
+; Entity Name ; Component Name ; Version ; Original Source File                              ; Generation File Path        ; New Source File                                ; Message ;
++-------------+----------------+---------+---------------------------------------------------+-----------------------------+------------------------------------------------+---------+
+; dual_boot   ; Qsys           ; 17.1    ; output_files/output_files/synthesis/dual_boot.qip ; output_files/dual_boot.qsys ; output_files/dual_boot/synthesis/dual_boot.qip ;         ;
++-------------+----------------+---------+---------------------------------------------------+-----------------------------+------------------------------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "output_files/dual_boot.qsys" to "output_files/dual_boot.BAK.qsys"
+Info (11902): Backing up file "output_files/output_files/synthesis/dual_boot.v" to "output_files/dual_boot.BAK.v"
+Info (11837): Started upgrading IP component Qsys with file "output_files/dual_boot.qsys"
+Info: 2025.03.31.15:16:22 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2025.03.31.15:16:22 Info: Finished upgrading the ip cores
+Info: 2025.03.31.15:16:25 Info: Saving generation log to /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot
+Info: 2025.03.31.15:16:25 Info: Starting: Create simulation model
+Info: 2025.03.31.15:16:25 Info: Loading output_files
+Info: 2025.03.31.15:16:25 Info: Reading input file
+Info: 2025.03.31.15:16:25 Info: Adding clk_0 [clock_source 20.1]
+Info: 2025.03.31.15:16:25 Info: Parameterizing module clk_0
+Info: 2025.03.31.15:16:25 Info: Adding dual_boot [altera_dual_boot 20.1]
+Info: 2025.03.31.15:16:25 Info: Parameterizing module dual_boot
+Info: 2025.03.31.15:16:25 Info: Building connections
+Info: 2025.03.31.15:16:25 Info: Parameterizing connections
+Info: 2025.03.31.15:16:25 Info: Validating
+Info: 2025.03.31.15:16:25 Info: Done reading input file
+Warning: 2025.03.31.15:16:25 Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: 2025.03.31.15:16:25 Info: dual_boot: Generating dual_boot "dual_boot" for SIM_VERILOG
+Info: 2025.03.31.15:16:25 Info: dual_boot: "dual_boot" instantiated altera_dual_boot "dual_boot"
+Info: 2025.03.31.15:16:25 Info: rst_controller: "dual_boot" instantiated altera_reset_controller "rst_controller"
+Info: 2025.03.31.15:16:25 Info: dual_boot: Done "dual_boot" with 3 modules, 16 files
+Info: 2025.03.31.15:16:25 Info: qsys-generate succeeded.
+Info: 2025.03.31.15:16:25 Info: Finished: Create simulation model
+Info: 2025.03.31.15:16:25 Info: Starting: Create Modelsim Project.
+Info: 2025.03.31.15:16:25 Info: sim-script-gen --spd=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/dual_boot.spd --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:25 Info: Doing: ip-make-simscript --spd=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/dual_boot.spd --output-directory=/home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info: Generating the following file(s) for MODELSIM simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info:     mentor
+Info: 2025.03.31.15:16:26 Info: Generating the following file(s) for VCS simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info:     synopsys/vcs
+Info: 2025.03.31.15:16:26 Info: Generating the following file(s) for VCSMX simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info:     synopsys/vcsmx
+Info: 2025.03.31.15:16:26 Info:     synopsys/vcsmx
+Info: 2025.03.31.15:16:26 Info: Generating the following file(s) for NCSIM simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info:     cadence
+Info: 2025.03.31.15:16:26 Info:     cadence
+Info: 2025.03.31.15:16:26 Info:     cadence
+Info: 2025.03.31.15:16:26 Info:     2 .cds.lib files in cadence/cds_libs
+Info: 2025.03.31.15:16:26 Info: Generating the following file(s) for RIVIERA simulator in /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info:     aldec
+Info: 2025.03.31.15:16:26 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/blastsail/Documents/University/ELEC3885/github/FPGA-Rubiks-Cube-State-Input/output_files/dual_boot/simulation
+Info: 2025.03.31.15:16:26 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2025.03.31.15:16:26 Info: Finished: Create Modelsim Project.
+Info: 2025.03.31.15:16:26 Info: Starting: Create block symbol file (.bsf)
+Info: 2025.03.31.15:16:26 Info: Loading output_files
+Info: 2025.03.31.15:16:26 Info: Reading input file
+Info: 2025.03.31.15:16:26 Info: Adding clk_0 [clock_source 20.1]
+Info: 2025.03.31.15:16:26 Info: Parameterizing module clk_0
+Info: 2025.03.31.15:16:26 Info: Adding dual_boot [altera_dual_boot 20.1]
+Info: 2025.03.31.15:16:26 Info: Parameterizing module dual_boot
+Info: 2025.03.31.15:16:26 Info: Building connections
+Info: 2025.03.31.15:16:26 Info: Parameterizing connections
+Info: 2025.03.31.15:16:26 Info: Validating
+Info: 2025.03.31.15:16:26 Info: Done reading input file
+Warning: 2025.03.31.15:16:26 Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: 2025.03.31.15:16:26 Info: qsys-generate succeeded.
+Info: 2025.03.31.15:16:26 Info: Finished: Create block symbol file (.bsf)
+2025.03.31.15:16:26 Info: 
+2025.03.31.15:16:26 Info: Starting: Create HDL design files for synthesis
+Info: 2025.03.31.15:16:26 Info: Loading output_files
+Info: 2025.03.31.15:16:26 Info: Reading input file
+Info: 2025.03.31.15:16:26 Info: Adding clk_0 [clock_source 20.1]
+Info: 2025.03.31.15:16:26 Info: Parameterizing module clk_0
+Info: 2025.03.31.15:16:26 Info: Adding dual_boot [altera_dual_boot 20.1]
+Info: 2025.03.31.15:16:26 Info: Parameterizing module dual_boot
+Info: 2025.03.31.15:16:26 Info: Building connections
+Info: 2025.03.31.15:16:26 Info: Parameterizing connections
+Info: 2025.03.31.15:16:26 Info: Validating
+Info: 2025.03.31.15:16:26 Info: Done reading input file
+Warning: 2025.03.31.15:16:26 Warning: dual_boot.dual_boot: dual_boot.avalon must be connected to an Avalon-MM master
+Info: 2025.03.31.15:16:26 Info: dual_boot: Generating dual_boot "dual_boot" for QUARTUS_SYNTH
+Info: 2025.03.31.15:16:26 Info: dual_boot: generating top-level entity altera_dual_boot
+Info: 2025.03.31.15:16:26 Info: dual_boot: "dual_boot" instantiated altera_dual_boot "dual_boot"
+Info: 2025.03.31.15:16:26 Info: rst_controller: "dual_boot" instantiated altera_reset_controller "rst_controller"
+Info: 2025.03.31.15:16:26 Info: dual_boot: Done "dual_boot" with 3 modules, 7 files
+Info: 2025.03.31.15:16:26 Info: qsys-generate succeeded.
+Info: 2025.03.31.15:16:26 Info: Finished: Create HDL design files for synthesis
+Info (11131): Completed upgrading IP component Qsys with file "output_files/dual_boot.qsys"
+Info (23030): Evaluation of Tcl script /home/blastsail/intelFPGA_lite/20.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 819 megabytes
+    Info: Processing ended: Mon Mar 31 15:16:26 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:35
+
+

@@ -1,6 +1,6 @@
 Flow report for RUBIKS_CUBE_DISPLAY_INPUT
-Sun Mar 23 15:42:54 2025
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Tue Apr  8 16:33:44 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,24 +33,25 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 23 15:42:54 2025       ;
-; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Flow Status                        ; Successful - Tue Apr  8 16:33:44 2025       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; RUBIKS_CUBE_DISPLAY_INPUT                   ;
 ; Top-level Entity Name              ; LCD_RUBIKS_CUBE_DISPLAY                     ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 9,804 / 49,760 ( 20 % )                     ;
-;     Total combinational functions  ; 9,624 / 49,760 ( 19 % )                     ;
-;     Dedicated logic registers      ; 1,368 / 49,760 ( 3 % )                      ;
-; Total registers                    ; 1368                                        ;
+; Total logic elements               ; 9,894 / 49,760 ( 20 % )                     ;
+;     Total combinational functions  ; 9,657 / 49,760 ( 19 % )                     ;
+;     Dedicated logic registers      ; 1,367 / 49,760 ( 3 % )                      ;
+; Total registers                    ; 1367                                        ;
 ; Total pins                         ; 44 / 360 ( 12 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,228,800 / 1,677,312 ( 73 % )              ;
@@ -66,104 +67,104 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------------+
 ; Option            ; Setting                   ;
 +-------------------+---------------------------+
-; Start date & time ; 03/23/2025 15:41:00       ;
+; Start date & time ; 04/08/2025 16:32:04       ;
 ; Main task         ; Compilation               ;
 ; Revision Name     ; RUBIKS_CUBE_DISPLAY_INPUT ;
 +-------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                   ;
-+--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+------------------------+
-; Assignment Name                      ; Value                                                        ; Default Value             ; Entity Name             ; Section Id             ;
-+--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+------------------------+
-; COMPILER_SIGNATURE_ID                ; 39908810502323.174274445911348                               ; --                        ; --                      ; --                     ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; SKID_BUFFER_tb         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; STEP_CONVERSION_tb     ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                                           ; --                        ; --                      ; ASYNC_FIFO_tb          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SOBEL_FILTER_RGB565_tb                                       ; --                        ; --                      ; eda_simulation         ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                  ; --                        ; --                      ; eda_simulation         ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                    ; <None>                    ; --                      ; --                     ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                              ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_FILE                  ; SKID_BUFFER_tb.sv                                            ; --                        ; --                      ; SKID_BUFFER_tb         ;
-; EDA_TEST_BENCH_FILE                  ; TOUCH_SPI_MASTER_tb.sv                                       ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
-; EDA_TEST_BENCH_FILE                  ; TEXT_GENERATOR_tb.sv                                         ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
-; EDA_TEST_BENCH_FILE                  ; STEP_CONVERSION_tb.sv                                        ; --                        ; --                      ; STEP_CONVERSION_tb     ;
-; EDA_TEST_BENCH_FILE                  ; SOBEL_FILTER_RGB565_tb.sv                                    ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
-; EDA_TEST_BENCH_FILE                  ; SQUARE_TOUCH_tb.sv                                           ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
-; EDA_TEST_BENCH_FILE                  ; ASYNC_FIFO_tb.sv                                             ; --                        ; --                      ; ASYNC_FIFO_tb          ;
-; EDA_TEST_BENCH_MODULE_NAME           ; SKID_BUFFER_tb                                               ; --                        ; --                      ; SKID_BUFFER_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; TOUCH_SPI_MASTER_tb                                          ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
-; EDA_TEST_BENCH_MODULE_NAME           ; TEXT_GENERATOR_tb                                            ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; STEP_CONVERSION_tb                                           ; --                        ; --                      ; STEP_CONVERSION_tb     ;
-; EDA_TEST_BENCH_MODULE_NAME           ; SOBEL_FILTER_RGB565_tb                                       ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; SQUARE_TOUCH_tb                                              ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ASYNC_FIFO_tb                                                ; --                        ; --                      ; ASYNC_FIFO_tb          ;
-; EDA_TEST_BENCH_NAME                  ; SQUARE_TOUCH_tb                                              ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; TOUCH_SPI_MASTER_tb                                          ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; STEP_CONVERSION_tb                                           ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; ASYNC_FIFO_tb                                                ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; SKID_BUFFER_tb                                               ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; TEXT_GENERATOR_tb                                            ; --                        ; --                      ; eda_simulation         ;
-; EDA_TEST_BENCH_NAME                  ; SOBEL_FILTER_RGB565_tb                                       ; --                        ; --                      ; eda_simulation         ;
-; EDA_TIME_SCALE                       ; 1 ps                                                         ; --                        ; --                      ; eda_simulation         ;
-; ENABLE_SIGNALTAP                     ; Off                                                          ; --                        ; --                      ; --                     ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                                           ; --                        ; --                      ; --                     ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                                            ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; output_files/output_files/synthesis/../dual_boot.cmp         ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; output_files/output_files/synthesis/../../dual_boot.qsys     ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; ip/pll_inst.v                                                ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; ip/pll.ppf                                                   ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; ip/mem/mem_inst.v                                            ; --                        ; --                      ; --                     ;
-; MISC_FILE                            ; output_files/Multiplier/mult_9x9_signed_inst.v               ; --                        ; --                      ; --                     ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                            ; --                        ; --                      ; --                     ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                            ; --                        ; --                      ; --                     ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                   ; --                        ; --                      ; --                     ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                   ; --                        ; --                      ; --                     ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                       ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                          ; --                        ; --                      ; --                     ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --                        ; --                      ; --                     ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                 ; --                        ; --                      ; --                     ;
-; SLD_FILE                             ; output_files/output_files/synthesis/dual_boot.debuginfo      ; --                        ; --                      ; --                     ;
-; SLD_INFO                             ; QSYS_NAME dual_boot HAS_SOPCINFO 1 GENERATION_ID 1732766233  ; --                        ; dual_boot               ; --                     ;
-; SOPCINFO_FILE                        ; output_files/output_files/synthesis/../../dual_boot.sopcinfo ; --                        ; --                      ; --                     ;
-; SYNTHESIS_ONLY_QIP                   ; On                                                           ; --                        ; --                      ; --                     ;
-; TOP_LEVEL_ENTITY                     ; LCD_RUBIKS_CUBE_DISPLAY                                      ; RUBIKS_CUBE_DISPLAY_INPUT ; --                      ; --                     ;
-; USE_SIGNALTAP_FILE                   ; output_files/stp2.stp                                        ; --                        ; --                      ; --                     ;
-+--------------------------------------+--------------------------------------------------------------+---------------------------+-------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                  ;
++--------------------------------------+-------------------------------------------------------------+---------------------------+-------------------------+------------------------+
+; Assignment Name                      ; Value                                                       ; Default Value             ; Entity Name             ; Section Id             ;
++--------------------------------------+-------------------------------------------------------------+---------------------------+-------------------------+------------------------+
+; COMPILER_SIGNATURE_ID                ; 104249397171267.174412272454415                             ; --                        ; --                      ; --                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; SKID_BUFFER_tb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; STEP_CONVERSION_tb     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                          ; --                        ; --                      ; ASYNC_FIFO_tb          ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SOBEL_FILTER_RGB565_tb                                      ; --                        ; --                      ; eda_simulation         ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                 ; --                        ; --                      ; eda_simulation         ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                   ; <None>                    ; --                      ; --                     ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                             ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_FILE                  ; SKID_BUFFER_tb.sv                                           ; --                        ; --                      ; SKID_BUFFER_tb         ;
+; EDA_TEST_BENCH_FILE                  ; TOUCH_SPI_MASTER_tb.sv                                      ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
+; EDA_TEST_BENCH_FILE                  ; TEXT_GENERATOR_tb.sv                                        ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
+; EDA_TEST_BENCH_FILE                  ; STEP_CONVERSION_tb.sv                                       ; --                        ; --                      ; STEP_CONVERSION_tb     ;
+; EDA_TEST_BENCH_FILE                  ; SOBEL_FILTER_RGB565_tb.sv                                   ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
+; EDA_TEST_BENCH_FILE                  ; SQUARE_TOUCH_tb.sv                                          ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
+; EDA_TEST_BENCH_FILE                  ; ASYNC_FIFO_tb.sv                                            ; --                        ; --                      ; ASYNC_FIFO_tb          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; SKID_BUFFER_tb                                              ; --                        ; --                      ; SKID_BUFFER_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TOUCH_SPI_MASTER_tb                                         ; --                        ; --                      ; TOUCH_SPI_MASTER_tb    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TEXT_GENERATOR_tb                                           ; --                        ; --                      ; TEXT_GENERATOR_tb      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; STEP_CONVERSION_tb                                          ; --                        ; --                      ; STEP_CONVERSION_tb     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; SOBEL_FILTER_RGB565_tb                                      ; --                        ; --                      ; SOBEL_FILTER_RGB565_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; SQUARE_TOUCH_tb                                             ; --                        ; --                      ; SQUARE_TOUCH_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ASYNC_FIFO_tb                                               ; --                        ; --                      ; ASYNC_FIFO_tb          ;
+; EDA_TEST_BENCH_NAME                  ; SQUARE_TOUCH_tb                                             ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; TOUCH_SPI_MASTER_tb                                         ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; STEP_CONVERSION_tb                                          ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; ASYNC_FIFO_tb                                               ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; SKID_BUFFER_tb                                              ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; TEXT_GENERATOR_tb                                           ; --                        ; --                      ; eda_simulation         ;
+; EDA_TEST_BENCH_NAME                  ; SOBEL_FILTER_RGB565_tb                                      ; --                        ; --                      ; eda_simulation         ;
+; EDA_TIME_SCALE                       ; 1 ps                                                        ; --                        ; --                      ; eda_simulation         ;
+; ENABLE_SIGNALTAP                     ; Off                                                         ; --                        ; --                      ; --                     ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                          ; --                        ; --                      ; --                     ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                           ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; output_files/dual_boot/synthesis/../dual_boot.cmp           ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; output_files/dual_boot/synthesis/../../dual_boot.qsys       ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; ip/pll_inst.v                                               ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; ip/pll.ppf                                                  ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; ip/mem/mem_inst.v                                           ; --                        ; --                      ; --                     ;
+; MISC_FILE                            ; output_files/Multiplier/mult_9x9_signed_inst.v              ; --                        ; --                      ; --                     ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                           ; --                        ; --                      ; --                     ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                           ; --                        ; --                      ; --                     ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                  ; --                        ; --                      ; --                     ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                                  ; --                        ; --                      ; --                     ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                      ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                      ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                      ; --                        ; LCD_RUBIKS_CUBE_DISPLAY ; Top                    ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                         ; --                        ; --                      ; --                     ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --                        ; --                      ; --                     ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                ; --                        ; --                      ; --                     ;
+; SLD_FILE                             ; output_files/dual_boot/synthesis/dual_boot.debuginfo        ; --                        ; --                      ; --                     ;
+; SLD_INFO                             ; QSYS_NAME dual_boot HAS_SOPCINFO 1 GENERATION_ID 1743430586 ; --                        ; dual_boot               ; --                     ;
+; SOPCINFO_FILE                        ; output_files/dual_boot/synthesis/../../dual_boot.sopcinfo   ; --                        ; --                      ; --                     ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                          ; --                        ; --                      ; --                     ;
+; TOP_LEVEL_ENTITY                     ; LCD_RUBIKS_CUBE_DISPLAY                                     ; RUBIKS_CUBE_DISPLAY_INPUT ; --                      ; --                     ;
+; USE_SIGNALTAP_FILE                   ; output_files/stp2.stp                                       ; --                        ; --                      ; --                     ;
++--------------------------------------+-------------------------------------------------------------+---------------------------+-------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 4950 MB             ; 00:00:49                           ;
-; Fitter                    ; 00:00:55     ; 1.7                     ; 6251 MB             ; 00:02:22                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4721 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 3.3                     ; 4950 MB             ; 00:00:20                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4763 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:48     ; --                      ; --                  ; 00:03:37                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 754 MB              ; 00:00:31                           ;
+; Fitter               ; 00:00:59     ; 1.5                     ; 1438 MB             ; 00:02:14                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 612 MB              ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.6                     ; 818 MB              ; 00:00:18                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 884 MB              ; 00:00:02                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:03:07                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-FAVR3U1  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+------------------+-------------+-------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name     ; OS Version  ; Processor type ;
++----------------------+------------------+-------------+-------------+----------------+
+; Analysis & Synthesis ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
+; Fitter               ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
+; Assembler            ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
+; Timing Analyzer      ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
+; EDA Netlist Writer   ; fedora           ; Fedora Core ; Fedora Core ; x86_64         ;
++----------------------+------------------+-------------+-------------+----------------+
 
 
 ------------

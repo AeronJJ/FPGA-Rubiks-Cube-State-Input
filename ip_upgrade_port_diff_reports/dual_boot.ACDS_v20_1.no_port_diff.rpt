@@ -1,0 +1,23 @@
+IP Ports Diff Report for dual_boot
+Mon Mar 31 15:16:26 2025
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++---------------------------------------------------------------------+
+; IP Information                                                      ;
++----------------------+----------------------------------------------+
+; IP Variation Name    ; dual_boot                                    ;
+; Prior Version        ; ACDS_v17.1                                   ;
+; New Version          ; ACDS_v20.1                                   ;
+; New File             ; output_files/dual_boot/synthesis/dual_boot.v ;
+; Has Port Differences ; No                                           ;
++----------------------+----------------------------------------------+
+
+

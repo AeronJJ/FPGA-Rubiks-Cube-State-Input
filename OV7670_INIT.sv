@@ -56,10 +56,11 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 	// These are values scalped from https://github.com/jonlwowski012/OV7670_NEXYS4_Verilog/blob/master/ov7670_registers_verilog.v
 	16'h12_04, // COM7,     set RGB color output
 	//16'h11_80, // CLKRC     internal PLL matches input clock
-	16'h11_C0,
+	//16'h11_C0,
+	16'h11_81,
 	16'h0C_00, // COM3,     default settings
 	16'h3E_00, // COM14,    no scaling, normal pclock
-	16'h04_00, // COM1,     disable CCIR656
+	16'h04_00, // COM1,     disable CCIR656             !!
 	16'h40_d0, //COM15,     RGB565, full output range
 	16'h3a_04, //TSLB       set correct output data sequence (magic)
 	16'h14_18, //COM9       MAX AGC value x4 0001_1000
@@ -71,9 +72,12 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 	16'h54_E4, //MTX6
 	16'h58_9E, //MTXS
 	16'h3D_C0, //COM13      sets gamma enable, does not preserve reserved bits, may be wrong?
-	16'h17_14, //HSTART     start high 8 bits
-	16'h18_02, //HSTOP      stop high 8 bits //these kill the odd colored line
-	16'h32_80, //HREF       edge offset
+	//16'h17_14, //HSTART     start high 8 bits
+	//16'h18_02, //HSTOP      stop high 8 bits //these kill the odd colored line
+	//16'h32_80, //HREF       edge offset
+	16'h17_11,
+	16'h18_61,
+	16'h32_80,
 	16'h19_03, //VSTART     start high 8 bits
 	16'h1A_7B, //VSTOP      stop high 8 bits
 	16'h03_0A, //VREF       vsync edge offset
@@ -112,9 +116,10 @@ reg [15:0] INIT_SEQ [0:INIT_SEQ_LEN-1] = '{
 	16'h88_d7,
 	16'h89_e8,
 	//AGC and AEC
-	16'h13_e0, //COM8, disable AGC / AEC
+	//16'h13_e0, //COM8, disable AGC / AEC
+	16'h13_8F, //COM8, disable AGC / AEC
 	16'h00_00, //set gain reg to 0 for AGC
-	16'h10_00, //set ARCJ reg to 0
+	16'h10_00, //set ARCJ reg to 0 					!!
 	16'h0d_40, //magic reserved bit for COM4
 	16'h14_18, //COM9, 4x gain + magic bit
 	16'ha5_05, // BD50MAX

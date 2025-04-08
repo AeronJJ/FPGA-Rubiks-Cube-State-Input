@@ -32,7 +32,7 @@ c_SDATA <> OV7670_Cam:cam.port4
 c_VSYNC_noisy => c_VSYNC_noisy.IN1
 c_HREF => c_HREF.IN1
 c_PCLK => c_PCLK.IN1
-c_XCLK << OV7670_Cam:cam.port8
+c_XCLK << MAX10_CLK1_50.DB_MAX_OUTPUT_PORT_TYPE
 c_DOUT[0] => c_DOUT[0].IN1
 c_DOUT[1] => c_DOUT[1].IN1
 c_DOUT[2] => c_DOUT[2].IN1
@@ -1063,7 +1063,7 @@ two_move_format[5] <= one_move_format_A[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LCD_RUBIKS_CUBE_DISPLAY|pll:pll_inst
-inclk0 => sub_wire1[0].IN1
+inclk0 => sub_wire7[0].IN1
 c0 <= altpll:altpll_component.clk
 c1 <= altpll:altpll_component.clk
 c2 <= altpll:altpll_component.clk

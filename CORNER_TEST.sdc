@@ -42,6 +42,12 @@ create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.00
 
 create_clock -name MAX10_CLK1_50 -period 20 [get_ports {MAX10_CLK1_50}]
 
+create_clock -name c_XCLK -period 40.0 [get_ports {c_XCLK}]
+
+derive_pll_clocks
+
+derive_clock_uncertainty
+
 #**************************************************************
 # Create Generated Clock
 #**************************************************************

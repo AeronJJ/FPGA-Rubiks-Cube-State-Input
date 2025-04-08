@@ -116,11 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "MAX10_CLK1_50",
 					"strict" : false
 				},
 				{
-					"name" : "MAX10_CLK1_50",
+					"name" : "rst_n",
 					"strict" : false
 				},
 				{

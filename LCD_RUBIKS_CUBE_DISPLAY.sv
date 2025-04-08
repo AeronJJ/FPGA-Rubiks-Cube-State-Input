@@ -76,7 +76,7 @@ wire clk_800KHz;
 wire clk_800KHz_30;
 wire clk_25MHz;
 //wire clk_13MHz;
-wire clk_200MHz;
+//wire clk_200MHz;
 
 /*pll	pll_inst (
 	.inclk0 ( MAX10_CLK1_50 ),
@@ -90,10 +90,13 @@ pll	pll_inst (
 	.c1 ( clk_1MHz ),
 	.c2 ( clk_800KHz ),
 	.c3 ( clk_800KHz_30 ),
-	.c4 ( clk_200MHz )
+	//.c4 ( clk_200MHz )
+	.c4 ( clk_25MHz )
+	//.c4 ( c_XCLK )
 	);
 
-assign clk_25MHz = internal_xclk;
+assign c_XCLK = MAX10_CLK1_50;
+//assign clk_25MHz = internal_xclk;
 reg internal_xclk = 1'b0;
 
 always @ (posedge MAX10_CLK1_50) begin
@@ -442,6 +445,7 @@ ASYNC_FRAME_BUFFER_CORNER_DETECTION frame_buffer (
 );
 
 wire [16:0] cam_bufferIndex;
+wire c_XCLK_null;
 
 OV7670_Cam cam (
 	clk_800KHz,
@@ -454,7 +458,7 @@ OV7670_Cam cam (
 	c_VSYNC,
 	c_HREF,
 	c_PCLK,
-	c_XCLK,
+	c_XCLK_null,
 	c_DOUT,
 	c_RST,
 	c_PWRN,
